@@ -1,0 +1,336 @@
+.promos {
+  width: 100%;
+  padding: 0;
+  height: 570px;
+  min-height: 570px;
+  max-height: 570px;
+  @media (min-width: 768px) {
+    height: 650px;
+    min-height: 650px;
+    max-height: 650px;
+  }
+  @media (min-width: 1850px) {
+    max-height: 1060px;
+    height: calc(100vh - 230px);
+  }
+  @media (min-width: 2560px) {
+    height: calc(100vh - 350px);
+  }
+  & .slider__promos {
+    height: 100%;
+    width: 100%;
+    overflow: unset;
+    background: var(--black);
+    position: relative;
+    transform: translate3d(-13px, 0, 0);
+    @media (min-width: 768px) {
+      transform: initial;
+    }
+    & .swiper-wrapper {
+      height: 100%;
+      width: 100%;
+      & .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background: rgb(18,18,18);
+        background: -moz-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(69,3,1,1) 10%, rgba(217,110,4,1) 25%, rgba(69,3,1,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+        background: -webkit-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(69,3,1,1) 10%, rgba(217,110,4,1) 25%, rgba(69,3,1,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+        background: linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(69,3,1,1) 10%, rgba(217,110,4,1) 25%, rgba(69,3,1,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#121212",GradientType=1);
+        @media (min-width: 1850px) {
+          padding-right: 200px;
+          padding-bottom: 30px;
+        }
+        @media (min-width: 2560px) {
+          padding-right: 120px;
+        }
+        &.newyear {
+          background: #cb2d3e;
+          background: -moz-linear-gradient(to right, #cb2d3e, #ef473a);
+          background: -webkit-linear-gradient(to right, #cb2d3e, #ef473a);
+          background: linear-linear-gradient(to right, #cb2d3e, #ef473a);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cb2d3e",endColorstr="#ef473a",GradientType=1);
+          & .promo-content {
+            justify-content: center !important;
+          }
+        }
+
+        &.gaming {
+          background: rgb(18,18,18);
+          background: -moz-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(69,3,1,1) 10%, rgba(217,110,4,1) 25%, rgba(69,3,1,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+          background: -webkit-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(69,3,1,1) 10%, rgba(217,110,4,1) 25%, rgba(69,3,1,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+          background: linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(69,3,1,1) 10%, rgba(217,110,4,1) 25%, rgba(69,3,1,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#121212",GradientType=1);
+        }
+        &.agon {
+          background: rgb(18,18,18);
+          background: -moz-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(42,11,3,1) 10%, rgba(136,0,48,1) 25%, rgba(42,11,3,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+          background: -webkit-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(42,11,3,1) 10%, rgba(136,0,48,1) 25%, rgba(42,11,3,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+          background: linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(19,9,0,1) 3%, rgba(42,11,3,1) 10%, rgba(136,0,48,1) 25%, rgba(42,11,3,1) 55%, rgba(19,9,0,1) 85%, rgba(18,18,18,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#121212",GradientType=1);
+        }
+        &.agonpro {
+          background: rgb(18,18,18);
+          background: -moz-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(3,1,16,1) 3%, rgba(39,8,74,1) 10%, rgba(82,63,224,1) 25%, rgba(39,8,74,1) 55%, rgba(3,1,16,1) 85%, rgba(18,18,18,1) 100%);
+          background: -webkit-linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(3,1,16,1) 3%, rgba(39,8,74,1) 10%, rgba(82,63,224,1) 25%, rgba(39,8,74,1) 55%, rgba(3,1,16,1) 85%, rgba(18,18,18,1) 100%);
+          background: linear-gradient(270deg, rgba(18,18,18,1) 0%, rgba(3,1,16,1) 3%, rgba(39,8,74,1) 10%, rgba(82,63,224,1) 25%, rgba(39,8,74,1) 55%, rgba(3,1,16,1) 85%, rgba(18,18,18,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#121212",endColorstr="#121212",GradientType=1);
+        }
+        & .promo-content {
+          width: 42.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-position: top;
+          background-size: 40%;
+          padding-bottom: 30px;
+          @media (min-width: 1050px) {
+            width: 60rem;
+            justify-content: space-around;
+            background-position: 95% 40%;
+            background-size: 400px;
+            padding-bottom: 80px;
+          }
+          @media (min-width: 1250px) {
+            width: 100vw;
+            background-size: 500px;
+          }
+          @media (min-width: 1450px) {
+            background-size: 600px;
+            padding-bottom: 100px;
+          }
+          @media (min-width: 1550px) {
+            width: 95vw;
+            min-height: 530px;
+            background-position: 100%;
+            background-size: contain;
+          }
+          @media (min-width: 1850px) {
+            width: 85vw;
+            padding-bottom: 0px;
+            background-size: 40vw;
+          }
+          @media (min-width: 2150px) {
+            width: 80vw;
+          }
+          @media (min-width: 3000px) {
+            background-size: contain;
+            background-position: 90%;
+          }
+
+          & a {
+            display: block;
+          }
+
+          & h2 {
+            width: 60%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            @media (max-width: 1049px) {
+              width: 96%;
+              margin: 1rem auto;
+              font-size: 1rem;
+            }
+            @media (min-width: 1050px) {
+              font-size: 1.25rem;
+            }
+            @media (min-width: 1850px) {
+              margin: 1rem 0 2.5rem 1rem;
+              width: 45%;
+            }
+            @media (min-width: 2150px) {
+              margin: 1rem 0 2.5rem 5rem;
+            }
+            @media (min-width: 2560px) {
+              margin: 1rem 0 2.5rem 1rem;
+            }
+            @media (min-width: 3000px) {
+              width: 55%;
+            }
+            &.newyear {
+              color: var(--white);
+            }
+            &.aoc-gaming {
+              background: linear-gradient(to right, var(--aoc-gaming-features-secondary) 25%, var(--aoc-gaming-features-primary) 50%, var(--aoc-gaming-features-tertiary) 75%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              color: var(--aoc-gaming-features-primary);
+            }
+            &.agon {
+              background: linear-gradient(to right, var(--aoc-agon-features-secondary) 25%, var(--aoc-agon-features-primary) 50%, var(--aoc-agon-features-tertiary) 75%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              color: var(--aoc-agon-features-primary);
+            }
+            &.agonpro {
+              background: linear-gradient(to right, var(--aoc-agonpro-features-secondary) 25%, var(--aoc-agonpro-features-primary) 50%, var(--aoc-agonpro-features-tertiary) 75%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              color: var(--aoc-agonpro-features-primary);
+            }
+
+            & b {
+              font-size: 2.625rem;
+              line-height: 3rem;
+              letter-spacing: 0.295em;
+              padding: 0.25rem 0 3.5rem;
+              font-weight: 700;
+              @media (max-width: 1050px) {
+                padding: 0.25rem 0 1.5rem;
+                font-size: 1.5rem;
+                line-height: 3.5rem;
+              }
+              @media (max-width: 1249px) {
+                font-size: 2rem;
+              }
+            }
+
+            & center {
+              max-width: 50%;
+              margin: 0 auto;
+              line-height: 1.8rem;
+              @media (min-width: 768px) {
+                max-width: none;
+                margin: unset;
+                line-height: unset;
+              }
+            }
+
+            & strong {
+              letter-spacing: 0.09em;
+              font-size: 1.2rem;
+              font-weight: 300;
+              text-align: center;
+              @media (min-width: 768px) {
+                font-size: 2rem;
+              }
+              @media (min-width: 1050px) {
+                font-size: 2.75rem;
+              }
+              @media (min-width: 1249px) {
+                font-size: 4rem;
+              }
+            }
+            &::before, &::after {
+              display: none;
+            }
+          }
+          & .sub-header {
+            font-size: .85rem;
+            width: 98%;
+            margin: 1rem auto;
+            @media (min-width: 1050px) {
+              margin: 0 0 1rem 0;
+              width: 60%;
+            }
+            @media (min-width: 1550px) {
+              font-size: 1rem;
+            }
+            @media (min-width: 1850px) {
+              margin: 0 0 1rem 1rem;
+              width: 45%;
+            }
+            @media (min-width: 2150px) {
+              margin: 0 0 1rem 5rem;
+            }
+            @media (min-width: 2560px) {
+              margin: 0 0 1rem 1rem;
+            }
+            @media (min-width: 3000px) {
+              width: 55%;
+            }
+
+            &.newyear {
+              & ul {
+                & li {
+                  color: var(--white-97);
+                  border-left: 1px solid var(--white-97)
+                }
+              }
+              color: var(--white-97);
+            }
+
+            &.aoc-gaming {
+              & ul {
+                & li {
+                  color: var(--aoc-gaming-text);
+                  border-left: 1px solid var(--aoc-gaming-text);
+                }
+              }
+              color: var(--aoc-gaming-text);
+            }
+
+            &.agon {
+              & ul {
+                & li {
+                  color: var(--aoc-agon-text);
+                  border-left: 1px solid var(--aoc-agon-text);
+                }
+              }
+              color: var(--aoc-agon-text);
+            }
+            &.agonpro {
+              & ul {
+                & li {
+                  color: var(--aoc-agonpro-text);
+                  border-left: 1px solid var(--aoc-agonpro-text);
+                }
+              }
+              color: var(--aoc-agonpro-text);
+            }
+            & ul {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              gap: .5rem;
+              padding: 0;
+              margin: 0;
+              font-size: 0.5rem;
+              @media(min-width: 768px) {
+                font-size: 0.8rem;
+              }
+
+              & li {
+                display: block;
+                align-self: center;
+                text-align: center;
+                padding: 0 0.5rem;
+                @media (min-width: 1050px) {
+                  padding: 0 1rem;
+                }
+
+                &:first-child {
+                  border: none;
+                }
+
+                & strong {
+                  display: block;
+                }
+              }
+            }
+            & p {
+              max-width: 60%;
+              margin: 0 auto;
+              padding: .5rem;
+              @media (min-width: 1050px) {
+                max-width: initial;
+                margin: initial;
+              }
+            }
+            }
+          }
+        }
+      }
+    }
+  }

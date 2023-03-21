@@ -1,0 +1,443 @@
+.pickup {
+
+  &__text {
+    margin-top: 15px;
+    width: 95%;
+    font-weight: 300;
+    font-size: 0.9rem;
+
+    & a {
+      white-space: nowrap;
+    }
+  }
+}
+
+.pickup-contacts {
+  margin: 30px 0!important;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 180px);
+  grid-gap: 15px 10px;
+
+  &__item {
+    padding: 10px 10px 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    background-color: var(--white-10);
+    border-radius: 5px;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+
+    & img {
+      width: inherit;
+      height: inherit;
+    }
+  }
+
+  &__phone-wrapper {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__phone {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--white)!important;
+    &:hover {
+      color: var(--base-color)!important;
+    }
+  }
+
+  &__mail {
+    display: block;
+    margin-top: 15px;
+    color: var(--white)!important;
+    &:hover {
+      color: var(--base-color)!important;
+    }
+  }
+
+  &__btn {
+    padding: 0 0.5rem!important;
+    margin: 15px 0 0 0;
+    font-size: 0.8rem;
+  }
+
+  &__descr-wrapper {
+    font-size: 0.9rem;
+  }
+
+  &__descr {
+    margin-top: 15px;
+  }
+}
+
+.pickup-advantages {
+  margin: 50px 0!important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    padding: 0 2.5rem;
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: 300;
+    color: var(--white-60);
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+    width: 120px;
+    height: 70px;
+
+    & img {
+      width: inherit;
+    }
+  }
+}
+
+@media (min-width: 375px) {
+  .pickup-contacts {
+    grid-template-rows: repeat(2, 190px);
+
+    &__item {
+      border-radius: 10px;
+    }
+
+    &__phone {
+      font-size: 1rem;
+    }
+
+    &__descr-wrapper {
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+    &__btn {
+      padding: 0 1rem !important;
+    }
+  }
+}
+
+@media (min-width: 450px) {
+  .pickup-contacts {
+
+    &__btn {
+      font-size: 1rem;
+    }
+  }
+  .pickup-advantages {
+
+    &__item {
+      padding: 0 3.5rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .pickup {
+
+    &__title {
+      margin: 3rem 0 1rem 0!important;
+    }
+
+    &__text a {
+      margin: 0 10px;
+    }
+  }
+
+  .pickup-contacts {
+    margin: 45px 0 !important;
+    grid-template-rows: repeat(2, 260px);
+    grid-gap: 15px 20px;
+
+    &__item {
+      padding: 20px 40px;
+    }
+
+    &__phone-wrapper {
+      margin-top: 15px;
+    }
+
+    &__phone {
+      letter-spacing: 1px;
+      font-size: 1.2rem;
+    }
+
+    &__mail {
+      letter-spacing: 1px;
+    }
+
+    &__descr-wrapper {
+      font-size: 1.2rem;
+    }
+
+    &__descr {
+      letter-spacing: 1px;
+    }
+
+    &__icon {
+      width: 65px;
+      height: 65px;
+    }
+
+    &__btn {
+      margin: 20px 0 0 0;
+    }
+  }
+
+  .pickup-advantages {
+    margin: 70px 0 !important;
+    flex-direction: row;
+
+    &__item {
+      padding: 0 0.5rem;
+      margin-bottom: 0;
+      height: 150px;
+      flex: 1;
+    }
+
+    &__descr {
+      font-size: 0.8rem!important;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .pickup {
+    
+    &__text {
+      width: 85%;
+    }
+  }
+  .pickup-contacts {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 235px);
+    grid-gap: 15px;
+
+    &__item {
+      padding: 20px 10px;
+    }
+    
+    &__phone-wrapper {
+      margin-top: 10px;
+    }
+
+    &__phone {
+      font-size: 1rem;
+    }
+
+    &__descr-wrapper {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .pickup {
+
+    &__text {
+      width: 70%;
+      font-size: 1rem;
+    }
+  }
+  .pickup-contacts {
+    grid-template-rows: repeat(1, 250px);
+
+    &__item {
+      padding: 20px 40px;
+    }
+
+    &__phone-wrapper {
+      margin-top: 15px;
+    }
+
+    &__phone {
+      margin-top: 8px;
+    }
+
+    &__descr {
+      margin-top: 20px;
+    }
+
+    &__mail {
+      margin-top: 20px;
+    }
+
+    &__btn {
+      padding: 0 1.5rem !important;
+    }
+  }
+
+  .pickup-advantages {
+    margin: 100px 0 !important;
+    &__item {
+      height: 180px;
+      padding: 0 1.5rem;
+    }
+
+    &__icon {
+      width: 140px;
+      height: 80px;
+    }
+
+    &__descr {
+      font-size: 1.1rem !important;
+    }
+  }
+}
+
+@media (min-width: 1550px) {
+  .pickup {
+
+    &__text {
+      width: 60%;
+    }
+  }
+  .pickup-contacts {
+    margin: 60px 0 !important;
+    grid-template-rows: repeat(1, 300px);
+    grid-gap: 20px;
+
+    &__icon {
+      width: 90px;
+      height: 90px;
+    }
+
+    &__phone {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    &__mail {
+      margin-top: 25px;
+    }
+
+    &__descr-wrapper {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    &__descr {
+      margin-top: 25px;
+    }
+
+    &__btn {
+      margin: 25px 0 0 0;
+      padding: 0 2rem !important;
+    }
+  }
+
+  .pickup-advantages {
+      padding: 0 4rem;
+
+    &__item {
+      height: 245px;
+      padding: 0 3rem;
+    }
+
+    &__icon {
+      margin-bottom: 30px;
+      width: 230px;
+      height: 120px;
+    }
+
+    &__descr {
+      font-size: 1.3rem !important;
+    }
+  }
+}
+
+@media (min-width: 1850px) {
+  .pickup {
+
+    &__text {
+      width: 60%;
+      font-size: 1.2rem;
+    }
+  }
+  .pickup-contacts {
+    margin: 70px 0 !important;
+    grid-template-rows: repeat(1, 380px);
+
+    &__item {
+      padding: 30px 60px;
+    }
+
+    &__icon {
+      width: 120px;
+      height: 120px;
+    }
+
+    &__phone {
+      margin-top: 20px;
+      font-size: 1.3rem;
+    }
+
+    &__descr-wrapper {
+      font-size: 1.3rem;
+    }
+
+    &__descr {
+      margin-top: 30px;
+    }
+
+    &__btn {
+      padding: 0 3rem !important;
+      margin: 30px 0 0 0;
+    }
+  }
+}
+
+@media (min-width: 2150px) {
+  .pickup {
+
+    &__text {
+      font-size: 1.3rem;
+    }
+  }
+  .pickup-contacts {
+
+    &__item {
+      padding: 30px 85px;
+    }
+
+    &__descr-wrapper {
+      font-size: 1.4rem;
+    }
+
+    &__phone {
+      font-size: 1.4rem;
+    }
+  }
+  .pickup-advantages {
+    margin: 130px 0 !important;
+
+    &__item {
+      height: 260px;
+      padding: 0 4rem;
+    }
+
+    &__icon {
+      margin-bottom: 40px;
+      width: 270px;
+      height: 150px;
+    }
+    &__descr {
+      font-size: 1.5rem !important;
+    }
+  }
+}

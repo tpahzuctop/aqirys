@@ -1,0 +1,168 @@
+.cart {
+  grid-area: cart;
+  justify-self: center;
+  max-width: 600px;
+  @media (min-width: 1050px) {
+    justify-self: stretch;
+  }
+  @media (min-width: 1550px) {
+    justify-self: center;
+    width: 80%;
+  }
+  & .price {
+    margin: 0 auto;
+  }
+  & .add2cart {
+    width: 100%;
+    padding: 1rem;
+    color:var(--white);
+    background: rgb(255, 133, 0);
+    background: -moz-linear-gradient(90deg, rgba(255, 133, 0, 1) 0%, rgba(209, 5, 12, 1) 50%, rgba(115, 40, 205, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 133, 0, 1) 0%, rgba(209, 5, 12, 1) 50%, rgba(115, 40, 205, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 133, 0, 1) 0%, rgba(209, 5, 12, 1) 50%, rgba(115, 40, 205, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--base-color)", endColorstr=" var(--base-color-purple) ", GradientType=1);
+    border-radius: var(--border-radius);
+    & input {
+      width: 100%;
+      background: var(--black);
+      color: var(--white);
+      border-radius: var(--border-radius-5);
+      border:none;
+      outline:none;
+      &:hover {
+        background:var(--white);
+        color:var(--black) !important;
+        border-color: var(--black);
+      }
+      &:disabled {
+        background:var(--black-15) !important;
+        color:var(--white-40) !important;
+        cursor: not-allowed;
+        border:none !important;
+      }
+    }
+    & .storequickorder-button {
+      background: none;
+      border: 3px solid var(--black);
+      &:hover {
+        background: var(--black);
+        color: var(--white) !important;
+      }
+      &:disabled {
+        background:var(--black-15) !important;
+        color:var(--white-40) !important;
+        cursor: not-allowed;
+        border:none !important;
+      }
+    }
+  }
+  & .frontend-plugin-hook {
+    text-align: center;
+  }
+  & .buttons-color-bg-block{
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  & .services {
+    padding: 2.5rem 0;
+    & div {
+      & label {
+        padding: .25rem 0;
+        font-size: 0.76rem;
+        @media (min-width: 1550px) {
+          font-size: .9rem;
+        }
+        & .service-price {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  & #cart-form {
+    & .prices {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 1rem;
+      & span.compare-at-price {
+        width: 40%;
+        color: var(--base-color-red);
+        text-decoration: line-through;
+        padding: 0 0 1.5rem 0;
+        font-size: 1.45rem;
+        justify-self: flex-start;
+      }
+      & span.price {
+        width: 60%;
+        color: var(--base-color);
+        font-weight: 700;
+        font-size: 2.25rem;
+        padding: 0 0 1.5rem 0;
+        margin: 0;
+        display: block;
+      }
+    }
+    & .stocks {
+        padding: .5rem 0;
+    }
+  }
+}
+.series-agon-pro {
+  & .cart {
+    & .add2cart {
+      background: var(--base-color-agon-pro-2);
+      background: -moz-linear-gradient(90deg, var(--base-color-agon-pro-1) 0%, var(--base-color-agon-pro-2) 50%, var(--base-color-agon-pro-3) 100%);
+      background: -webkit-linear-gradient(90deg, var(--base-color-agon-pro-1) 0%, var(--base-color-agon-pro-2) 50%, var(--base-color-agon-pro-3) 100%);
+      background: linear-gradient(90deg, var(--base-color-agon-pro-1) 0%, var(--base-color-agon-pro-2) 50%, var(--base-color-agon-pro-3) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--base-color-agon-pro-1)", endColorstr="var(--base-color-agon-pro-2)", GradientType=1);
+    }
+    & #cart-form {
+      & .prices {
+        & span.price {
+          color: var(--base-color-agon-pro-2);
+        }
+      }
+    }
+  }
+}
+.series-agon {
+  & .cart {
+    & .add2cart {
+      background: var(--base-color-agon-2);
+      background: -moz-linear-gradient(90deg, var(--base-color-agon-1) 0%, var(--base-color-agon-2) 50%, var(--base-color-agon-3) 100%);
+      background: -webkit-linear-gradient(90deg, var(--base-color-agon-1) 0%, var(--base-color-agon-2) 50%, var(--base-color-agon-3) 100%);
+      background: linear-gradient(90deg, var(--base-color-agon-1) 0%, var(--base-color-agon-2) 50%, var(--base-color-agon-3) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--base-color-agon-1)", endColorstr="var(--base-color-agon-2)", GradientType=1);
+    }
+    & #cart-form {
+      & .prices {
+        & span.price {
+          color: var(--base-color-agon-2);
+        }
+      }
+    }
+  }
+}
+.series-b2b {
+  & .cart {
+    & .add2cart {
+      background: var(--aoc-b2b);
+      background: -moz-linear-gradient(90deg, var(--aoc-b2b) 0%, var(--aoc-b2b) 50%, var(--aoc-b2b) 100%);
+      background: -webkit-linear-gradient(90deg, var(--aoc-b2b) 0%, var(--aoc-b2b) 50%, var(--aoc-b2b) 100%);
+      background: linear-gradient(90deg, var(--aoc-b2b) 0%, var(--aoc-b2b) 50%, var(--aoc-b2b) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--aoc-b2b)", endColorstr="var(--aoc-b2b)", GradientType=1);
+    }
+    & #cart-form {
+      & .prices {
+        & span.price {
+          color: var(--aoc-b2b);
+        }
+      }
+    }
+  }
+}

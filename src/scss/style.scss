@@ -1,0 +1,87 @@
+@charset 'UTF-8';
+@import 'agonbyaoc/variables/root';
+
+/* Подключение шрифтов */
+@import 'agonbyaoc/fonts/fonts';
+
+
+/* Общий сброс стилей браузера */
+@import 'agonbyaoc/reset/browsers/reset';
+@import 'agonbyaoc/reset/browsers/scrollbar';
+@import 'agonbyaoc/reset/browsers/placeholder';
+
+
+/* Переменные цвета, градиенты, контейнеры, кнопки */
+@import 'agonbyaoc/variables/padding';
+@import 'agonbyaoc/variables/margin';
+@import 'agonbyaoc/variables/background';
+@import 'agonbyaoc/variables/containers';
+@import 'agonbyaoc/variables/buttons';
+@import 'agonbyaoc/variables/html-body';
+@import 'agonbyaoc/variables/h1-h6';
+
+
+/* Блоки хлебные крошки, галереи, отзывы и т.д. */
+@import 'agonbyaoc/blocks/main';
+@import 'agonbyaoc/blocks/breadcrumb';
+@import 'agonbyaoc/blocks/club-call';
+@import 'agonbyaoc/blocks/category';
+@import 'agonbyaoc/blocks/header';
+@import 'agonbyaoc/blocks/footer';
+@import 'agonbyaoc/blocks/three-ways';
+@import 'agonbyaoc/blocks/toast-message';
+@import 'agonbyaoc/blocks/email-distribution';
+@import 'agonbyaoc/blocks/nav-fixed-mobile';
+
+/* Блоки блога */
+@import 'agonbyaoc/blocks/blog/club-gallery';
+@import 'agonbyaoc/blocks/blog/club-style';
+@import 'agonbyaoc/blocks/blog/stream-posts';
+
+
+/* Блоки магазина */
+@import 'agonbyaoc/blocks/shop/category_descriptions';
+@import 'agonbyaoc/blocks/shop/compare';
+@import 'agonbyaoc/blocks/shop/info-product';
+@import 'agonbyaoc/blocks/shop/filters';
+@import 'agonbyaoc/blocks/shop/my-profile';
+@import 'agonbyaoc/blocks/shop/obzor';
+@import 'agonbyaoc/blocks/shop/price';
+@import 'agonbyaoc/blocks/shop/product';
+@import 'agonbyaoc/blocks/shop/product-list';
+@import 'agonbyaoc/blocks/shop/product-list-item';
+@import 'agonbyaoc/blocks/shop/product-cart.scss';
+@import 'agonbyaoc/blocks/shop/promo';
+@import 'agonbyaoc/blocks/shop/review';
+@import 'agonbyaoc/blocks/shop/sliders';
+@import 'agonbyaoc/blocks/shop/tag';
+@import 'agonbyaoc/blocks/shop/thumb-list';
+@import 'agonbyaoc/blocks/shop/stream-reviews';
+@import 'agonbyaoc/blocks/shop/stream-clubs';
+@import 'agonbyaoc/blocks/shop/pickup';
+
+
+/* Стили плагинов */
+@import 'agonbyaoc/reset/plugins/callb';
+@import 'agonbyaoc/reset/plugins/cityselect';
+@import 'agonbyaoc/reset/plugins/fancybox';
+@import 'agonbyaoc/reset/plugins/plugin_arrived';
+@import 'agonbyaoc/reset/plugins/quickorder_alpha';
+@import 'agonbyaoc/reset/plugins/gallery_fancybox';
+
+
+/* Сброс стилей вебасиста */
+@import 'agonbyaoc/reset/webasyst/cart';
+@import 'agonbyaoc/reset/webasyst/form';
+@import 'agonbyaoc/reset/webasyst/my_webasyst_style';
+@import 'agonbyaoc/reset/webasyst/order';
+@import 'agonbyaoc/reset/webasyst/wa-form-change';
+@import 'agonbyaoc/reset/webasyst/wa-iu-change';
+
+
+/* popup */
+@import 'agonbyaoc/blocks/popup';
+@import 'agonbyaoc/blocks/close-button';
+@import 'agonbyaoc/blocks/popup__contacts';
+
+@import 'agonbyaoc/blocks/shop/change-site';
