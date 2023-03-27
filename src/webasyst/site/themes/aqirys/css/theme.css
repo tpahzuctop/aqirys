@@ -1,0 +1,14 @@
+html, body {
+    background: #171717;
+    color: #cccccc;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #00aeee;
+}

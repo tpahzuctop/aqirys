@@ -1,0 +1,28 @@
+<h1>[`My orders`]</h1>
+
+
+{foreach $orders as $o}
+    <div class="orders-list__number">
+        {$o.id_str}
+    </div>
+    <div class="orders-list__create-date">
+        {$o.create_datetime|wa_datetime}
+    </div>
+    <div class="orders-list__state">
+        {$o.state->getName()}
+    </div>
+    <div class="orders-list__price">
+        {$o.total|wa_format_amount_currency:$o.currency}
+        <span>{$o.tax|wa_format_amount_currency:$o.currency}</span>
+    </div>
+
+
+        {$o|wa_dumpc}
+{foreachelse}
+    [`You have no order history yet.`]
+{/foreach}
+
+
+<!-- plugin hook: 'frontend_my_orders' -->
+{* @event frontend_my_orders.%plugin_id% *}
+{foreach $frontend_my_orders as $_}{$_}{/foreach}

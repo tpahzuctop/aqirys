@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
+<theme id="aqirys" system="0" vendor="efimov-alexey" author="efimov-alexey" app="shop" parent_theme_id="site:aqirys" version="1.0.0">
+    <name locale="en_US">Aqirys</name>
+    <name locale="ru_RU">Aqirys</name>
+    <description locale="ru_RU">Семейство адаптивных тем дизайна.</description>
+    <files>
+        <file path="index.html" parent="1">
+        </file>
+        <file path="home.html">
+            <description locale="en_US">Storefront homepage</description>
+            <description locale="ru_RU">Главная витрина магазина</description>
+        </file>
+        <file path="error.html" parent="1">
+        </file>
+        <file path="login.html" parent="1">
+        </file>
+        <file path="forgotpassword.html" parent="1">
+        </file>
+        <file path="signup.html" parent="1">
+        </file>
+    </files>
+    <about locale="en_US">
+        <![CDATA[
+        <p><b>Aqirys</b> is a universal adaptive design theme family for all basic Webasyst apps: Site, Blog, Photos, Shop-Script, and others. The parent (main) theme of the family, which includes the basic set of CSS rules and the common layout template index.html, is the Clear (i.e. this) theme for the Site application. All Clear design themes used in other applications (e.g., Blog or Photos) link common CSS and index.html layout file from the main (i.e. this) theme.</p>
+        <p>Clear design themes automatically link CSS depending on a visitor's device. Supported devices and platforms: iOS or Android based mobile devices, tablet computers such as iPad, common desktop computers and laptops.</p>
+        ]]>
+    </about>
+    <about locale="ru_RU">
+        <![CDATA[
+        <p><b>Aqirys</b> — это универсальное семейство адаптивных тем дизайна для всех базовых приложений фреймворка Вебасист: Сайт, Блог, Фото, Shop-Script и других. Родительской (основной) темой семейства, включающей в себя базовый набор CSS-стилей и общий макет дизайна index.html, является тема Clear для приложения «Сайт» (данная тема). Все темы дизайна Clear для других приложений (Блог, Фото и других) используют базовый CSS и index.html из родительской (основной) темы.</p>
+        <p>Темы дизайна семейства Clear оптимизированы для всех современных браузеров, планшетных компьютеров и мобильных устройств на основе iOS и Android. CSS-стили подключаются в зависимости от разрешения и типа устройства, которым пользуется посетитель сайта.</p>
+        ]]>
+    </about>
+    <settings>
+        <setting var="shop_divider_1" control_type="group_divider">
+            <value></value>
+            <name locale="en_US">Shop settings</name>
+            <name locale="ru_RU">Настройки магазина</name>
+        </setting>
+    </settings>
+    <thumbs>
+        <thumb>48x48</thumb>
+        <thumb>96x96</thumb>
+        <thumb>200</thumb>
+        <thumb>400</thumb>
+        <thumb>970</thumb>
+    </thumbs>
+    <locales>
+        <locale>
+            <msgid>Delete all products</msgid>
+            <msgstr locale="ru_RU">Удалить все товары</msgstr>
+        </locale>
+    </locales>
+</theme>

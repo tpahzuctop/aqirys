@@ -1,7 +1,5 @@
-<div class="content">
-    <div id="page" role="main">
-
-        {if !empty($confirmed_email)}
+{strip}
+    {if !empty($confirmed_email)}
         
             <h1>[s`Thank you!`]</h1>
             <p>[s`You have successfully confirmed your email.`]</p>
@@ -22,6 +20,4 @@
             {$wa->signupForm($errors)}
             
         {/if}
-
-    </div>
-</div>
+{/strip}
