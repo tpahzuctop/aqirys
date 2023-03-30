@@ -29,6 +29,10 @@
             <description locale="en_US">Login page</description>
             <description locale="ru_RU">Страница входа для пользователей</description>
         </file>
+        <file path="my.profile.html">
+            <description locale="en_US">My profile: contact info editing form</description>
+            <description locale="ru_RU">Мой профиль: редактирование контактной информации</description>
+        </file>
         <file path="signup.html" custom="0">
             <description locale="en_US">Sign up page</description>
             <description locale="ru_RU">Страница регистрации пользователей</description>

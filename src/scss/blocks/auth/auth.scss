@@ -1,0 +1,17 @@
+.auth, .singup, .forgotpassword {
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  padding: 8rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(64, 64, 64, 0.375);
+}
+.auth__title, .singup__title, .forgotpassword__title {
+  color: var(--white);
+  letter-spacing: 1px;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 2rem;
+}

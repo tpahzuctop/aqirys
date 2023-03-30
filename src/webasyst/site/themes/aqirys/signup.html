@@ -1,23 +1,28 @@
 {strip}
-    {if !empty($confirmed_email)}
-        
-            <h1>[s`Thank you!`]</h1>
-            <p>[s`You have successfully confirmed your email.`]</p>
-            
+<div class="singup">
+    <div class="singup__inner">
+        {if !empty($confirmed_email)}
+
+        <h1 class="singup__title">[s`Thank you!`]</h1>
+        <p>[s`You have successfully confirmed your email.`]</p>
+
         {else if !empty($contact)}
-        
-            <h1>[s`Thank you!`]</h1>
-            <p>[s`You have successfully signed up.`]</p>
-    
-            {if !empty($email_confirmation_hash)}
-                <p><em>[s`A confirmation link has been sent to you by email. Please click this link to confirm your signup and to sign in.`]</em></p>
-            {/if}
-            
-        {else}
-        
-            <h1>[s`Sign up`]</h1>
-            {$wa->authAdapters()}
-            {$wa->signupForm($errors)}
-            
+
+        <h1 class="singup__title">[s`Thank you!`]</h1>
+        <p class="singup__description">[s`You have successfully signed up.`]</p>
+
+        {if !empty($email_confirmation_hash)}
+        <p class="singup__description"><em>[s`A confirmation link has been sent to you by email. Please click this link to confirm your signup and to sign in.`]</em></p>
         {/if}
+
+        {else}
+
+        <h1 class="singup__title">[s`Sign up`]</h1>
+        <p class="singup__description">
+            {$wa->authAdapters()}
+            {$wa->signupForm($errors, ['include_css'=> false])}
+        </p>
+        {/if}
+    </div>
+</div>
 {/strip}

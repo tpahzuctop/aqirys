@@ -1,3 +1,5 @@
+{strip}
+{$frontParameters = waRequest::param()}
 <!DOCTYPE html>
 <html lang="{if $wa->locale()}{$wa->locale()}{else}en{/if}">
 
@@ -12,7 +14,7 @@
 <meta http-equiv="x-ua-compatible" content="IE=edge">
 
 <!-- css -->
-<link href="{$wa_theme_url}theme.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+<link href="{$wa_theme_url}css/theme.css?v{$wa_theme_version}1" rel="stylesheet" type="text/css"/>
 {$wa->css()}
 
 <!-- js -->
@@ -36,11 +38,14 @@
 </script>
 <![endif]-->
 </head>
-<body id="{$wa_app}">
-
-{waRequest::param()|wa_dumpc}
-{if $wa->isAuthEnabled()}
-<!-- auth & sign up links -->
+<body id="{$wa_app}" {if $frontParameters.module == 'login' || $frontParameters.module == 'signup' || $frontParameters.module == 'forgotpassword'}class="bg-gradient-top"{/if}>
+{if $frontParameters.module == 'login' || $frontParameters.module == 'signup' || $frontParameters.module == 'forgotpassword'}
+    <main>
+        {include file="`$wa_active_theme_path`/content.html" inline}
+    </main>
+{else}
+    {if $wa->isAuthEnabled()}
+    <!-- auth & sign up links -->
     <ul class="menu-h">
         {if $wa->user()->isAuth()}
         {if $wa->shop}
@@ -54,8 +59,7 @@
         <li><a href="{$wa->signupUrl()}">[s`Sign up`]</a></li>
         {/if}
     </ul>
-{/if}
-
+    {/if}
     <header>
         {include file="`$wa_active_theme_path`/header.html" inline}
     </header>
@@ -67,5 +71,7 @@
     <footer>
         {include file="`$wa_active_theme_path`/footer.html" inline}
     </footer>
+{/if}
 </body>
 </html>
+{/strip}

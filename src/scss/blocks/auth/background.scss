@@ -1,0 +1,17 @@
+.bg-gradient-top {
+  width: 150vw;
+  height: 100vh;
+  background-image: radial-gradient(50% 50% at 50% 50%,rgba(153,51,153,.2) 0,rgba(137,45,137,.1) 46.35%,rgba(0,104,142,0) 100%),radial-gradient(50% 50% at 50% 50%,rgba(153,51,153,.2) 0,rgba(137,45,137,.1) 46.35%,rgba(0,104,142,0) 100%),radial-gradient(50% 50% at 50% 50%,rgba(153,51,153,.2) 0,rgba(137,45,137,.1) 46.35%,rgba(0,104,142,0) 100%);
+  background-size: 120% 100%;
+  background-position: -50vw -45vh;
+  background-repeat: no-repeat;
+}
+
+.bg-gradient-top main {
+  width: 150vw;
+  height: 100vh;
+  background-image: radial-gradient(50% 50% at 50% 50%,rgba(0,174,238,.2) 0,rgba(0,156,214,.1) 46.35%,rgba(91,30,91,0) 100%),radial-gradient(50% 50% at 50% 50%,rgba(0,174,238,.2) 0,rgba(0,156,214,.1) 46.35%,rgba(91,30,91,0) 100%),radial-gradient(50% 50% at 50% 50%,rgba(0,174,238,.2) 0,rgba(0,156,214,.1) 46.35%,rgba(91,30,91,0) 100%);
+  background-size: 120% 100%;
+  background-position: 20vw -25vh;
+  background-repeat: no-repeat;
+}

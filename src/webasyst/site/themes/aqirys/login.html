@@ -1,3 +1,13 @@
-<h1>[s`Login`]</h1>
-{$wa->authAdapters()}
-{$wa->loginForm($error, empty($without_form))}
+{strip}
+<div class="auth">
+    <div class="auth__inner">
+        <h1 class="auth__title">
+            [s`Login`]
+        </h1>
+        <p class="auth__description">
+            {$wa->authAdapters()}
+            {$wa->loginForm($error, ['include_css'=> false])}
+        </p>
+    </div>
+</div>
+{/strip}
