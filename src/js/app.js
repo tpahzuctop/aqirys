@@ -1,18 +1,6 @@
 import * as allFunctions from './modules/functions.js';
 
-    allFunctions.isWebp();
-
-import deleteCookie from './modules/deleteCookie.js';
-
-import 'swiper/bundle';
-    allFunctions.compareSliders();
-    allFunctions.productSliderMainPage();
-    allFunctions.promoSlider();
-    allFunctions.benefitsSlider();
-    allFunctions.checkStreamSlider();
-    allFunctions.reviewsStreamSlider();
-    allFunctions.clubsStreamSlider();
-    allFunctions.gallerySlider();
+allFunctions.isWebp();
 
 import 'lazysizes';
 

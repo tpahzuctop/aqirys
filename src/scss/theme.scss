@@ -1,4 +1,5 @@
 @charset 'UTF-8';
+@import 'reset/browsers/normalize';
 @import 'variables/root';
 
 /* Подключение шрифтов */
@@ -6,15 +7,30 @@
 
 
 /* Общий сброс стилей браузера */
-@import 'reset/browsers/reset';
 @import 'reset/browsers/scrollbar';
 @import 'reset/browsers/placeholder';
+@import 'reset/browsers/autofill';
 
 /* main */
 @import 'variables/html-body';
+@import 'variables/link';
+@import 'variables/background';
 
 /* auth */
-@import 'blocks/auth/background';
 @import 'blocks/auth/auth';
 @import 'blocks/auth/login';
 @import 'blocks/auth/singup';
+@import 'blocks/auth/forgot-password';
+
+/* header, content, footer */
+@import 'blocks/header';
+@import 'blocks/logo';
+@import 'blocks/nav';
+@import 'blocks/right-panel';
+@import 'blocks/footer';
+
+/* shop */
+@import 'blocks/shop/home/gaming-gear';
+
+/* others */
+@import 'variables/icons';

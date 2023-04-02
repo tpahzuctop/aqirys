@@ -1,15 +1,3 @@
-.wa-login-form-wrapper input[type="text"],
-.wa-login-form-wrapper input[type="email"],
-.wa-login-form-wrapper input[type="password"] {
-  width: 210px;
-  max-width: 100%;
-  padding: 0.25em 0.25em;
-  box-sizing: border-box;
-  font-size: 1.142857142857143em;
-  line-height: 1.125em;
-  border: none;
-  margin-right: 16px;
-}
 .wa-login-form-wrapper input.wa-onetime-password {
   width: 80px;
   min-width: 80px;
@@ -48,16 +36,7 @@
   border-color: #cfcfcf;
   outline: 0;
 }
-.wa-login-form-wrapper input:hover,
-.wa-login-form-wrapper select:hover,
-.wa-login-form-wrapper textarea:hover {
-  border-color: #888;
-}
-.wa-login-form-wrapper input:focus,
-.wa-login-form-wrapper select:focus,
-.wa-login-form-wrapper textarea:focus {
-  border-color: #006bd8;
-}
+
 .wa-login-form-wrapper input::-webkit-input-placeholder,
 .wa-login-form-wrapper select::-webkit-input-placeholder,
 .wa-login-form-wrapper textarea::-webkit-input-placeholder {
@@ -82,26 +61,14 @@
   display: block;
   margin: 0.666666666666667em 0 0;
   color: #d02d14;
-  font-size: 0.857142857142857em;
+  font-size: 0.875rem;
   font-style: normal;
   line-height: 1.166666666666667em;
 }
 .wa-login-form-wrapper .wa-error-msg:first-child {
   margin-top: 0;
 }
-.wa-login-form-wrapper .wa-field {
-  margin: 1.071428571428571em 0 0;
-}
-.wa-login-form-wrapper .wa-field:first-child {
-  margin-top: 0;
-}
-.wa-login-form-wrapper .wa-field .wa-name {
-  display: block;
-  margin-bottom: 0.5em;
-  font-size: 0.857142857142857em;
-  line-height: 1.166666666666667em;
-  color: var(--grey);
-}
+
 .wa-login-form-wrapper .wa-field .wa-value {
   margin: 0;
 }
@@ -110,13 +77,13 @@
 }
 .wa-login-form-wrapper .wa-adapters-section .wa-section-header {
   margin: 0 0 1.071428571428571em;
-  font-size: 0.857142857142857em;
+  font-size: 0.875rem;
   line-height: 1.166666666666667em;
   color: #888;
 }
 .wa-login-form-wrapper .wa-adapters-section .wa-section-divider {
   margin: 2.142857142857143em 0 0;
-  font-size: 0.857142857142857em;
+  font-size: 0.875rem;
   line-height: 1.166666666666667em;
   color: #bbb;
   overflow: hidden;
@@ -182,7 +149,7 @@
   color: #fff;
 }
 .wa-login-form-wrapper .wa-captcha-section .wa-captcha-code {
-  margin-top: 0.5em;
+  margin-top: 0.65rem;
 }
 .wa-login-form-wrapper .wa-captcha-section .wa-captcha-code .wa-captcha-img-wrapper {
   display: inline-block;
@@ -238,10 +205,7 @@
 .wa-login-form-wrapper .wa-login-form-fields {
   margin: 0;
 }
-.wa-login-form-wrapper .wa-login-form-fields .wa-login-forgotpassword-url {
-  margin-right: 16px;
-  display: inline-block;
-}
+
 .wa-login-form-wrapper .wa-login-form-actions {
   position: relative;
   margin: 1.071428571428571em 0 0;
@@ -249,16 +213,11 @@
 .wa-login-form-wrapper .wa-login-form-actions .wa-uncaught-errors {
   margin-bottom: 1.071428571428571em;
 }
-.wa-login-form-wrapper .wa-login-form-actions .wa-signup-url {
-  margin-top: 2.142857142857143em;
-}
+
 .wa-login-form-wrapper .wa-field.wa-separator {
   height: 10px;
 }
-.wa-login-form-wrapper .wa-field.wa-required .wa-name:after {
-  content: " *";
-  color: #faa;
-}
+
 .wa-login-form-wrapper .wa-field .wa-value label {
   display: block;
 }

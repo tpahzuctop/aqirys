@@ -1,5 +1,6 @@
 {strip}
 {$frontParameters = waRequest::param()}
+
 <!DOCTYPE html>
 <html lang="{if $wa->locale()}{$wa->locale()}{else}en{/if}">
 
@@ -38,40 +39,30 @@
 </script>
 <![endif]-->
 </head>
-<body id="{$wa_app}" {if $frontParameters.module == 'login' || $frontParameters.module == 'signup' || $frontParameters.module == 'forgotpassword'}class="bg-gradient-top"{/if}>
+<body id="{$wa_app}">
+
 {if $frontParameters.module == 'login' || $frontParameters.module == 'signup' || $frontParameters.module == 'forgotpassword'}
+<div class="wrapper">
     <main>
         {include file="`$wa_active_theme_path`/content.html" inline}
     </main>
+</div>
 {else}
-    {if $wa->isAuthEnabled()}
-    <!-- auth & sign up links -->
-    <ul class="menu-h">
-        {if $wa->user()->isAuth()}
-        {if $wa->shop}
-        <li><a href="{$wa->getUrl('shop/frontend/my')}">[s`My account`]</a></li>
-        {else}
-        <li><strong>{$wa->user('name')}</strong></li>
-        {/if}
-        <li><a href="?logout">[s`Log out`]</a></li>
-        {else}
-        <li><a href="{$wa->loginUrl()}">[s`Log in`]</a></li>
-        <li><a href="{$wa->signupUrl()}">[s`Sign up`]</a></li>
-        {/if}
-    </ul>
-    {/if}
-    <header>
-        {include file="`$wa_active_theme_path`/header.html" inline}
-    </header>
-    <main>
-        <div class="container">
-            {include file="`$wa_active_theme_path`/content.html" inline}
-        </div>
-    </main>
-    <footer>
-        {include file="`$wa_active_theme_path`/footer.html" inline}
-    </footer>
+    <div class="wrapper">
+        <header>
+            {include file="header.html" inline}
+        </header>
+        <main>
+            <div class="container">
+                {include file="`$wa_active_theme_path`/content.html" inline}
+            </div>
+        </main>
+        <footer>
+            {include file="footer.html" inline}
+        </footer>
+    </div>
 {/if}
+<script src="{$wa_theme_url}js/app.min.js?v{$wa_theme_version}"></script>
 </body>
 </html>
 {/strip}

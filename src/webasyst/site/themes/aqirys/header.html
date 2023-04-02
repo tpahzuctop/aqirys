@@ -1,1 +1,62 @@
-header
+{$compare_list_count = count($wa->shop->inComparison())}
+{$compare_list = waRequest::cookie('shop_compare')}
+
+{$_cart_url = $wa->getUrl('shop/frontend/cart')}
+{$_my_profile_url = $wa->getUrl('shop/frontend/profile')}
+{$_my_orders_url = $wa->getUrl('shop/frontend/my')}
+{$_compare_url = $wa->getUrl('shop/frontend/compare')}
+
+
+{if method_exists($wa->shop, 'checkout')}
+    {$_cart_url = $wa->shop->checkout()->cartUrl()}
+{/if}
+
+
+
+<div class="logo">
+    <a href="/" title="{$wa->title()|escape}">
+        <img src="{$wa_theme_url}img/logo.svg" alt="{$wa->title()|escape}" title="{$wa->title()|escape}">
+    </a>
+</div>
+<nav>
+    <ul>
+        {$items = $wa->menu->get(145)}
+        {foreach $items as $item}
+        <li><a href="{$item.url}">{$item.name}</a></li>
+        {/foreach}
+    </ul>
+</nav>
+
+    <div class="right-panel">
+        {if $wa->isAuthEnabled()}
+            {if $wa->user()->isAuth()}
+            <a href="{$_my_profile_url}" title="Ваш профиль">
+                <svg class="icon">
+                    <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_account"></use>
+                </svg>
+            </a>
+            {else}
+            <a href="{$wa->loginUrl()}" title="Вход / Регистрация">
+                <svg class="icon">
+                    <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_login"></use>
+                </svg>
+            </a>
+            {/if}
+        {/if}
+        {if $_cart_url}
+        <a href="{$_cart_url}" title="Сравнение">
+            <svg class="icon">
+                <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_compare"></use>
+            </svg>
+            {if $wa->shop->cart->items()}<span class="red-dot-counter">{$wa->shop->cart->count()}</span>{/if}
+        </a>
+        {/if}
+        {if $_cart_url}
+        <a href="{$_cart_url}" class="cart" title="Корзина">
+            <svg class="icon">
+                <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_cart"></use>
+            </svg>
+            {if $wa->shop->cart->items()}<span class="red-dot-counter">{$wa->shop->cart->count()}</span>{/if}
+        </a>
+        {/if}
+    </div>

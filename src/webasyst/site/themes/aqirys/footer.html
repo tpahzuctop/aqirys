@@ -1,1 +1,23 @@
-footer
+{$gg = $wa->menu->get(138)}
+{$cp = $wa->menu->get(132)}
+<div class="logo">
+    <a href="/" title="{$wa->title()|escape}">
+        <img src="{$wa_theme_url}img/logo.svg" alt="{$wa->title()|escape}" title="{$wa->title()|escape}">
+    </a>
+</div>
+<nav class="footer-menu">
+    <h2>Игровое снаряжение</h2>
+    {foreach $gg as $item}
+    <div class="footer-menu-item">
+        <a href="{$item.url}">{$item.name}</a>
+    </div>
+    {/foreach}
+</nav>
+<nav class="footer-menu">
+    <h2>Компоненты компьютера</h2>
+    {foreach $cp as $item}
+    <div class="footer-menu-item">
+        <a href="{$item.url}">{$item.name}</a>
+    </div>
+    {/foreach}
+</nav>

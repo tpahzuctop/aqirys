@@ -20,7 +20,7 @@
         <h1 class="singup__title">[s`Sign up`]</h1>
         <p class="singup__description">
             {$wa->authAdapters()}
-            {$wa->signupForm($errors, ['include_css'=> false])}
+            {$wa->signupForm($errors, ['include_css'=> false])|replace:'placeholder':'autocomplete="off" placeholder'}
         </p>
         {/if}
     </div>

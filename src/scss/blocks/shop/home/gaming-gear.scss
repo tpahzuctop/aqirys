@@ -1,0 +1,116 @@
+.gaming-gear{
+  display: grid;
+  gap: 1rem;
+  flex-direction: column;
+  justify-items: stretch;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 150px 150px 200px 250px;
+  grid-template-areas:
+        "mice mice"
+        "mice mice"
+        "keyboards keyboards"
+        "mousepads chairs";
+  margin: 2rem 0;
+  @media (min-width: 393px) {
+    grid-template-rows: 150px 150px 200px 300px;
+  }
+  @media (min-width: 768px) {
+    grid-template-rows: 250px 150px 300px 350px;
+    gap: 2rem;
+  }
+  @media (min-width: 1050px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-template-areas:
+        "mice mice keyboards keyboards"
+        "mice mice mousepads chairs";
+  }
+}
+.mice, .keyboards, .mousepads, .chairs {
+  border-radius: 20px;
+  padding: 1rem;
+  min-width: 100px;
+  overflow: hidden;
+  box-sizing: border-box;
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+   & h2 {
+     font-size: 0.75rem;
+     line-height: 1.15;
+     font-weight: 300;
+     margin: 0;
+     text-transform: uppercase;
+     width: 90%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     flex-wrap: nowrap;
+     align-content: flex-start;
+     justify-content: space-between;
+     @media (min-width: 375px) {
+       font-size: 0.875rem;
+       line-height: 1.35;
+       letter-spacing: 1px;
+     }
+     & strong {
+       display: block;
+       margin: 0.5rem 0;
+       font-size: 1.25rem;
+       line-height: 1.05;
+       text-transform: none;
+       color: var(--white);
+       @media (min-width: 375px) {
+         letter-spacing: 1.5px;
+         line-height: 1.2;
+         font-size: 1.45rem;
+       }
+       @media (min-width: 393px) {
+         font-size: 1.55rem;
+       }
+     }
+   }
+}
+
+.mice {
+  grid-area: mice;
+  background: var(--black-dark);
+  & h2 {
+    & strong {
+      font-size: 1.45rem;
+      @media (min-width: 375px) {
+        font-size: 1.65rem;
+      }
+      @media (min-width: 393px) {
+        font-size: 1.95rem;
+      }
+      @media (min-width: 1050px) {
+        font-size: 2.15rem;
+      }
+      @media (min-width: 1250px) {
+        font-size: 2.35rem;
+      }
+      @media (min-width: 1550px) {
+        font-size: 2.95rem;
+      }
+      @media (min-width: 1850px) {
+        font-size: 3.15rem;
+      }
+    }
+  }
+}
+
+.keyboards {
+  grid-area: keyboards;
+  background: var(--blue-secondary);
+}
+
+.mousepads {
+  grid-area: mousepads;
+  background: var(--blue-dark);
+}
+
+.chairs {
+  grid-area: chairs;
+  background: var(--purple);
+}

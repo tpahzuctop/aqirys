@@ -1,32 +1,20 @@
 ::-webkit-scrollbar {
   width: .35rem;
   height: .35rem;
-  background: var(--white-35);
+  background: var(--white);
 }
 ::-webkit-scrollbar-button {
   height: 0;
   width: 0;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--base-color);
+  background:  var(--blue);
 }
 ::-webkit-scrollbar-corner {
-  background: var(--white-35);
+  background: var(--white);
 }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: var(--white-45);
-}
-
-.series-agon ::-webkit-scrollbar-thumb {
-  background: var(--base-color-agon-2);
-}
-
-.series-agon-pro ::-webkit-scrollbar-thumb {
-  background: var(--base-color-agon-pro-2);
-}
-
-.series-b2b ::-webkit-scrollbar-thumb {
-  background: var(--aoc-b2b);
+  color: var(--white);
 }
