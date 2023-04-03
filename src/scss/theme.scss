@@ -31,6 +31,18 @@
 
 /* shop */
 @import 'blocks/shop/home/gaming-gear';
+@import 'blocks/shop/home/headset';
+@import 'blocks/shop/category/category';
+@import 'blocks/shop/category/list-thumbs';
+@import 'blocks/shop/category/sub-categories';
+@import 'blocks/shop/menu-h';
+@import 'blocks/shop/breadcrumbs';
+
+/* shop product*/
+@import 'blocks/shop/product/product-promo';
+@import 'blocks/shop/product/product-name';
+
 
 /* others */
 @import 'variables/icons';
+

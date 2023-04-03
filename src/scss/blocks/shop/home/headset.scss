@@ -1,0 +1,46 @@
+.headset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 200px 250px 300px;
+  grid-template-areas:
+        "top-banner top-banner top-banner"
+        "text text text"
+        "side-banner side-banner side-banner";
+  gap: 1rem;
+  margin: 2rem 0;
+  @media (min-width: 393px) {
+    grid-template-rows: 200px 300px 300px;
+  }
+  @media (min-width: 768px) {
+    gap: 2rem;
+    grid-template-rows: 300px 350px 400px;
+  }
+  @media (min-width: 1050px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 350px;
+    grid-template-areas:
+    "top-banner side-banner"
+    "text side-banner"
+    "text side-banner";
+  }
+  &__top-banner, &__text, &__side-banner {
+    border-radius: 20px;
+    padding: 1rem;
+    min-width: 100px;
+    overflow: hidden;
+    box-sizing: border-box;
+    @media (min-width: 768px) {
+      padding: 2rem;
+    }
+  }
+  &__top-banner {
+    grid-area: top-banner;
+    background: var(--blue-secondary);
+    min-height: 200px;
+  }
+  &__text { grid-area: text; }
+  &__side-banner {
+    grid-area: side-banner;
+    background: var(--white);
+  }
+}

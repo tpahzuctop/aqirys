@@ -23,6 +23,7 @@ footer {
     width: 240px;
     @media (min-width: 375px) {
       width: 250px;
+      margin-top: 1.5rem;
     }
   }
   & nav.footer-menu {
@@ -34,6 +35,10 @@ footer {
     }
     @media (min-width: 768px) {
       min-width: 265px;
+    }
+    @media (min-width: 1050px) {
+      min-width: 200px;
+      margin: 2rem 0 0 2rem;
     }
     & h2 {
       font-size: 0.875rem;

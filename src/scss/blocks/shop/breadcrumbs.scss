@@ -1,0 +1,31 @@
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3em 0 1rem 0;
+  color: var(--grey-dark);
+  font-weight: 300;
+  font-size: .85rem;
+  @media (min-width: 1050px) {
+    margin: 6em 0 1rem 0;
+  }
+  & a {
+    color: var(--white);
+    &:hover {
+      color: var(--grey-dark);
+    }
+  }
+  & strong {
+    color: var(--blue);
+  }
+}
+
+.rarr {
+  padding: 0 .5rem;
+  @media (min-width: 1050px) {
+    padding: 0 1rem;
+  }
+}

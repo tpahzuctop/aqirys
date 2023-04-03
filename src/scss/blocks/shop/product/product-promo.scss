@@ -1,0 +1,14 @@
+.product__promo {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    & .product__image {
+        & img {
+            display: block;
+            width: 80%;
+            max-width: 970px;
+            margin: 6rem auto;
+        }
+
+    }
+}

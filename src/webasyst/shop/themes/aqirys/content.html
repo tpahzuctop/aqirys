@@ -1,11 +1,13 @@
 <!-- current page core content -->
   <!-- integrnal navigation breadcrumbs -->
-  {if !empty($breadcrumbs)}
-  <div class="breadcrumbs">
-    {foreach $breadcrumbs as $breadcrumb}
-    <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a> <span class="rarr">&rarr;</span>
-    {/foreach}
-  </div>
-  {/if}
 
-  {$content}
+{if !empty($breadcrumbs)}
+<div class="breadcrumbs">
+  {foreach $breadcrumbs as $breadcrumb}
+  <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a> <span class="rarr">&rarr;</span>
+  {/foreach}
+  <strong>{$wa->title()|escape}</strong>
+</div>
+{/if}
+
+{$content}
