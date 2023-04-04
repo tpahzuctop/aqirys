@@ -54,6 +54,9 @@
        line-height: 1.35;
        letter-spacing: 1px;
      }
+     @media (min-width: 420px) {
+       width: 60%;
+     }
      & strong {
        display: block;
        margin: 0.5rem 0;
@@ -76,14 +79,22 @@
 .mice {
   grid-area: mice;
   background: var(--black-dark);
+  background-size: 200px;
+  background-position-x: 32vw;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
   & h2 {
+    justify-content: flex-start;
     & strong {
       font-size: 1.45rem;
       @media (min-width: 375px) {
         font-size: 1.65rem;
       }
       @media (min-width: 393px) {
-        font-size: 1.95rem;
+        font-size: 1.85rem;
+      }
+      @media (min-width: 420px) {
+        font-size: 1.7rem;
       }
       @media (min-width: 1050px) {
         font-size: 2.15rem;
@@ -99,19 +110,139 @@
       }
     }
   }
+  @media (min-width: 375px) {
+    background-position-x: 35vw;
+    background-position-y: 15vh;
+  }
+  @media (min-width: 420px) {
+    background-position-x: 55vw;
+    background-position-y: center;
+    & h2 {
+      justify-content: space-between;
+    }
+  }
+  @media (min-width: 620px) {
+    background-position-x: 50vw;
+    background-size: 250px;
+    & h2 {
+      width: 50%;
+    }
+  }
+  @media (min-width: 720px) {
+    background-position-x: 48vw;
+    background-size: 280px;
+    & h2 {
+      width: 40%;
+    }
+  }
+  @media (min-width: 768px) {
+    background-size: 350px;
+  }
+  @media (min-width: 1050px) {
+    background-position-x: center;
+    background-size: 70%;
+    background-position-y: 260px;
+    & h2 {
+      justify-content: start;
+      width: 90%;
+    }
+  }
+  @media (min-width: 1150px) {
+    background-size: 65%;
+  }
+  @media (min-width: 1250px) {
+    background-size: 60%;
+  }
+  @media (min-width: 1550px) {
+    background-position-y: 85%;
+    background-size: 50%;
+    background-position-x: 90%;
+  }
+  @media (min-width: 1850px) {
+    background-size: 40%;
+  }
+  @media (min-width: 2000px) {
+    & h2 {
+      width: 60%;
+    }
+  }
+  @media (min-width: 2150px) {
+    background-size: 35%;
+  }
 }
 
 .keyboards {
   grid-area: keyboards;
   background: var(--blue-secondary);
+  background-size: 300px;
+  background-position-x: 45vw;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  @media (min-width: 375px) {
+    background-position-x: 50vw;
+  }
+  @media (min-width: 420px) {
+    background-position-x: 50vw;
+  }
+  @media (min-width: 620px) {
+    background-position-x: 45vw;
+    background-size: 380px;
+    & h2 {
+      width: 50%;
+    }
+  }
+  @media (min-width: 720px) {
+    background-position-x: 45vw;
+    background-size: 380px;
+    & h2 {
+      width: 40%;
+    }
+  }
+  @media (min-width: 768px) {
+    background-size: 500px;
+  }
+  @media (min-width: 850px) {
+    background-size: 600px;
+  }
+  @media (min-width: 1050px) {
+    background-position-x: 22vw;
+    background-size: 100%;
+  }
+  @media (min-width: 1550px) {
+    background-size: 80%;
+  }
+  @media (min-width: 1850px) {
+    background-size: 70%;
+  }
+  @media (min-width: 2150px) {
+    background-size: 60%;
+  }
 }
 
 .mousepads {
   grid-area: mousepads;
   background: var(--blue-dark);
+  background-size: 85%;
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  @media (min-width: 1050px) {
+    background-size: 60%;
+    background-position-y: top;
+  }
 }
 
 .chairs {
   grid-area: chairs;
   background: var(--purple);
+  background-size: contain;
+  background-position-x: 20vw;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  @media (min-width: 1050px) {
+    background-position: calc(100% + 80px) 0;
+  }
+  @media (min-width: 1450px) {
+    background-position: calc(100% + 40px) 0;
+  }
 }

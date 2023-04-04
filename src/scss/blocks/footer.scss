@@ -21,6 +21,17 @@ footer {
 
   & .logo {
     width: 240px;
+    & a {
+      padding: 0.25rem 0;
+      justify-content: flex-start;
+      & img {
+        width: auto;
+        height: 2.5rem;
+        @media (min-width: 480px) {
+          height: 3.5rem;
+        }
+      }
+    }
     @media (min-width: 375px) {
       width: 250px;
       margin-top: 1.5rem;
@@ -37,8 +48,14 @@ footer {
       min-width: 265px;
     }
     @media (min-width: 1050px) {
-      min-width: 200px;
+      max-width: 200px;
       margin: 2rem 0 0 2rem;
+      width: 200px;
+    }
+    @media (min-width: 1350px) {
+      max-width: 300px;
+      width: auto;
+      margin: 2rem auto 0 auto;
     }
     & h2 {
       font-size: 0.875rem;

@@ -1,7 +1,7 @@
 .headset {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px 250px 300px;
+  grid-template-rows: 200px auto 300px;
   grid-template-areas:
         "top-banner top-banner top-banner"
         "text text text"
@@ -9,11 +9,11 @@
   gap: 1rem;
   margin: 2rem 0;
   @media (min-width: 393px) {
-    grid-template-rows: 200px 300px 300px;
+    grid-template-rows: 200px auto 300px;
   }
   @media (min-width: 768px) {
     gap: 2rem;
-    grid-template-rows: 300px 350px 400px;
+    grid-template-rows: 300px auto 400px;
   }
   @media (min-width: 1050px) {
     grid-template-columns: 1fr 1fr;
@@ -23,6 +23,7 @@
     "text side-banner"
     "text side-banner";
   }
+
   &__top-banner, &__text, &__side-banner {
     border-radius: 20px;
     padding: 1rem;
@@ -33,14 +34,80 @@
       padding: 2rem;
     }
   }
+
   &__top-banner {
     grid-area: top-banner;
     background: var(--blue-secondary);
     min-height: 200px;
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media (min-width: 620px) {
+      background-size: 80%;
+    }
+    @media (min-width: 2150px) {
+      background-size: 65%;
+    }
   }
-  &__text { grid-area: text; }
+
+  &__text {
+    grid-area: text;
+    border-radius: 0;
+    padding: 2rem 0;
+    align-self: center;
+    @media (min-width: 768px) {
+      padding: 3rem 0;
+    }
+    & h2 {
+      line-height: 1.1;
+      font-weight: 300;
+      margin: 0;
+      font-size: 1.35rem;
+      letter-spacing: 1px;
+      color: var(--grey-dark);
+      & strong {
+        font-size: 1.65rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        display: block;
+        color: var(--white);
+        width: 80%;
+        @media (min-width: 375px) {
+          font-size: 1.65rem;
+        }
+        @media (min-width: 393px) {
+          font-size: 1.85rem;
+        }
+        @media (min-width: 420px) {
+          font-size: 1.7rem;
+        }
+        @media (min-width: 1050px) {
+          font-size: 2.15rem;
+        }
+        @media (min-width: 1250px) {
+          font-size: 2.35rem;
+        }
+        @media (min-width: 1550px) {
+          font-size: 2.95rem;
+        }
+        @media (min-width: 1850px) {
+          font-size: 3.15rem;
+        }
+      }
+      @media (min-width: 375px) {
+        font-size: 1.4rem;
+      }
+      @media (min-width: 768px) {
+        width: 80%;
+      }
+    }
+  }
+
   &__side-banner {
     grid-area: side-banner;
     background: var(--white);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
