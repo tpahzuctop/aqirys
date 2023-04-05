@@ -49,15 +49,13 @@
 </div>
 {else}
     <div class="wrapper">
-        <header>
+        <header class="header">
             {include file="header.html" inline}
         </header>
-        <main>
-            <div class="container">
-                {include file="`$wa_active_theme_path`/content.html" inline}
-            </div>
+        <main class="main">
+            {include file="`$wa_active_theme_path`/content.html" inline}
         </main>
-        <footer>
+        <footer class="footer">
             {include file="footer.html" inline}
         </footer>
     </div>

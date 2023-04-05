@@ -1,3 +1,4 @@
+<div class="container padding__big_vertical">
 {$wa->myNav('menu-h bottom-padded')}
 
 {if !empty($pin_required)}
@@ -9,7 +10,7 @@
         {if $wrong_pin}
             <p style="color:red">[`PIN is not valid`]</p>
         {/if}
-        <p>[`Please enter a 4-digit PIN that you have received in a notification from our online store.`]</p>
+        <p>[`Please enter a 4-digit PIN that you received with your order receipt by email.`]</p>
         <div>
             <input type="text" name="pin">
         </div>
@@ -36,7 +37,7 @@
     <!-- shipping plugin output -->
     {if !empty($order.params.tracking_number)}
         [`Shipment tracking number`]: {$order.params.tracking_number}
-        <br />
+        <br >
     {/if}
     {if !empty($tracking) && $order.state->getId() != 'completed'}
         <div class="plugin">
@@ -89,7 +90,8 @@
         {foreach $order.items as $item}
             <tr{if $item.type == 'service'} class="service"{/if}>
                 <td>{if $item.type == 'service'}+ {/if}{$item.name}
-                    {if $item.type == 'product' && !empty($item.download_link)}<a href="{$item.download_link}"><strong>[`Download`]</strong></a>{/if}</td>
+                    {if $item.type == 'product' && !empty($item.download_link)}<a href="{$item.download_link}"><strong>[`Download`]</strong></a>{/if}
+                </td>
                 <td class="align-right"><span class="gray">{wa_currency_html($item.price, $order.currency)} x</span> {$item.quantity}</td>
                 <td class="align-right">{wa_currency_html($item.price * $item.quantity, $order.currency)}</td>
             </tr>
@@ -129,3 +131,4 @@
 <!-- plugin hook: 'frontend_my_order' -->
 {* @event frontend_my_order.%plugin_id% *}
 {foreach $frontend_my_order as $_}{$_}{/foreach}
+</div>

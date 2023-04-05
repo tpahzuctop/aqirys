@@ -37,11 +37,18 @@
 @import 'blocks/shop/category/sub-categories';
 @import 'blocks/shop/menu-h';
 @import 'blocks/shop/breadcrumbs';
+/*import 'blocks/shop/profile/my-profile.scss*/
 
 /* shop product*/
 @import 'blocks/shop/product/product-promo';
 @import 'blocks/shop/product/product-name';
 
+/* shop order page */
+@import 'blocks/shop/order/s-order-section';
+@import 'blocks/shop/order/cart';
+@import 'blocks/shop/order/ui';
+@import 'blocks/shop/order/form';
+@import 'blocks/shop/order/loader';
 
 /* others */
 @import 'variables/icons';

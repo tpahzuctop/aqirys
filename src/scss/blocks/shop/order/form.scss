@@ -1,0 +1,7 @@
+.wa-order-form-wrapper.is-locked {
+  filter: blur(0.45rem);
+}
+
+.wa-order-form-wrapper.is-locked:after {
+  background: none !important;
+}
