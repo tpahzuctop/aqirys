@@ -1,5 +1,24 @@
 @charset "UTF-8";
 
+:root {
+  --black: #010210;
+  --black-dark: #212121;
+  --white: #ffffff;
+  --grey: #D7D9DC;
+  --grey-dark: #acaeaf;
+  --blue: #42a5f0;
+  --blue-dark: #009cd6;
+  --blue-darkest: #00688e;
+  --blue-secondary: #526A7C;
+  --purple: #B286FE;
+  --purple-dark: #892D89;
+  --purple-darkest: #5B1E5B;
+  --green: #B1EF42;
+  --red: #f04242;
+  --surface-color: #ffffff;
+  --curve: 40;
+}
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -182,37 +201,12 @@ template {
   display: none;
 }
 
-:root {
-  --black: #0A111E;
-  --black-dark: #171717;
-  --white: #ffffff;
-  --grey: #cccccc;
-  --grey-dark: #acaeaf;
-  --blue: #00aeee;
-  --blue-dark: #009cd6;
-  --blue-darkest: #00688e;
-  --blue-secondary: #526A7C;
-  --purple: #993399;
-  --purple-dark: #892D89;
-  --purple-darkest: #5B1E5B;
-  --red: #ff0024;
-  --surface-color: #fff;
-  --curve: 40;
-  --clr-1: var(--blue);
-  --clr-2: var(--purple);
-  --clr-3: #3ccaff;
-  --clr-4: #c146c1;
-  --blur: 1rem;
-  --fs: clamp(3rem, 8vw, 7rem);
-  --ls: clamp(-1.75px, -0.25vw, -3.5px);
-}
-
 /* Подключение шрифтов */
 
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-ExtraBold.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-ExtraBold.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-ExtraBold.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-ExtraBold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
@@ -220,7 +214,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Bold.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Bold.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Bold.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -228,7 +222,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Black.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Black.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Black.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Black.woff") format("woff");
   font-weight: 900;
   font-style: normal;
 }
@@ -236,7 +230,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Light.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Light.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Light.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -244,7 +238,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-ExtraLight.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-ExtraLight.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-ExtraLight.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-ExtraLight.woff") format("woff");
   font-weight: 200;
   font-style: normal;
 }
@@ -252,7 +246,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Regular.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Regular.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Regular.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -260,7 +254,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Medium.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Medium.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Medium.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
@@ -268,7 +262,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-VariableFont_wght.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-VariableFont_wght.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-VariableFont_wght.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-VariableFont_wght.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -276,7 +270,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Thin.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-Thin.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Thin.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-Thin.woff") format("woff");
   font-weight: 100;
   font-style: normal;
 }
@@ -284,7 +278,7 @@ template {
 @font-face {
   font-family: Montserrat;
   font-display: swap;
-  src: url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-SemiBold.woff2") format("woff2"), url("https://aqirys.ru/wa-data/public/site/FONTS/Montserrat-SemiBold.woff") format("woff");
+  src: url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-SemiBold.woff2") format("woff2"), url("https://test4.aoc-gaming.ru/wa-data/public/site/FONTS/Montserrat-SemiBold.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
