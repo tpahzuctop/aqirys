@@ -48,6 +48,26 @@
             <name locale="en_US">Shop settings</name>
             <name locale="ru_RU">Настройки магазина</name>
         </setting>
+        <setting var="id_main_menu" control_type="text">
+            <value>206</value>
+            <name locale="en_US">ID MAIN MENU</name>
+            <name locale="ru_RU">ID Главного меню</name>
+        </setting>
+        <setting var="id_footer_menu1" control_type="text">
+            <value>209</value>
+            <name locale="en_US">ID FOOTER MENU #1</name>
+            <name locale="ru_RU">ID Футер меню #1</name>
+        </setting>
+        <setting var="id_footer_menu2" control_type="text">
+            <value>215</value>
+            <name locale="en_US">ID FOOTER MENU #2</name>
+            <name locale="ru_RU">ID Футер меню #2</name>
+        </setting>
+        <setting var="id_footer_menu3" control_type="text">
+            <value>221</value>
+            <name locale="en_US">ID FOOTER MENU #3</name>
+            <name locale="ru_RU">ID Футер меню #3</name>
+        </setting>
     </settings>
     <thumbs>
         <thumb>48x48</thumb>

@@ -15,3 +15,17 @@ body {
   background-position: -50vw -45vh;
   background-repeat: no-repeat;
 }
+
+/*body::before {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  content: '';
+  width: 100vw;
+  height: 50vh;
+  background-image: radial-gradient(50% 50% at 50% 50%,rgba(0,174,238,.2) 0,rgba(0,156,214,.1) 46.35%,rgba(91,30,91,0) 100%),radial-gradient(50% 50% at 50% 50%,rgba(0,174,238,.2) 0,rgba(0,156,214,.1) 46.35%,rgba(91,30,91,0) 100%),radial-gradient(50% 50% at 50% 50%,rgba(0,174,238,.2) 0,rgba(0,156,214,.1) 46.35%,rgba(91,30,91,0) 100%);
+  background-size: 120% 100%;
+  background-position: 20vw -25vh;
+  background-repeat: no-repeat;
+}*/

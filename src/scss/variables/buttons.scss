@@ -5,10 +5,57 @@
 }
 
 .button {
+  display: block;
   &__big {
-
     &--icon {
-
+      background: var(--purple);
+      color: var(--white);
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      border-radius: calc(var(--curve) * 0.5px);
+      margin-top: 3rem;
+      align-items: stretch;
+      max-width: 320px;
+      & span.button__text {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        font-weight: 300;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        color: var(--black-dark);
+        padding: 1.35rem 2rem;
+        & strong {
+          text-transform: none;
+          color: var(--white);
+          font-size: 1.3rem;
+          margin-top: 0.5rem;
+          font-weight: 500;
+        }
+      }
+      & span.button__icon {
+        display: flex;
+        width: 80px;
+        height: auto;
+        border-left: 1px solid rgb(1 2 16 / 15%);
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin-left: auto;;
+          & svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--white);
+          }
+      }
+      &:hover {
+        background: var(--purple-dark);
+      }
     }
   }
 }

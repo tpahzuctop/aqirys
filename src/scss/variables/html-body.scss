@@ -16,6 +16,9 @@ body {
 html {
   background: var(--black);
 }
+body {
+  position: relative;
+}
 .wrapper {
   min-height: 100vh;
   padding: 5vw;
@@ -24,4 +27,7 @@ html {
   @media (min-width: 1250px) {
     padding: 2rem 5vw;
   }
+}
+.hidden {
+  display: none;
 }

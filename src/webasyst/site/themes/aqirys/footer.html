@@ -1,6 +1,19 @@
-{$gg = $wa->menu->get(138)}
-{$cp = $wa->menu->get(132)}
+{if $theme_settings.id_footer_menu1 && $wa->domainUrl() !='https://test4.aoc-gaming.ru'}
+    {$gg = $wa->menu->get($theme_settings.id_footer_menu1)}
+
+{else}
+    {$gg = $wa->menu->get(138)}
+{/if}
+{if $theme_settings.id_footer_menu2 && $wa->domainUrl() !='https://test4.aoc-gaming.ru'}
+    {$cp = $wa->menu->get($theme_settings.id_footer_menu2)}
+{else}
+    {$cp = $wa->menu->get(132)}
+{/if}
+{if $theme_settings.id_footer_menu3 && $wa->domainUrl() !='https://test4.aoc-gaming.ru'}
+{$fu = $wa->menu->get($theme_settings.id_footer_menu3)}
+{else}
 {$fu = $wa->menu->get(148)}
+{/if}
 <div class="logo">
     <a href="/" title="{$wa->title()|escape}">
         <img src="{$wa_theme_url}img/logo.svg" alt="{$wa->title()|escape}" title="{$wa->title()|escape}">

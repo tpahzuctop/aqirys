@@ -1,20 +1,64 @@
 .product__name {
-  font-size: 2rem;
-  margin: 0 0 2rem 0;
-  line-height: 1.15;
-  color: var(--white);
-  @media (min-width: 1050px) {
-    margin: 0 0 4rem 0;
-    font-size: 2.25rem;
-  }
-  @media (min-width: 1250px) {
-    margin: 0 0 4rem 0;
-    font-size: 2.5rem;
-  }
-  @media (min-width: 1450px) {
-    font-size: 2.95rem;
-  }
-  @media (min-width: 1650px) {
-    font-size: 4rem;
+  & &--h1 {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.3rem;
+    margin: 0.67em 0;
+    text-align: center;
+    line-height: 1.15;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--grey);
+    & strong {
+      font-size: 2.5rem;
+      line-height: 1.35;
+      letter-spacing: 3px;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+    @media (min-width: 1050px) {
+      margin: 0 0 4rem 0;
+      font-size: 1.85rem;
+      & strong {
+        font-size: 4.5rem;
+      }
+    }
+    @media (min-width: 1250px) {
+      margin: 0 0 4rem 0;
+      font-size: 2rem;
+      & strong {
+        font-size: 5.5rem;
+      }
+    }
+    @media (min-width: 1450px) {
+      font-size: 2.35rem;
+      & strong {
+        font-size: 6.5rem;
+      }
+    }
+    @media (min-width: 1550px) {
+      margin: 0;
+      font-size: 2rem;
+      & strong {
+        font-size: 4rem;
+      }
+    }
+    @media (min-width: 1650px) {
+      font-size: 2rem;
+      & strong {
+        font-size: 5rem;
+      }
+    }
+    @media (min-width: 1850px) {
+      font-size: 2.5rem;
+      & strong {
+        font-size: 6.5rem;
+      }
+    }
   }
 }

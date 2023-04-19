@@ -20,7 +20,11 @@
 </div>
 <nav>
     <ul>
-        {$items = $wa->menu->get(145)}
+        {if $theme_settings.id_footer_menu1 && $wa->domainUrl() !='https://test4.aoc-gaming.ru'}
+            {$items = $wa->menu->get($theme_settings.id_main_menu)}
+        {else}
+            {$items = $wa->menu->get(145)}
+        {/if}
         {foreach $items as $item}
         <li><a href="{$item.url}">{$item.name}</a></li>
         {/foreach}
@@ -43,14 +47,15 @@
             </a>
             {/if}
         {/if}
-        {if $_cart_url}
+        {*if $_cart_url}
         <a href="{$_cart_url}" title="Сравнение">
             <svg class="icon">
                 <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_compare"></use>
             </svg>
-            {*if $wa->shop->cart->items()}<span class="red-dot-counter">{$wa->shop->cart->count()}</span>{/if*}
+            {if $wa->shop->cart->items()}<span class="red-dot-counter">{$wa->shop->cart->count()}</span>{/if}
         </a>
-        {/if}
+        {/if*}
+
         {if $_cart_url}
         <a href="{$_cart_url}" class="cart" title="Корзина">
             <svg class="icon">

@@ -42,6 +42,10 @@
 /* shop product*/
 @import 'blocks/shop/product/product-promo';
 @import 'blocks/shop/product/product-name';
+@import 'blocks/shop/product/product-cart-form';
+@import 'blocks/shop/product/product-images';
+@import 'blocks/shop/product/product-features';
+@import 'blocks/shop/product/product-description';
 
 /* shop order page */
 @import 'blocks/shop/order/s-order-section';
@@ -52,4 +56,5 @@
 
 /* others */
 @import 'variables/icons';
-
+@import 'variables/buttons';
+@import 'variables/swiper';

@@ -9,6 +9,7 @@
   padding: 0.5rem;
   margin: 3rem 0;
   border-radius: calc(var(--curve) * 0.5px);
+  gap: 1rem;
   @media (min-width: 450px) {
     padding: 1rem;
   }
@@ -27,10 +28,10 @@
       margin: 0 0.15rem 0.5rem 0;
       border-radius: calc(var(--curve) * 0.35px);
       background: var(--black-dark);
-      color: var(--white);
+      color: var(--grey);
+      border: 2px solid var(--blue-secondary);
       transition: all 300ms linear;
       text-align: center;
-      border: 2px solid var(--blue);
       &.inline-link {
         background: var(--black-dark);
         color: var(--white);
@@ -38,13 +39,14 @@
       &:hover {
         background: var(--blue);
         color: var(--white);
+        border-color: var(--blue);
       }
       @media (min-width: 450px) {
         padding: 0.5rem 1rem;
       }
       @media (min-width: 768px) {
         padding: 1rem 1.5rem;
-        margin: 0 0.5rem 1rem 0;
+        margin: 0 0.5rem 0 0;
         border-radius: calc(var(--curve) * .5px);
       }
     }

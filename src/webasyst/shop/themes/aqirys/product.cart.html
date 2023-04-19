@@ -2,8 +2,9 @@
 {if method_exists($wa->shop, 'checkout')}
     {$_cart_url = $wa->shop->checkout()->cartUrl()}
 {/if}
+{assign var="big_sku" value="AQIRYS"}
 
-<form id="cart-form{if $wa->get('cart')}-dialog{/if}" method="post" action="{$wa->getUrl('/frontendCart/add')}">
+<form id="cart-form{if $wa->get('cart')}-dialog{/if}" class="cart-form" method="post" action="{$wa->getUrl('/frontendCart/add')}">
 
     <!-- sku -->
         {if !empty($product.rating) && $product.rating > 0}
@@ -43,7 +44,8 @@
                 <li itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <label{if !$sku.available} class="disabled"{/if}>
                     <input name="sku_id" type="radio" value="{$sku.id}"{if !$sku.available} disabled="true"{/if}{if !$sku_available}data-disabled="1"{/if}{if $sku.id == $product.sku_id} checked="checked"{/if} data-compare-price="{shop_currency($sku.compare_price, $product.currency, null, 0)}" data-price="{shop_currency($sku.price, $product.currency, null, 0)}"{if $sku.image_id} data-image-id="{$sku.image_id}"{/if}> <span itemprop="name">{$sku.name|escape}</span>
-                    {if $sku.sku}<span class="hint" itemprop="name">{$sku.sku|escape}</span>{/if}
+                    {if $sku.sku}<span class="hint hidden" itemprop="name">{$sku.sku|escape}</span>{/if}
+                    {$big_sku = $sku.sku}
                     <meta itemprop="price" content="{shop_currency($sku.price, $product.currency, null, 0)}">
                     <meta itemprop="priceCurrency" content="{$wa->shop->currency()}">
                     <span class="price tiny nowrap">{shop_currency_html($sku.price, $product.currency)}</span>
@@ -65,7 +67,8 @@
                 {$sku = $product.skus[$product.sku_id]}
                 {if $sku.sku}
                     {assign var=sku_sku value="$sku.sku" scope="global"}
-                    <span class="hint" itemprop="name">{$sku.sku|escape}</span>
+                    <span class="hint hidden" itemprop="name">{$sku.sku|escape}</span>
+                    {$big_sku = $sku.sku}
                 {/if}
 
                 <meta itemprop="price" content="{shop_currency($sku.price, $product.currency, null, 0)}">
@@ -75,7 +78,7 @@
                     <p><em class="bold error">[`This product is not available for purchase`]</em></p>
                 {elseif !$wa->shop->settings('ignore_stock_count') && !($sku.count === null || $sku.count > 0)}
                     <link itemprop="availability" href="http://schema.org/OutOfStock" />
-                    <div class="stocks"><strong class="stock-none"><i class="icon16 stock-transparent"></i>{if $wa->shop->settings('ignore_stock_count')}[`Pre-order only`]{else}[`Out of stock`]{/if}</strong></div>
+                    <div class="stocks"><strong class="stock-none hidden"><i class="icon16 stock-transparent"></i>{if $wa->shop->settings('ignore_stock_count')}[`Pre-order only`]{else}[`Out of stock`]{/if}</strong></div>
                 {else}
                     <link itemprop="availability" href="http://schema.org/InStock" />
                 {/if}
@@ -126,41 +129,50 @@
     {/if}
 
     <div class="purchase">
-
-        {if $services}
-        <!-- services -->
-        <div class="services">
-            {foreach $services as $s}
-            <div class="service-{$s.id}">
-                <label>
-                    <input data-price="{shop_currency($s.price, $s.currency, null, 0)}" {if !$product_available}disabled="disabled"{/if} type="checkbox" name="services[]" value="{$s.id}"> {$s.name|escape} {if $s.price && !isset($s.variants)}(+<span class="service-price">{shop_currency_html($s.price, $s.currency)}</span>){/if}
-                </label>
-                {if isset($s.variants)}
-                <select data-variant-id="{$s.variant_id}" class="service-variants" name="service_variant[{$s.id}]" disabled>
-                    {foreach $s.variants as $v}
-                    <option {if $s.variant_id == $v.id}selected{/if} data-price="{shop_currency($v.price, $s.currency, null, 0)}" value="{$v.id}">{$v.name|escape} (+{shop_currency($v.price, $s.currency)})</option>
-                    {/foreach}
-                </select>
-                {else}
-                <input type="hidden" name="service_variant[{$s.id}]" value="{$s.variant_id}">
-                {/if}
-            </div>
-            {/foreach}
-        </div>
-        {/if}
-
         <!-- price -->
         <div class="add2cart">
             {if $product.compare_price > 0}<span class="compare-at-price nowrap"> {shop_currency_html($product.compare_price)} </span>{/if}
             <span data-price="{shop_currency($product.price, null, null, 0)}" class="price nowrap">{shop_currency_html($product.price)}</span>
             <input type="hidden" name="product_id" value="{$product.id}">
-                        <span class="qty">
-                            &times; <input type="text" name="quantity" value="1">
-                        </span>
-            <input type="submit" {if !$product_available}disabled="disabled"{/if} value="[`Add to cart`]">
-            <span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $product.name|escape, $_cart_url)}</span>
-        </div>
+            <div class="add2cart__submit">
+                <span class="qty">
+                    Колличество товара
+                            <input type="text" name="quantity" value="1">
+                </span>
+                <input type="submit" {if !$product_available}disabled="disabled"{/if} value="[`Add to cart`]">
+            </div>
 
+            {*<span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $product.name|escape, $_cart_url)}</span>*}
+        </div>
     </div>
 
+    {if $services}
+    <!-- services -->
+    <div class="services">
+        {foreach $services as $s}
+        <div class="service-{$s.id}">
+            <label>
+                <input data-price="{shop_currency($s.price, $s.currency, null, 0)}" {if !$product_available}disabled="disabled"{/if} type="checkbox" name="services[]" value="{$s.id}"> {$s.name|escape} {if $s.price && !isset($s.variants)}(+<span class="service-price">{shop_currency_html($s.price, $s.currency)}</span>){/if}
+            </label>
+            {if isset($s.variants)}
+            <select data-variant-id="{$s.variant_id}" class="service-variants" name="service_variant[{$s.id}]" disabled>
+                {foreach $s.variants as $v}
+                <option {if $s.variant_id == $v.id}selected{/if} data-price="{shop_currency($v.price, $s.currency, null, 0)}" value="{$v.id}">{$v.name|escape} (+{shop_currency($v.price, $s.currency)})</option>
+                {/foreach}
+            </select>
+            {else}
+            <input type="hidden" name="service_variant[{$s.id}]" value="{$s.variant_id}">
+            {/if}
+        </div>
+        {/foreach}
+    </div>
+    {/if}
+
 </form>
+
+<div class="product__name">
+    <h1 itemprop="name" style=" position: relative;" class="product__name--h1">
+        {$product.name|replace:$big_sku:''|escape}
+        <strong>{$big_sku|escape}</strong>
+    </h1>
+</div>

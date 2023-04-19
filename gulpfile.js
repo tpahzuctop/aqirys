@@ -31,7 +31,7 @@ export { svgicons }
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 const js = gulp.series(javascript);
-const css = gulp.series(scss);
+const css = gulp.series(reset, scss, webasystSiteCss);
 
 
 const mainTasks = gulp.parallel(copy, html, scss, javascript, images);

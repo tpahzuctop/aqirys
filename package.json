@@ -41,6 +41,6 @@
     "@fancyapps/ui": "^4.0.31",
     "gulp-if": "^3.0.0",
     "lazysizes": "^5.3.2",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.7"
   }
 }
