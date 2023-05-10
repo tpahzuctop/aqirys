@@ -29,20 +29,23 @@
                 Цвет изделия может отличаться от фотографии. Уточняйте наличие желаемых функций и характеристик товара на момент покупки и оплаты.
             </div>
         </div>
-            {if count($product.images) > 1}
-            <div class="swiper swiper-gallery">
-                <div class="product__images--gallery swiper-wrapper" id="product-gallery">
-                        {foreach $product.images as $image}
-                        <div class="image swiper-slide">
-                            <a id="product-image-{$image.id}" href="#">{$wa->shop->imgHtml($image, '750x0', ['alt' => $product.name|cat:' - ':$image.description|escape])}</a>
-                        </div>
-                        {/foreach}
+
+        {if count($product.images) > 1}
+        <div class="swiper product__images--gallery" id="myCarousel">
+                <div class="swiper-wrapper">
+                    {foreach $product.images as $image}
+                    <div class="swiper-slide">
+                        <a href="{$wa->shop->productImgUrl($product, '750x0')}" data-fancybox="gallery" data-caption="{$product.name}">
+                            {$wa->shop->imgHtml($image, '440', ['alt' => $product.name|cat:' - ':$image.description|escape])}
+                        </a>
+                    </div>
+                    {/foreach}
                 </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-            </div>
-            {/if}
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        {/if}
+
 
             {if $_video_url}
             <div id="video-container" class="product__images--video-container" itemscope itemtype="http://schema.org/VideoObject">

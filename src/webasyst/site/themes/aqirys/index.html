@@ -2,20 +2,20 @@
 {$frontParameters = waRequest::param()}
 
 <!DOCTYPE html>
-<html lang="{if $wa->locale()}{$wa->locale()}{else}en{/if}">
+<html lang="ru">
 
 {$_head_prefix = $wa->globals("headPrefix")}
 <head {if !empty($_head_prefix)}prefix="{$_head_prefix}"{/if}>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>{$wa->title()|escape}</title>
-<meta name="keywords" content="{$wa->meta('keywords')|escape}" />
-<meta name="description" content="{$wa->meta('description')|escape}" />
-<meta name="viewport" content="width=device-width, initial-scale=1{if $wa->isMobile()}, maximum-scale=1, user-scalable=0{/if}" />
+<meta name="keywords" content="{$wa->meta('keywords')|escape}" >
+<meta name="description" content="{$wa->meta('description')|escape}" >
+<meta name="viewport" content="width=device-width, initial-scale=1{if $wa->isMobile()}, maximum-scale=1, user-scalable=0{/if}" >
 <meta http-equiv="x-ua-compatible" content="IE=edge">
 
 <!-- css -->
-<link href="{$wa_theme_url}css/theme.css?v{$wa_theme_version}" rel="stylesheet" type="text/css"/>
+<link href="{$wa_theme_url}css/theme.css?v{$wa_theme_version}" rel="stylesheet" type="text/css">
 {$wa->css()}
 
 <!-- js -->
@@ -39,7 +39,7 @@
 </script>
 <![endif]-->
 </head>
-<body id="{$wa_app}">
+<body id="{$wa_app}" itemscope itemtype="https://schema.org/WebPage">
 
 {if $frontParameters.module == 'login' || $frontParameters.module == 'signup' || $frontParameters.module == 'forgotpassword'}
 <div class="wrapper">
@@ -61,6 +61,7 @@
     </div>
 {/if}
 <script src="{$wa_theme_url}js/app.min.js?v{$wa_theme_version}"></script>
+{include file="organization.html" inline}
 </body>
 </html>
 {/strip}

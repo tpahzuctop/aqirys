@@ -19,14 +19,14 @@
     </a>
 </div>
 <nav>
-    <ul>
+    <ul itemscope itemtype="http://schema.org/SiteNavigationElement">
         {if $theme_settings.id_footer_menu1 && $wa->domainUrl() !='https://test4.aoc-gaming.ru'}
             {$items = $wa->menu->get($theme_settings.id_main_menu)}
         {else}
             {$items = $wa->menu->get(145)}
         {/if}
         {foreach $items as $item}
-        <li><a href="{$item.url}">{$item.name}</a></li>
+        <li itemprop="name"><a href="{$item.url}" itemprop="url" title="{$item.name}">{$item.name}</a></li>
         {/foreach}
     </ul>
 </nav>

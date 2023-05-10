@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper';
 
 export function isWebp() {
     function testWebp(callback) {
@@ -16,34 +17,20 @@ export function isWebp() {
 }
 
 export function gallerySlider() {
-    const swiper = new Swiper('.swiper-gallery', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
+    var swiper = new Swiper("#myCarousel", {
+        modules: [ Navigation ],
         slidesPerView: 1,
-        slidesOffsetBefore: 10,
-        spaceBetween: 10,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
         breakpoints: {
-            768: {
+            1050: {
                 slidesPerView: 3,
-                slidesOffsetBefore: -70,
-            },
-            1024: {
-                slidesPerView: 4,
-                slidesOffsetBefore: 0
+                spaceBetween: 30
             }
         },
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
     });
 }

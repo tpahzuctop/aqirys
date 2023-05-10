@@ -6,6 +6,38 @@
 
 .button {
   display: block;
+  &__normal {
+    &--base-color,
+    &--white-color {
+      border-radius: calc(var(--curve) * 0.25px);
+      align-items: stretch;
+      max-width: -webkit-max-content;
+      max-width: -moz-max-content;
+      max-width: max-content;
+      padding: 0.75rem 1rem;
+      font-weight: 300;
+    }
+    &--base-color {
+      background: var(--blue);
+      color: var(--white);
+      &:hover,
+      &:active {
+        background: var(--blue-darkest);
+        color: var(--white);
+      }
+    }
+
+    &--white-color {
+      background: var(--white);
+      color: var(--black);
+      &:hover,
+      &:active {
+        background: var(--blue);
+        color: var(--white);
+      }
+    }
+  }
+
   &__big {
     &--icon {
       background: var(--purple);
