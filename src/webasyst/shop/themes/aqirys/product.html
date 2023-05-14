@@ -13,7 +13,7 @@
 <div itemscope itemtype="http://schema.org/Product">
     <div class="product__promo">
         <div class="product__image">
-                {$wa->shop->productImgHtml($product, '970', [ 'itemprop' => 'image', 'id' => 'product__main-image', 'alt' => $product.name|escape|cat:' ':strip_tags($product.summary)|escape ])}
+            {$wa->shop->productImgHtml($product, '970', [ 'itemprop' => 'image', 'id' => 'product__main-image', 'alt' => $product.name|escape|cat:' ':strip_tags($product.summary)|escape ])}
         </div>
         <div class="product__cart">
             {include file="product.cart.html" inline}
@@ -22,42 +22,47 @@
 
     <!-- GALLERY -->
     {if $product.images}
-    <div class="product__images">
-        <div class="product__images--title">
-            <h2>Фотографии {if $_video_url}и видео{/if} товара</h2>
-            <div class="product__images--subtitle">
-                Цвет изделия может отличаться от фотографии. Уточняйте наличие желаемых функций и характеристик товара на момент покупки и оплаты.
-            </div>
-        </div>
-
-        {if count($product.images) > 1}
-        <div class="f-carousel product__images--gallery" id="myCarousel">
-                {foreach $product.images as $image}
-                <div class="f-carousel__slide">
-                    {$wa->shop->imgHtml($image, '750x0', ['alt' => $product.name|cat:' - ':$image.description|escape,
-                    'width' => '640', 'height' => 'auto'])}
+        <div class="product__images">
+            <div class="product__images--title">
+                <h2>Фотографии {if $_video_url}и видео{/if} товара</h2>
+                <div class="product__images--subtitle">
+                    Цвет изделия может отличаться от фотографии. Уточняйте наличие желаемых функций и характеристик товара на момент покупки и оплаты.
                 </div>
-                {/foreach}
-        </div>
-        {/if}
+            </div>
+
+            {if count($product.images) > 1}
+                <div class="swiper product__images--gallery" id="myCarousel">
+                    <div class="swiper-wrapper">
+                        {foreach $product.images as $image}
+                            <div class="swiper-slide">
+                                <a href="{$wa->shop->productImgUrl($product, '750x0')}" data-fancybox="gallery" data-caption="{$product.name}">
+                                    {$wa->shop->imgHtml($image, '440', ['alt' => $product.name|cat:' - ':$image.description|escape])}
+                                </a>
+                            </div>
+                        {/foreach}
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            {/if}
 
 
             {if $_video_url}
-            <div id="video-container" class="product__images--video-container" itemscope itemtype="http://schema.org/VideoObject">
-                <div class="product__images--video-wrapper" itemprop="embedHTML">
-                    <iframe src="{$_video_url}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen height="{$_video.height}"></iframe>
+                <div id="video-container" class="product__images--video-container" itemscope itemtype="http://schema.org/VideoObject">
+                    <div class="product__images--video-wrapper" itemprop="embedHTML">
+                        <iframe src="{$_video_url}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen height="{$_video.height}"></iframe>
+                    </div>
+                    <meta itemprop="width" content="{$_video.width}">
+                    <meta itemprop="height" content="{$_video.height}">
+                    <meta itemprop="name" content="{$product.name|default:""|escape}">
+                    <meta itemprop="description" content="{$product.description|default:""|escape}">
+                    <meta itemprop="uploadDate" content="{$product.create_datetime|default:""|escape}">
+                    {if !empty($_video.images[0])}
+                        {$_thumb = $_video.images[0]}
+                        {$_absolute_thumb_uri = "{$wa->url(true)}{$_thumb|substr:1}"}
+                        <meta itemprop="thumbnailUrl" content="{$_absolute_thumb_uri|escape}" />
+                    {/if}
                 </div>
-                <meta itemprop="width" content="{$_video.width}">
-                <meta itemprop="height" content="{$_video.height}">
-                <meta itemprop="name" content="{$product.name|default:""|escape}">
-                <meta itemprop="description" content="{$product.description|default:""|escape}">
-                <meta itemprop="uploadDate" content="{$product.create_datetime|default:""|escape}">
-                {if !empty($_video.images[0])}
-                {$_thumb = $_video.images[0]}
-                {$_absolute_thumb_uri = "{$wa->url(true)}{$_thumb|substr:1}"}
-                <meta itemprop="thumbnailUrl" content="{$_absolute_thumb_uri|escape}" />
-                {/if}
-            </div>
             {/if}
 
 
@@ -81,7 +86,7 @@
 
 
 
-    </div>
+        </div>
     {/if}
 
 
@@ -100,8 +105,8 @@
                 <a id="compare-link" {if count($compare) lt 2}style="display:none"{/if} rel="nofollow" href="{$wa->getUrl('/frontend/compare/', ['id' => implode(',', $compare) ])}" class="bold">[`Compare`] <span class="count">{count($compare)}</span></a>
             </div>
             *}
-            <!-- plugin hook: 'frontend_product.cart' -->
-            {* *} {* @event frontend_product.%plugin_id%.cart *}{*
+    <!-- plugin hook: 'frontend_product.cart' -->
+    {* *} {* @event frontend_product.%plugin_id%.cart *}{*
             {foreach $frontend_product as $_}{$_.cart}{/foreach}
 
         </div>
@@ -145,7 +150,7 @@
     <div class="product__content">
 
         <!-- plugin hook: 'frontend_product.block' -->
-       {* @event frontend_product.%plugin_id%.block *}
+        {* @event frontend_product.%plugin_id%.block *}
         {foreach $frontend_product as $_}{$_.block}{/foreach}
 
         {if $product.description}
