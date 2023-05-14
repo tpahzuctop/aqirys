@@ -25,6 +25,10 @@
         </file>
         <file path="signup.html" parent="1">
         </file>
+        <file path="schema.org.html" parent="1">
+        </file>
+        <file path="vcard.html" parent="1">
+        </file>
         <file path="header.html" parent="1">
         </file>
         <file path="footer.html" parent="1">

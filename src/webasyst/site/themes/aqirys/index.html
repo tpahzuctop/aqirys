@@ -1,67 +1,115 @@
 {strip}
-{$frontParameters = waRequest::param()}
+    {$frontParameters = waRequest::param()}
 
-<!DOCTYPE html>
-<html lang="ru">
+    {assign "find" array('>', 'type="text/javascript"', 'type="text/css"')}
+    {assign "repl" array('>', '', '')}
 
-{$_head_prefix = $wa->globals("headPrefix")}
-<head {if !empty($_head_prefix)}prefix="{$_head_prefix}"{/if}>
+    <!DOCTYPE html>
+    <html lang="ru">
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>{$wa->title()|escape}</title>
-<meta name="keywords" content="{$wa->meta('keywords')|escape}" >
-<meta name="description" content="{$wa->meta('description')|escape}" >
-<meta name="viewport" content="width=device-width, initial-scale=1{if $wa->isMobile()}, maximum-scale=1, user-scalable=0{/if}" >
-<meta http-equiv="x-ua-compatible" content="IE=edge">
+    {$_head_prefix = $wa->globals("headPrefix")}
+    <head {if !empty($_head_prefix)}prefix="{$_head_prefix}"{/if}>
 
-<!-- css -->
-<link href="{$wa_theme_url}css/theme.css?v{$wa_theme_version}" rel="stylesheet" type="text/css">
-{$wa->css()}
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>{$wa->title()|escape|strip_tags|default: 'Магазин игрового оборудования и компонентов для пк AQIRYS'}{if !empty($wa->globals("globalHeader"))} — {$wa->globals("globalHeader")}{/if}</title>
+        <meta name="title" content="{$wa->title()|escape|strip_tags|default: 'Магазин игрового оборудования и компонентов для пк AQIRYS'}{if !empty($wa->globals("globalHeader"))} — {$wa->globals("globalHeader")}{/if}">
+        <meta name="keywords" content="{$wa->meta('keywords')|escape|strip_tags|default: 'AQIRYS, игровое оборудование, игровая атрибутика, девайсы для геймеров, товар для киберспорта'}">
+        <meta name="description" content="{$wa->meta('description')|escape|strip_tags|default: 'Магазин игровых девайсов, мышек, геймерских ковриков, клавиатур, наушников, девайсов для геймеров, товаров для киберспорта AQIRYS. Доставка по России. Экспресс доставка по Москве'}">
+        <meta http-equiv="x-ua-compatible" content="IE=edge">
 
-<!-- js -->
-<script src="{$wa_static_url}wa-content/js/jquery/jquery-3.6.0.min.js"></script>
-{$wa->js()}
+        <meta name="revisit-after" content="1">
+        <meta name="author" content="Алексей Ефимов - rgbweb.ru">
+        <meta name="application-name" content="AQIRYS.RU">
 
-{include file="`$wa_active_theme_path`/head.html" inline}
-{$wa->head()}
+        {* Установка Viewport *}
+        {if $wa->isMobile()}
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+        {else}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {/if}
+        {* Canonical плагина «Link Canonical» *}
+        {if !empty($canonical)}
+            <link rel="canonical" href="{$canonical|escape}">
+        {/if}
+        {$wa->block("shop.seo_pagination")}
+        {* КОНЕЦ Canonical плагина «Link Canonical» *}
 
-<!--[if lt IE 9]>
-<script>
-    document.createElement('header');
-    document.createElement('nav');
-    document.createElement('section');
-    document.createElement('article');
-    document.createElement('aside');
-    document.createElement('footer');
-    document.createElement('figure');
-    document.createElement('hgroup');
-    document.createElement('menu');
-</script>
-<![endif]-->
-</head>
-<body id="{$wa_app}" itemscope itemtype="https://schema.org/WebPage">
+        <!-- css -->
+        <link href="{$wa_theme_url}css/theme.css?v{$wa_theme_version}" rel="stylesheet">
+        {$wa->css()|replace:$find:$repl}
 
-{if $frontParameters.module == 'login' || $frontParameters.module == 'signup' || $frontParameters.module == 'forgotpassword'}
-<div class="wrapper">
-    <main>
-        {include file="`$wa_active_theme_path`/content.html" inline}
-    </main>
-</div>
-{else}
-    <div class="wrapper">
-        <header class="header">
-            {include file="header.html" inline}
-        </header>
-        <main class="main">
-            {include file="`$wa_active_theme_path`/content.html" inline}
-        </main>
-        <footer class="footer">
-            {include file="footer.html" inline}
-        </footer>
-    </div>
-{/if}
-<script src="{$wa_theme_url}js/app.min.js?v{$wa_theme_version}"></script>
-{include file="organization.html" inline}
-</body>
-</html>
+        <!-- js -->
+        <script src="{$wa_static_url}wa-content/js/jquery/jquery-3.6.0.min.js"></script>
+        {$wa->js()|replace:$find:$repl}
+
+        {include file="`$wa_active_theme_path`/head.html" inline}
+
+        <!-- start-head -->
+        {$wa->head()|replace:$find:$repl} {* links Google Analytics tracking code and current site's custom JS (Site app) *}
+        <!-- end-head -->
+
+        <!--[if lt IE 9]>
+        <script>
+            document.createElement('header');
+            document.createElement('nav');
+            document.createElement('section');
+            document.createElement('article');
+            document.createElement('aside');
+            document.createElement('footer');
+            document.createElement('figure');
+            document.createElement('hgroup');
+            document.createElement('menu');
+        </script>
+        <![endif]-->
+
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Title">
+        <meta name="twitter:site" content="@Site">
+        <meta name="twitter:description" content="Description">
+        <meta name="twitter:image" content="https://aqirys.ru/wa-apps/site/themes/aqirys/img/logo.png">
+        <meta name="twitter:image:alt" content="Title">
+    </head>
+    <body id="{$wa_app}">
+    {if $frontParameters.module == 'login' || $frontParameters.module == 'signup' || $frontParameters.module == 'forgotpassword'}
+        <div class="wrapper">
+            <main>
+                {include file="`$wa_active_theme_path`/content.html" inline}
+            </main>
+        </div>
+    {else}
+        <div class="wrapper">
+            <header class="header">
+                {include file="header.html" inline}
+            </header>
+            <main class="main">
+                {include file="`$wa_active_theme_path`/content.html" inline}
+            </main>
+            <footer class="footer">
+                {include file="footer.html" inline}
+            </footer>
+        </div>
+    {/if}
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
+    <script src="{$wa_theme_url}js/app.min.js?v{$wa_theme_version}"></script>
+    {include file="schema.org.html" inline}
+    {include file="vcard.html" inline}
+    {if !$frontParameters['action']}
+        <script type="application/ld+json">
+            {
+                "@context": "http://schema.org/",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Интернет-магазин AQIRYS",
+                        "item": "https://aqirys.ru"
+                    }
+                ]
+            }
+        </script>
+    {/if}
+    </body>
+    </html>
 {/strip}

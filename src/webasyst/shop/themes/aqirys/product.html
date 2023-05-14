@@ -31,18 +31,13 @@
         </div>
 
         {if count($product.images) > 1}
-        <div class="swiper product__images--gallery" id="myCarousel">
-                <div class="swiper-wrapper">
-                    {foreach $product.images as $image}
-                    <div class="swiper-slide">
-                        <a href="{$wa->shop->productImgUrl($product, '750x0')}" data-fancybox="gallery" data-caption="{$product.name}">
-                            {$wa->shop->imgHtml($image, '440', ['alt' => $product.name|cat:' - ':$image.description|escape])}
-                        </a>
-                    </div>
-                    {/foreach}
+        <div class="f-carousel product__images--gallery" id="myCarousel">
+                {foreach $product.images as $image}
+                <div class="f-carousel__slide">
+                    {$wa->shop->imgHtml($image, '750x0', ['alt' => $product.name|cat:' - ':$image.description|escape,
+                    'width' => '640', 'height' => 'auto'])}
                 </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+                {/foreach}
         </div>
         {/if}
 

@@ -3,7 +3,7 @@
 @import 'reset/browsers/normalize';
 
 /* Подключение шрифтов */
-@import 'fonts/fonts';
+//@import 'fonts/fonts';
 
 
 /* Общий сброс стилей браузера */
@@ -32,12 +32,14 @@
 /* shop */
 @import 'blocks/shop/home/gaming-gear';
 @import 'blocks/shop/home/headset';
+@import 'blocks/shop/home/pc-components';
 @import 'blocks/shop/category/category';
 @import 'blocks/shop/category/list-thumbs';
 @import 'blocks/shop/category/sub-categories';
 @import 'blocks/shop/menu-h';
 @import 'blocks/shop/breadcrumbs';
-/*import 'blocks/shop/profile/my-profile.scss*/
+@import 'blocks/shop/profile/orders.scss';
+@import 'blocks/shop/profile/my-profile.scss';
 
 /* shop product*/
 @import 'blocks/shop/product/product-promo';
@@ -57,4 +59,6 @@
 /* others */
 @import 'variables/icons';
 @import 'variables/buttons';
-@import 'variables/swiper';
+
+/* fancybox css */
+@import "fancybox/fancybox";

@@ -45,6 +45,10 @@
             <description locale="en_US">404 and other errors</description>
             <description locale="ru_RU">404 и другие ошибки</description>
         </file>
+        <file path="schema.org.html" custom="0">
+        </file>
+        <file path="vcard.html" custom="0">
+        </file>
     </files>
     <about locale="en_US">
         <![CDATA[

@@ -5,48 +5,43 @@
 }
 
 .button {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  transition: all 300ms linear;
+  position: relative;
+  overflow: hidden;
   &__normal {
-    &--base-color,
-    &--white-color {
+    &--base-color, &--white-color {
       border-radius: calc(var(--curve) * 0.25px);
       align-items: stretch;
-      max-width: -webkit-max-content;
-      max-width: -moz-max-content;
       max-width: max-content;
-      padding: 0.75rem 1rem;
+      padding: .75rem 1rem;
       font-weight: 300;
     }
     &--base-color {
       background: var(--blue);
       color: var(--white);
-      &:hover,
-      &:active {
+      &:hover, &:active {
         background: var(--blue-darkest);
         color: var(--white);
       }
     }
-
     &--white-color {
       background: var(--white);
       color: var(--black);
-      &:hover,
-      &:active {
+      &:hover, &:active {
         background: var(--blue);
         color: var(--white);
       }
     }
   }
-
   &__big {
     &--icon {
-      background: var(--purple);
-      color: var(--white);
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: flex-start;
       border-radius: calc(var(--curve) * 0.5px);
+      background: radial-gradient(at top, var(--purple), var(--purple-dark));
+      color: var(--white);
       margin-top: 3rem;
       align-items: stretch;
       max-width: 320px;
@@ -61,6 +56,7 @@
         text-transform: uppercase;
         color: var(--black-dark);
         padding: 1.35rem 2rem;
+        z-index: 3;
         & strong {
           text-transform: none;
           color: var(--white);
@@ -78,7 +74,8 @@
         justify-content: center;
         flex-direction: row;
         flex-wrap: nowrap;
-        margin-left: auto;;
+        margin-left: auto;
+        z-index: 3;
           & svg {
             width: 32px;
             height: 32px;
@@ -86,7 +83,8 @@
           }
       }
       &:hover {
-        background: var(--purple-dark);
+        background: radial-gradient(at top, var(--purple), var(--purple-darkest));
+        box-shadow: #01021085 0 8px 24px;
       }
     }
   }

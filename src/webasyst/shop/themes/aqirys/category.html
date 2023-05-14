@@ -1,14 +1,58 @@
-<h1 class="category-name{if !empty($breadcrumbs)} no-margin-bottom{/if}">
+{$frontParameters = waRequest::param()}
+
+<h1 class="category-name {if $frontParameters['action']}no-margin-bottom{/if}">
     {$category.name|escape}
 </h1>
 
-{if !empty($breadcrumbs)}
-<div class="breadcrumbs">
-    {foreach $breadcrumbs as $breadcrumb}
-    <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a> <span class="rarr">&rarr;</span>
-    {/foreach}
-    <strong>{$wa->title()|escape}</strong>
-</div>
+{if $frontParameters['action']}
+
+    <div class="breadcrumbs">
+        <a href="/">Главная</a> <span class="rarr">&rarr;</span>
+        {foreach $breadcrumbs as $breadcrumb}
+        <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a> <span class="rarr">&rarr;</span>
+        {/foreach}
+        <strong>{$wa->title()|escape}</strong>
+    </div>
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Главная",
+                    "item": "https://aqirys.ru/"
+                }
+                {if $breadcrumbs}
+                {foreach $breadcrumbs as $breadcrumb}
+                {literal},{{/literal}
+                     "@type": "ListItem",
+                     "position": {$breadcrumb@iteration+1},
+                     "name": "{$breadcrumb.name|escape}",
+                     "item": "{$wa->domainUrl()}{$breadcrumb.url}"
+                {literal}}{/literal}
+                {if $breadcrumb@last}
+                {literal},{{/literal}
+                     "@type": "ListItem",
+                     "position": {$breadcrumb@iteration+2},
+                     "name": "{$wa->title()|escape}",
+                     "item": "{$wa->currentUrl(true)}"
+                {literal}}{/literal}
+                {/if}
+                {/foreach}
+                {else}
+                {literal},{{/literal}
+                     "@type": "ListItem",
+                     "position": 2,
+                     "name": "{$wa->title()|escape}",
+                     "item": "{$wa->currentUrl(true)}"
+                {literal}}{/literal}
+                {/if}
+            ]
+        }
+    </script>
 {/if}
 
 <!-- plugin hook: 'frontend_category' -->

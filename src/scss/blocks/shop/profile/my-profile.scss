@@ -6,7 +6,7 @@
   align-content: flex-start;
   align-items: flex-start;
   & details.profile-orders__item {
-    border: var(--border-size-input) solid var(--white-15);
+    border: 2px solid var(--white-15);
     border-radius: 4px;
     margin: 0 auto 1rem auto;
     padding: 0;
@@ -15,9 +15,9 @@
       font-weight: bold;
       padding: 1rem;
       line-height: 1.6rem;
-      cursor: pointer;
+      cursor:pointer;
       background-color: rgba(255, 255, 255, 0.1);
-      border-radius: calc(var(--curve) * 0.5px);
+      border-radius: calc(var(--curve) * .5px);
       transition: all 300ms linear;
       &::marker {
         color: var(--blue);
@@ -28,13 +28,9 @@
       }
     }
 
-    & .profile-orders__details {
-      padding: 2rem 0;
-    }
-
     & .profile-orders__list {
       color: var(--white-95);
-      & .goods-list {
+      & .profile-orders__goods-list {
         list-style: none;
         & li {
           padding-bottom: .5rem;
@@ -43,16 +39,17 @@
     }
 
     &[open] {
-      details.s-order-item::marker {
-        color: var(--base-color);
+      & summary {
+        background: var(--blue);
+        color: var(--white);
+        &::marker {
+          color: var(--white);
+        }
       }
     }
-    &[open] summary {
-      background: var(--blue);
-      color: var(--white);
-      &::marker {
-        color: var(--white);
-      }
+
+    & .profile-orders__details {
+      padding: 2rem 0;
     }
   }
 }

@@ -1,4 +1,4 @@
-.gaming-gear{
+.pc-components{
   display: grid;
   gap: 1rem;
   flex-direction: column;
@@ -6,10 +6,10 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 150px 150px 200px 250px;
   grid-template-areas:
-        "mice mice"
-        "mice mice"
-        "keyboards keyboards"
-        "mousepads chairs";
+        "pc-cases pc-cases"
+        "pc-cases pc-cases"
+        "cpu-coolers cpu-coolers"
+        "power-supplies fans";
   margin: 2rem 0;
   @media (min-width: 393px) {
     grid-template-rows: 150px 150px 200px 300px;
@@ -22,11 +22,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 300px 300px;
     grid-template-areas:
-        "mice mice keyboards keyboards"
-        "mice mice mousepads chairs";
+        "cpu-coolers cpu-coolers pc-cases pc-cases"
+        "power-supplies fans pc-cases pc-cases";
   }
 }
-.mice, .keyboards, .mousepads, .chairs {
+.pc-cases, .cpu-coolers, .power-supplies, .fans {
   position: relative;
   border-radius: 20px;
   min-width: 100px;
@@ -47,49 +47,49 @@
       box-shadow: rgba(1, 2, 16, 0.5215686275) 0 8px 24px;
     }
   }
-   & h2 {
-     font-size: 0.75rem;
-     line-height: 1.15;
-     font-weight: 300;
-     margin: 0;
-     text-transform: uppercase;
-     width: 90%;
-     height: 100%;
-     display: flex;
-     flex-direction: column;
-     flex-wrap: nowrap;
-     align-content: flex-start;
-     justify-content: space-between;
-     color: var(--grey);
-     @media (min-width: 375px) {
-       font-size: 0.875rem;
-       line-height: 1.35;
-       letter-spacing: 1px;
-     }
-     @media (min-width: 420px) {
-       width: 60%;
-     }
-     & strong {
-       display: block;
-       margin: 0.5rem 0;
-       font-size: 1.25rem;
-       line-height: 1.05;
-       text-transform: none;
-       color: var(--white);
-       @media (min-width: 375px) {
-         letter-spacing: 1.5px;
-         line-height: 1.2;
-         font-size: 1.45rem;
-       }
-       @media (min-width: 393px) {
-         font-size: 1.55rem;
-       }
-     }
-   }
+  & h2 {
+    font-size: 0.75rem;
+    line-height: 1.15;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    color: var(--grey);
+    @media (min-width: 375px) {
+      font-size: 0.875rem;
+      line-height: 1.35;
+      letter-spacing: 1px;
+    }
+    @media (min-width: 420px) {
+      width: 60%;
+    }
+    & strong {
+      display: block;
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+      line-height: 1.05;
+      text-transform: none;
+      color: var(--white);
+      @media (min-width: 375px) {
+        letter-spacing: 1.5px;
+        line-height: 1.2;
+        font-size: 1.45rem;
+      }
+      @media (min-width: 393px) {
+        font-size: 1.55rem;
+      }
+    }
+  }
 }
 
-.mice {
-  grid-area: mice;
+.pc-cases {
+  grid-area: pc-cases;
   background: var(--black-dark);
   background-size: 200px;
   background-position-x: 32vw;
@@ -143,32 +143,34 @@
     }
   }
   @media (min-width: 375px) {
-    background-position-x: 35vw;
-    background-position-y: 15vh;
+    background-position-x: 30vw;
+    background-position-y: 13vh;
+    background-size: 180px;
   }
   @media (min-width: 420px) {
-    background-position-x: 55vw;
+    background-position-x: 50vw;
     background-position-y: center;
+    background-size: 200px;
     & h2 {
       justify-content: space-between;
     }
   }
   @media (min-width: 620px) {
     background-position-x: 50vw;
-    background-size: 250px;
+    background-size: 240px;
     & h2 {
       width: 50%;
     }
   }
   @media (min-width: 720px) {
     background-position-x: 48vw;
-    background-size: 280px;
     & h2 {
       width: 40%;
     }
   }
   @media (min-width: 768px) {
-    background-size: 350px;
+    background-size: 320px;
+    background-position-x: 44vw;
   }
   @media (min-width: 1050px) {
     background-position-x: center;
@@ -203,10 +205,10 @@
   }
 }
 
-.keyboards {
-  grid-area: keyboards;
+.cpu-coolers {
+  grid-area: cpu-coolers;
   background: var(--blue-secondary);
-  background-size: 300px;
+  background-size: 130px;
   background-position-x: 45vw;
   background-repeat: no-repeat;
   background-position-y: center;
@@ -234,45 +236,56 @@
     background-position-x: 50vw;
   }
   @media (min-width: 420px) {
-    background-position-x: 50vw;
+    background-position-x: 55vw;
+    background-position-y: 10%;
+    background-size: 165px;
   }
   @media (min-width: 620px) {
-    background-position-x: 45vw;
-    background-size: 380px;
+    background-position-x: 56vw;
+    background-size: 175px;
     & h2 {
       width: 50%;
     }
   }
   @media (min-width: 720px) {
-    background-position-x: 45vw;
-    background-size: 380px;
     & h2 {
       width: 40%;
     }
   }
   @media (min-width: 768px) {
-    background-size: 500px;
+    background-position-x: 55vw;
+    background-size: 245px;
   }
-  @media (min-width: 850px) {
-    background-size: 600px;
+  @media (min-width: 960px) {
+    background-size: 255px;
   }
   @media (min-width: 1050px) {
-    background-position-x: 22vw;
-    background-size: 100%;
+    background-position-x: 25vw;
+    background-size: 50%;
+  }
+  @media (min-width: 1350px) {
+    background-size: 40%;
   }
   @media (min-width: 1550px) {
-    background-size: 80%;
+    background-size: 35%;
   }
   @media (min-width: 1850px) {
-    background-size: 70%;
+    background-position-x: 26vw;
+    background-size: 30%;
+    background-position-y: 15%;
   }
   @media (min-width: 2150px) {
-    background-size: 60%;
+    background-size: 28%;
+    background-position-x: 28vw;
+    background-position-y: 20%;
+  }
+  @media (min-width: 2350px) {
+    background-size: 25%;
   }
 }
 
-.mousepads {
-  grid-area: mousepads;
+.power-supplies {
+  grid-area: power-supplies;
   background: var(--blue-dark);
   background-size: 85%;
   background-position-x: right;
@@ -298,14 +311,40 @@
       display: block;
     }
   }
+  @media (min-width: 420px) {
+    background-position-x: 12vw;
+  }
+  @media (min-width: 768px) {
+    background-position-x: 16vw;
+  }
   @media (min-width: 1050px) {
-    background-size: 60%;
-    background-position-y: top;
+    background-size: 80%;
+    background-position-y: center;
+    background-position-x: 8vw;
+  }
+  @media (min-width: 1250px) {
+    background-position-x: 9vw;
+  }
+  @media (min-width: 1350px) {
+    background-size: 70%;
+    background-position-x: 10vw;
+  }
+  @media (min-width: 1650px) {
+    background-size: 85%;
+    background-position-x: 10vw;
+  }
+  @media (min-width: 1850px) {
+    background-size: 75%;
+    background-position-x: 9vw;
+  }
+  @media (min-width: 2150px) {
+  background-size: 60%;
+  background-position-x: 10vw;
   }
 }
 
-.chairs {
-  grid-area: chairs;
+.fans {
+  grid-area: fans;
   background: var(--purple);
   background-size: contain;
   background-position-x: 20vw;
