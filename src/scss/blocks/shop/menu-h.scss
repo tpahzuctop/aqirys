@@ -55,4 +55,16 @@
         }
     }
   }
+  &-left {
+    margin: 2rem 0 !important;
+    justify-content: flex-start !important;
+    @media (min-width: 768px) {
+      margin: 0 0 3rem 0 !important;
+    }
+    & li {
+      & a {
+        border-radius: calc(var(--curve) * 0.35px);
+      }
+    }
+  }
 }
