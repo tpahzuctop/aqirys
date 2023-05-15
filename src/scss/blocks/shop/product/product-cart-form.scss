@@ -103,6 +103,17 @@
     @media (min-width: 650px) {
       padding: 2rem 1.5rem;
     }
+    & .plugin_arrived-button a {
+      border: 2px solid var(--purple-dark);
+      background: var(--purple-dark);
+      color: var(--white);
+      margin-top: 0;
+      &:hover {
+        border: 2px solid var(--purple-darkest);
+        background: var(--purple-darkest);
+        color: var(--white);
+      }
+    }
   }
   & .services {
     padding: 2rem 0.5rem;

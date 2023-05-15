@@ -13,3 +13,13 @@
 .wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .s-message .gray {
   color: var(--grey-dark) !important;
 }
+
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper {
+  border: 1px solid var(--purple) !important;
+  background: var(--purple-dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper:hover, .wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper.is-active {
+  border-color: var(--purple-darkest) !important;
+  background: var(--purple-darkest) !important;
+}

@@ -2913,6 +2913,19 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   color: var(--black);
 }
 
+.cart-form .purchase .plugin_arrived-button a {
+  border: 2px solid var(--purple-dark);
+  background: var(--purple-dark);
+  color: var(--white);
+  margin-top: 0;
+}
+
+.cart-form .purchase .plugin_arrived-button a:hover {
+  border: 2px solid var(--purple-darkest);
+  background: var(--purple-darkest);
+  color: var(--white);
+}
+
 .cart-form .services {
   padding: 2rem 0.5rem;
   color: var(--blue-secondary);
@@ -3197,6 +3210,17 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 .wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .s-message .gray {
   color: var(--grey-dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper {
+  border: 1px solid var(--purple) !important;
+  background: var(--purple-dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper:hover,
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper.is-active {
+  border-color: var(--purple-darkest) !important;
+  background: var(--purple-darkest) !important;
 }
 
 .wa-cart-loader,
@@ -5115,7 +5139,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     line-height: 1.5rem;
   }
 
-  .about__text {
+  .about__descr {
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
@@ -5458,10 +5482,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .product-description-fact {
     margin: 100px auto 0;
-  }
-
-  .about {
-    max-width: 1700px;
   }
 }
 
