@@ -1,1 +1,4 @@
 <!-- put your Site app custom <head> tag instructions here -->
+<!-- plugin hook: '$frontend_header' -->
+{* @event $frontend_head.%plugin_id% *}
+{foreach $frontend_head as $_}{$_}{/foreach}

@@ -27,15 +27,19 @@
   overflow: hidden;
   text-decoration: none;
   transition: all 200ms linear;
+  &:hover {
+    box-shadow: rgba(1, 2, 16, 0.5215686275) 0 8px 24px;
+  }
 }
 
 .card__image {
   width: 100%;
-  height: 350px;
+  height: 300px;
   margin-bottom: 150px;
+  padding-bottom: 50px;
   background-repeat: no-repeat;
   background-size: auto, contain;
-  background-position: center;
+  background-position: 50% 40%;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -68,6 +72,10 @@
   min-height: 150px;
 }
 
+.card__header-text {
+  width: 100%;
+}
+
 .card__arc {
   width: 80px;
   height: 80px;
@@ -90,6 +98,7 @@
   font-size: 1rem;
   margin: 0 0 0.5rem;
   color: var(--black-dark);
+  height: 3rem;
 }
 
 .card__button {
@@ -101,9 +110,9 @@
     font-size: 1.25rem;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-content: flex-start;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    height: 1.5rem;
   }
   & .out-of-stock, .compare-at-price {
     color: var(--red);
@@ -115,16 +124,35 @@
   }
 }
 
-.addtocart__button {
-  background: none;
+.addtocart__button, .plugin_arrived-button > a {
   color: var(--black-dark);
   border-radius: calc(var(--curve) * 1px);
-  border: 2px solid var(--black-dark);
+  background: var(--blue);
+  border: 2px solid var(--blue);
   padding: 1rem 2rem;
   width: 100%;
   outline: none;
   cursor: pointer;
   transition: all 300ms linear;
+  font-size: .875rem;
+  text-transform: uppercase;
+  &:hover {
+    border-color: var(--black-dark);
+    background: var(--black-dark);
+    color: var(--white);
+  }
+}
+
+.plugin_arrived-button > a {
+  display: block;
+  text-align: center;
+  width: auto;
+  margin-top: 3rem;
+  background: none;
+  color: var(--grey-dark);
+  border: 2px solid var(--grey);
+  outline: none;
+  box-sizing: border-box;
   &:hover {
     background: var(--black-dark);
     color: var(--white);

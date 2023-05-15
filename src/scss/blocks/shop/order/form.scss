@@ -5,3 +5,11 @@
 .wa-order-form-wrapper.is-locked:after {
   background: none !important;
 }
+
+.wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .s-message {
+  color: var(--white) !important;
+}
+
+.wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .s-message .gray {
+  color: var(--grey-dark) !important;
+}

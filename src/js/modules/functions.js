@@ -1,3 +1,6 @@
+import Swiper from 'swiper';
+import { Navigation } from 'swiper';
+
 export function isWebp() {
     function testWebp(callback) {
         let webP = new Image();
@@ -10,5 +13,25 @@ export function isWebp() {
         let className = support === true ? 'webp' : 'no-webp';
         document.documentElement.classList.add(className);
         console.log(className);
+    });
+}
+
+export function gallerySlider() {
+    let swiper = new Swiper(".product__images--gallery", {
+        modules: [ Navigation ],
+        direction: "horizontal",
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            1050: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        },
     });
 }

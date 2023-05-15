@@ -55,10 +55,14 @@
 @import 'blocks/shop/order/ui';
 @import 'blocks/shop/order/form';
 @import 'blocks/shop/order/loader';
+@import 'blocks/about';
+@import 'blocks/pickup';
+
 
 /* others */
 @import 'variables/icons';
 @import 'variables/buttons';
+@import 'variables/swiper';
 
-/* fancybox css */
-@import "fancybox/fancybox";
+/* plugin css */
+@import "reset/plugins/plugin_arrived";

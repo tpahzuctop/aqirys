@@ -1,12 +1,57 @@
-{if !empty($breadcrumbs)}
-    <div class="breadcrumbs"itemprop="breadcrumb">
-        {foreach $breadcrumbs as $breadcrumb}
-            <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a> <span class="rarr">&rarr;</span>
-        {/foreach}
-    </div>
-{/if}
+{$frontParameters = waRequest::param()}
 
-<h1 itemprop="name">{$page.name|default:'[`(no name)`]'}</h1>
+<h1 itemprop="name" class="category-name {if $frontParameters['action']}no-margin-bottom{/if}">{$page.name|default:'[`(no name)`]'}</h1>
+
+{if $frontParameters['action']}
+
+<div class="breadcrumbs">
+    <a href="/">Главная</a> <span class="rarr">&rarr;</span>
+    {foreach $breadcrumbs as $breadcrumb}
+    <a href="{$breadcrumb.url}">{$breadcrumb.name|escape}</a> <span class="rarr">&rarr;</span>
+    {/foreach}
+    <strong>{$wa->title()|escape}</strong>
+</div>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://aqirys.ru/"
+            }
+            {if $breadcrumbs}
+            {foreach $breadcrumbs as $breadcrumb}
+            {literal},{{/literal}
+            "@type": "ListItem",
+            "position": {$breadcrumb@iteration+1},
+            "name": "{$breadcrumb.name|escape}",
+            "item": "{$wa->domainUrl()}{$breadcrumb.url}"
+            {literal}}{/literal}
+            {if $breadcrumb@last}
+            {literal},{{/literal}
+            "@type": "ListItem",
+            "position": {$breadcrumb@iteration+2},
+            "name": "{$wa->title()|escape}",
+            "item": "{$wa->currentUrl(true)}"
+            {literal}}{/literal}
+            {/if}
+            {/foreach}
+            {else}
+            {literal},{{/literal}
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{$wa->title()|escape}",
+            "item": "{$wa->currentUrl(true)}"
+            {literal}}{/literal}
+            {/if}
+        ]
+    }
+</script>
+{/if}
 
 {$subpages = $wa->site->pages($page.id|default:null)}
 {if $subpages}

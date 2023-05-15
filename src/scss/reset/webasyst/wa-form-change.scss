@@ -1063,11 +1063,11 @@
 .wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .s-message {
   font-size: 1.142857142857143em;
   line-height: 1.3125em;
-  color: #000;
+  color: var(--white)  !important;
 }
 
 .wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .s-message .gray {
-  color: #aaa
+  color: var(--grey) !important;
 }
 
 @media screen and (min-width: 1201px) {

@@ -7,3 +7,7 @@
 }
 
 .wa-cart-body .wa-cart-content .wa-products .wa-product .is-more-than-limit {}
+
+.wa-order-cart-wrapper .wa-products .wa-product.is-out-of-stock:after {
+  background: rgba(240,66,66, .45) !important;
+}

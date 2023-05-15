@@ -129,6 +129,7 @@
     {/if}
 
     <div class="purchase">
+        {if $product_available || count($product.skus) > 1}
         <!-- price -->
         <div class="add2cart">
             {if $product.compare_price > 0}<span class="compare-at-price nowrap"> {shop_currency_html($product.compare_price)} </span>{/if}
@@ -144,6 +145,9 @@
 
             {*<span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $product.name|escape, $_cart_url)}</span>*}
         </div>
+        {else}
+            {shopArrivedPlugin::getFormHtml($product)}
+        {/if}
     </div>
 
     {if $services}
