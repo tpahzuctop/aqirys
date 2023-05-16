@@ -9,7 +9,7 @@
 }
 
 .about-fact {
-  margin: 20px auto 0;
+  margin: 40px auto 0;
   max-width: 1100px;
 
   &__title {
@@ -31,8 +31,8 @@
 
     &__descr {
       margin-bottom: 30px;
-      font-size: 0.6rem;
-      line-height: 0.8rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
     }
   }
 
@@ -40,8 +40,8 @@
 
     &__descr {
       margin-bottom: 30px;
-      font-size: 0.6rem;
-      line-height: 0.8rem;
+      font-size: 0.8rem;
+      line-height: 1rem;
     }
   }
 }
@@ -51,13 +51,14 @@
     margin: 70px auto;
 
     &__descr {
-      font-size: 0.8rem;
-      line-height: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
     }
   }
 
   .about-fact {
-    margin: 40px auto;
+    margin: 70px auto;
+    max-width: 700px;
 
     &__title {
       text-align: center;
@@ -66,8 +67,8 @@
 
     &__descr {
       text-align: center;
-      font-size: 0.8rem;
-      line-height: 1.1rem;
+      font-size: 0.9rem;
+      line-height: 1.2rem;
     }
   }
 }
@@ -82,7 +83,8 @@
   }
 
   .about-fact {
-    max-width: 1180px;
+    max-width: 1000px;
+    margin: 90px auto;
 
     &__title {
       font-size: 1.8rem;
@@ -91,6 +93,27 @@
     &__descr {
       font-size: 1.1rem;
       line-height: 1.5rem;
+    }
+  }
+}
+
+@media(min-width: 1920px) {
+  .about {
+
+    &__descr {
+      font-size: 1.2rem;
+    }
+  }
+
+  .about-fact {
+    max-width: 1240px;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__descr {
+      font-size: 1.2rem;
     }
   }
 }

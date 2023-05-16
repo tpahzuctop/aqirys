@@ -3242,7 +3242,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .about-fact {
-  margin: 20px auto 0;
+  margin: 40px auto 0;
   max-width: 1100px;
 }
 
@@ -3259,6 +3259,17 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   color: var(--white);
 }
 
+.pickup {
+  margin-bottom: 150px;
+}
+
+.pickup__title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+
 .pickup__text {
   margin-top: 15px;
   width: 95%;
@@ -3271,8 +3282,13 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   white-space: nowrap;
 }
 
+.pickup__description {
+  margin-bottom: 30px;
+}
+
 .pickup-contacts {
-  margin: 30px 0 !important;
+  margin: 30px 0;
+  padding-left: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 180px);
@@ -3280,7 +3296,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .pickup-contacts__item {
-  padding: 10px 10px 15px 10px;
+  padding: 20px 10px 20px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3301,21 +3317,21 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .pickup-contacts__phone-wrapper {
-  margin-top: 10px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .pickup-contacts__phone {
-  margin-top: 5px;
+  margin-top: 15px;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--white);
 }
 
 .pickup-contacts__phone:hover {
-  color: var(--purple-darkest);
+  color: var(--blue);
 }
 
 .pickup-contacts__mail {
@@ -3325,11 +3341,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .pickup-contacts__mail:hover {
-  color: var(--purple-darkest);
+  color: var(--blue);
 }
 
 .pickup-contacts__descr-wrapper {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .pickup-contacts__descr {
@@ -3337,6 +3353,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .pickup-advantages {
+  padding-left: 0;
   margin: 50px 0;
   display: flex;
   flex-direction: column;
@@ -3362,6 +3379,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 .pickup-advantages__icon img {
   width: inherit;
+}
+
+.pickup-advantages__descr {
+  font-size: 0.85rem;
+  color: var(--blue);
 }
 
 /* others */
@@ -4548,22 +4570,27 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .about__descr {
     margin-bottom: 30px;
-    font-size: 0.6rem;
-    line-height: 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
 
   .about-fact__descr {
     margin-bottom: 30px;
-    font-size: 0.6rem;
-    line-height: 0.8rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
 
   .pickup__title {
     margin: 3rem 0 1rem 0;
   }
 
+  .pickup__text {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+
   .pickup__text a {
-    margin: 0 10px;
+    margin: 0 7px;
   }
 
   .pickup-contacts {
@@ -4573,16 +4600,16 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-contacts__item {
-    padding: 20px 40px;
+    padding: 30px 40px;
   }
 
   .pickup-contacts__phone-wrapper {
-    margin-top: 15px;
+    margin-top: 25px;
   }
 
   .pickup-contacts__phone {
     letter-spacing: 1px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .pickup-contacts__mail {
@@ -4590,6 +4617,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-contacts__descr-wrapper {
+    margin-top: 25px;
     font-size: 1.2rem;
   }
 
@@ -4610,7 +4638,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   .pickup-advantages__item {
     padding: 0 0.5rem;
     margin-bottom: 0;
-    height: 150px;
     flex: 1;
   }
 
@@ -4661,12 +4688,13 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .about__descr {
-    font-size: 0.8rem;
-    line-height: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
   }
 
   .about-fact {
-    margin: 40px auto;
+    margin: 70px auto;
+    max-width: 700px;
   }
 
   .about-fact__title {
@@ -4676,12 +4704,18 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .about-fact__descr {
     text-align: center;
-    font-size: 0.8rem;
-    line-height: 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  .pickup__title {
+    font-size: 1.5rem;
   }
 
   .pickup__text {
     width: 85%;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
   }
 
   .pickup-contacts {
@@ -4691,11 +4725,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-contacts__item {
-    padding: 20px 10px;
-  }
-
-  .pickup-contacts__phone-wrapper {
-    margin-top: 10px;
+    padding: 25px 10px;
   }
 
   .pickup-contacts__phone {
@@ -4703,7 +4733,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-contacts__descr-wrapper {
-    font-size: 1rem;
+    margin-top: 20px;
+    font-size: 0.9rem;
   }
 }
 
@@ -5042,7 +5073,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .pickup__text {
     width: 70%;
-    font-size: 1rem;
   }
 
   .pickup-contacts {
@@ -5050,15 +5080,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-contacts__item {
-    padding: 20px 40px;
-  }
-
-  .pickup-contacts__phone-wrapper {
-    margin-top: 15px;
-  }
-
-  .pickup-contacts__phone {
-    margin-top: 8px;
+    padding: 25px 40px;
   }
 
   .pickup-contacts__descr {
@@ -5074,7 +5096,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-advantages__item {
-    height: 180px;
+    height: 210px;
     padding: 0 1.5rem;
   }
 
@@ -5084,7 +5106,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-advantages__descr {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .icon {
@@ -5145,7 +5167,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .about-fact {
-    max-width: 1180px;
+    max-width: 1000px;
+    margin: 90px auto;
   }
 
   .about-fact__title {
@@ -5271,6 +5294,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .pickup__text {
     width: 60%;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
   }
 
   .pickup-contacts {
@@ -5285,7 +5310,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-contacts__phone {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 1.2rem;
   }
 
@@ -5294,17 +5319,16 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-contacts__descr-wrapper {
-    margin-top: 0;
-    font-size: 1.2rem;
+    margin-top: 10px;
+    font-size: 1.1rem;
   }
 
   .pickup-contacts__descr {
     margin-top: 25px;
   }
 
-  .pickup-contacts__btn {
-    margin: 25px 0 0 0;
-    padding: 0 2rem;
+  .pickup-contacts__item {
+    padding: 30px 40px;
   }
 
   .pickup-advantages {
@@ -5323,7 +5347,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .pickup-advantages__descr {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   .product__promo .product__image {
@@ -5432,6 +5456,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     padding: 9vw 7vw;
   }
 
+  .pickup {
+    margin: 30px auto 200px;
+  }
+
   .pickup__text {
     width: 60%;
     font-size: 1.2rem;
@@ -5440,10 +5468,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   .pickup-contacts {
     margin: 70px 0;
     grid-template-rows: repeat(1, 380px);
+    grid-gap: 45px;
   }
 
   .pickup-contacts__item {
-    padding: 30px 60px;
+    padding: 40px 60px;
   }
 
   .pickup-contacts__icon {
@@ -5467,7 +5496,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 @media (min-width: 1920px) {
   .product-description {
-    max-width: 1700px;
+    max-width: 1920px;
     margin: 0 auto;
   }
 
@@ -5482,6 +5511,22 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .product-description-fact {
     margin: 100px auto 0;
+  }
+
+  .about__descr {
+    font-size: 1.2rem;
+  }
+
+  .about-fact {
+    max-width: 1240px;
+  }
+
+  .about-fact__title {
+    font-size: 2rem;
+  }
+
+  .about-fact__descr {
+    font-size: 1.2rem;
   }
 }
 
@@ -5521,41 +5566,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   .power-supplies {
     background-size: 60%;
     background-position-x: 10vw;
-  }
-
-  .pickup__text {
-    font-size: 1.3rem;
-  }
-
-  .pickup-contacts__item {
-    padding: 30px 85px;
-  }
-
-  .pickup-contacts__descr-wrapper {
-    font-size: 1.4rem;
-  }
-
-  .pickup-contacts__phone {
-    font-size: 1.4rem;
-  }
-
-  .pickup-advantages {
-    margin: 130px 0;
-  }
-
-  .pickup-advantages__item {
-    height: 260px;
-    padding: 0 4rem;
-  }
-
-  .pickup-advantages__icon {
-    margin-bottom: 40px;
-    width: 270px;
-    height: 150px;
-  }
-
-  .pickup-advantages__descr {
-    font-size: 1.5rem;
   }
 }
 
