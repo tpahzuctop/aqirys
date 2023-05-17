@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE theme PUBLIC "wa-app-theme" "http://www.webasyst.com/wa-content/xml/wa-app-theme.dtd">
-<theme id="aqirys" system="0" vendor="efimov-alexey" author="efimov-alexey" app="shop" parent_theme_id="site:aqirys" version="1.0.5">
+<theme id="aqirys" system="0" vendor="efimov-alexey" author="efimov-alexey" app="shop" parent_theme_id="site:aqirys" version="1.0.6">
     <name locale="en_US">Aqirys</name>
     <name locale="ru_RU">Aqirys</name>
     <description locale="ru_RU">Семейство адаптивных тем дизайна.</description>
@@ -68,7 +68,7 @@
             <name locale="ru_RU">ID Футер меню #2</name>
         </setting>
         <setting var="id_footer_menu3" control_type="text">
-            <value>221</value>
+            <value>234</value>
             <name locale="en_US">ID FOOTER MENU #3</name>
             <name locale="ru_RU">ID Футер меню #3</name>
         </setting>
