@@ -377,6 +377,10 @@ body {
   display: none;
 }
 
+.grey {
+  color: var(--grey-dark);
+}
+
 a {
   color: var(--white);
   text-decoration: none;
@@ -1722,6 +1726,42 @@ body {
 }
 
 /* header, content, footer */
+
+.topbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3rem;
+  background: var(--black-dark);
+  font-size: 0.875rem;
+  padding: 0 5vw;
+  line-height: 3rem;
+}
+
+.topbar .phones .phone a:hover {
+  color: var(--blue);
+}
+
+.topbar .phones .phone a:hover span {
+  color: var(--blue);
+}
+
+.topbar .phones .email {
+  display: none;
+}
+
+.topbar .phones svg.small-icon {
+  margin: 0 0.5rem;
+  color: var(--grey-dark);
+  fill: var(--grey-dark);
+}
+
+.topbar .time-work {
+  display: none;
+  margin-left: 1rem;
+}
 
 header.header {
   width: 90vw;
@@ -3393,6 +3433,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   height: 1.5rem;
 }
 
+.small-icon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
 .__jivoMobileButton {
   bottom: 4rem !important;
   left: 0.5rem !important;
@@ -4418,6 +4463,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     width: 20rem;
   }
 
+  .topbar .time-work {
+    display: block;
+  }
+
   footer.footer {
     padding: 2rem;
   }
@@ -4644,6 +4693,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   .pickup-advantages__descr {
     font-size: 0.8rem;
   }
+
+  .small-icon {
+    width: 1rem;
+    height: 1rem;
+  }
 }
 
 @media (min-width: 850px) {
@@ -4739,6 +4793,18 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 @media (min-width: 1050px) {
+  .topbar .phones .email {
+    display: inline-block;
+  }
+
+  .topbar .phones svg.small-icon {
+    margin: 0 1rem;
+  }
+
+  .topbar .time-work {
+    margin-left: 2rem;
+  }
+
   header nav {
     display: block;
     width: 100%;
@@ -4996,6 +5062,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 @media (min-width: 1250px) {
   .wrapper {
     padding: 2rem 5vw;
+  }
+
+  .topbar .time-work {
+    margin-left: 3rem;
   }
 
   header.header {
@@ -5364,6 +5434,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 @media (min-width: 1650px) {
+  .topbar .time-work {
+    margin-left: 4rem;
+  }
+
   .power-supplies {
     background-size: 85%;
     background-position-x: 10vw;

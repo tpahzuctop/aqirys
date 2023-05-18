@@ -1026,7 +1026,7 @@ table td {
   height: 100%;
   top: 0;
   color: #555;
-  font-size: $rem(14);
+  font-size: 14px;
 }
 .dropdown > .dropdown-body .dropdown-filter .s-actions:not(.right) {
   left: 0;

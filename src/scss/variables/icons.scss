@@ -6,3 +6,11 @@
     height: 2rem;
   }
 }
+.small-icon {
+  width: .85rem;
+  height: .85rem;
+  @media (min-width: 768px) {
+    width: 1rem;
+    height: 1rem;
+  }
+}

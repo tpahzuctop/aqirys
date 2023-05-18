@@ -1,0 +1,53 @@
+.topbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  height: 3rem;
+  background: var(--black-dark);
+  font-size: .875rem;
+  padding: 0 5vw;
+  line-height: 3rem;
+  & .phones {
+    & .phone {
+      & a:hover {
+        color: var(--blue);
+        & span {
+          color: var(--blue);
+        }
+      }
+    }
+    & .email {
+      display: none;
+      @media (min-width: 1050px) {
+        display: inline-block;
+      }
+    }
+    & svg.small-icon {
+      margin: 0 .5rem;
+      color: var(--grey-dark);
+      fill: var(--grey-dark);
+      @media (min-width: 1050px) {
+        margin: 0 1rem;
+      }
+    }
+  }
+  & .time-work {
+    display: none;
+    margin-left: 1rem;
+    @media (min-width: 768px) {
+      display: block;
+    }
+    @media (min-width: 1050px) {
+      margin-left: 2rem;
+    }
+    @media (min-width: 1250px) {
+      margin-left: 3rem;
+    }
+    @media (min-width: 1650px) {
+      margin-left: 4rem;
+    }
+  }
+
+}
