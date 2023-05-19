@@ -1735,32 +1735,47 @@ body {
   align-items: center;
   height: 3rem;
   background: var(--black-dark);
-  font-size: 0.875rem;
+  font-size: 0.7rem;
   padding: 0 5vw;
-  line-height: 3rem;
+  line-height: 1rem;
 }
 
-.topbar .phones .phone a:hover {
+.topbar .phones {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topbar .phones .phone:hover {
   color: var(--blue);
 }
 
-.topbar .phones .phone a:hover span {
+.topbar .phones .phone:hover span {
   color: var(--blue);
 }
 
 .topbar .phones .email {
   display: none;
-}
-
-.topbar .phones svg.small-icon {
-  margin: 0 0.5rem;
-  color: var(--grey-dark);
-  fill: var(--grey-dark);
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .topbar .time-work {
   display: none;
-  margin-left: 1rem;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.topbar svg.small-icon {
+  margin: 0 0.5rem 0 1.5rem;
+  color: var(--grey-dark);
+  fill: var(--grey-dark);
 }
 
 header.header {
@@ -1770,6 +1785,80 @@ header.header {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+}
+
+.search {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.25rem;
+  border-radius: 20px;
+  line-height: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin-top: 5vw;
+}
+
+.search form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.search form button,
+.search form input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.search form button {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  fill: var(--white);
+  padding: 0.5rem 0.65rem 0.5rem 1rem;
+  height: 2.5rem;
+}
+
+.search form button:hover {
+  cursor: pointer;
+  color: var(--blue);
+  fill: var(--blue);
+}
+
+.search form input {
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  padding: 0 0.5rem;
+  font-size: 1rem;
+  color: var(--white);
+}
+
+.search form input::-webkit-input-placeholder {
+  color: var(--grey-dark);
+}
+
+.search form input::-moz-placeholder {
+  color: var(--grey-dark);
+}
+
+.search form input::placeholder {
+  color: var(--grey-dark);
+}
+
+.search-page .no-found {
+  margin: 3rem 0;
 }
 
 .logo a {
@@ -3434,8 +3523,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .small-icon {
-  width: 0.85rem;
-  height: 0.85rem;
+  width: 1rem;
+  height: 1rem;
 }
 
 .__jivoMobileButton {
@@ -4097,6 +4186,14 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 @media (min-width: 375px) {
+  .topbar {
+    font-size: 0.875rem;
+  }
+
+  .search form input {
+    letter-spacing: 1px;
+  }
+
   footer.footer .logo {
     width: 250px;
     margin-top: 1.5rem;
@@ -4464,7 +4561,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .topbar .time-work {
-    display: block;
+    display: flex;
+  }
+
+  .search {
+    margin-top: 1.5rem;
   }
 
   footer.footer {
@@ -4693,11 +4794,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   .pickup-advantages__descr {
     font-size: 0.8rem;
   }
-
-  .small-icon {
-    width: 1rem;
-    height: 1rem;
-  }
 }
 
 @media (min-width: 850px) {
@@ -4794,15 +4890,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 @media (min-width: 1050px) {
   .topbar .phones .email {
-    display: inline-block;
-  }
-
-  .topbar .phones svg.small-icon {
-    margin: 0 1rem;
-  }
-
-  .topbar .time-work {
-    margin-left: 2rem;
+    display: flex;
   }
 
   header nav {
@@ -5065,11 +5153,24 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .topbar .time-work {
-    margin-left: 3rem;
+    margin-left: 2rem;
   }
 
   header.header {
     height: 4rem;
+  }
+
+  .search form button {
+    height: 3.5rem;
+  }
+
+  .search form input {
+    height: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  .search-page .no-found {
+    margin: 4rem 0;
   }
 
   .logo a {
@@ -5252,6 +5353,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 @media (min-width: 1450px) {
+  .topbar .time-work {
+    margin-left: 3rem;
+  }
+
   .chairs {
     background-position: calc(100% + 40px) 0;
   }

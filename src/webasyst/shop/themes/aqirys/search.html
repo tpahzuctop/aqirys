@@ -1,4 +1,4 @@
-<div class="search-page container">
+<div class="search-page">
 
     <h1 class="category-name">
        Вы искали: {$title}
@@ -9,7 +9,7 @@
     {foreach $frontend_search as $_}{$_}{/foreach}
 
     {if !$products}
-        [`No products were found.`]
+        <div class="no-found">[`No products were found.`]</div>
     {else}
         {include file='list-thumbs.html'}
     {/if}

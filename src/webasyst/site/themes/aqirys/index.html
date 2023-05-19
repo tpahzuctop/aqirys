@@ -97,16 +97,40 @@
 
             <div class="phones">
                 <svg class="small-icon">
-                    <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_call"></use>
+                    <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_phone"></use>
                 </svg>
-                <a href="tel:+74951158451" class="phone"><span class="grey">+7 (495)</span> 115-84-51</a>&nbsp; |&nbsp; <a href="tel:88003508845" class="phone"><span class="grey">8 (800)</span> 350-88-45</a> <span class="email">&nbsp; |&nbsp; <a href="mailto:info@aqirys.ru" class="email">info@aqirys.ru</a></span>
+                <a href="tel:+74951158451" class="phone"><span class="grey">+7 (495)</span> 115-84-51</a>
+                &nbsp; | &nbsp;
+                <a href="tel:88003508845" class="phone"><span class="grey">8 (800)</span> 350-88-45</a>
+                <span class="email">
+                    <svg class="small-icon">
+                        <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_mail"></use>
+                    </svg>
+                    <a href="mailto:info@aqirys.ru" class="email">info@aqirys.ru</a>
+                </span>
             </div>
-            <div class="time-work"><span class="grey">Консультация - </span>Пн-Пт, с 9 до 18</div>
+            <div class="time-work">
+                <svg class="small-icon">
+                    <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_operator"></use>
+                </svg>
+                <span class="grey">Консультация&nbsp;—&nbsp;</span>Пн-Пт, с 9 до 18
+            </div>
         </div>
         <div class="wrapper">
             <header class="header">
                 {include file="header.html" inline}
             </header>
+            <div class="search">
+                <form method="get" action="{$wa->getUrl('shop/frontend/search')}">
+                    <button type="submit">
+                        <svg class="icon">
+                            <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_search"></use>
+                        </svg>
+                    </button>
+                    {$_query = $smarty.get.query|default:''|escape}
+                    <input type="text" name="query" value="{if !empty($_query)}{$_query}{/if}" placeholder="[`Search`] по названию или SKU" id="header-fixed-search-form-input">
+                </form>
+            </div>
             <main class="main">
                 {include file="`$wa_active_theme_path`/content.html" inline}
             </main>
