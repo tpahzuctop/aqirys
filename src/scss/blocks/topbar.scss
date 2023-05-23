@@ -61,4 +61,42 @@
     color: var(--grey-dark);
     fill: var(--grey-dark);
   }
+  &.auth {
+    padding: 0;
+    justify-content: center;
+  }
+  & .link-back {
+    width: 50%;
+    max-width: 300px;
+    background: var(--blue);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: all ease-in 300ms;
+    &:hover {
+      background: var(--blue-darkest);
+      color: var(--white);
+    }
+  }
+  & .link-main-page {
+    width: 50%;
+    max-width: 300px;
+    background: var(--blue-secondary);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    transition: all ease-in 300ms;
+    &:hover {
+      background: var(--blue-darkest);
+      color: var(--white);
+    }
+  }
 }

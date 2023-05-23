@@ -26,12 +26,28 @@
 
   &__top-banner, &__text, &__side-banner {
     border-radius: 20px;
-    padding: 1rem;
     min-width: 100px;
     overflow: hidden;
     box-sizing: border-box;
-    @media (min-width: 768px) {
-      padding: 2rem;
+  }
+
+  &__top-banner, &__side-banner {
+    position: relative;
+    & a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      padding: 1rem;
+      box-sizing: border-box;
+      z-index: 3;
+      position: relative;
+      &:hover {
+        cursor: pointer;
+      }
+
+      @media (min-width: 768px) {
+        padding: 2rem;
+      }
     }
   }
 
@@ -48,6 +64,30 @@
     @media (min-width: 2150px) {
       background-size: 65%;
     }
+
+
+      &::before {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(at 0% 15%, var(--purple), #B286FE65, #935CF625, #935CF600);
+        z-index: 1;
+        border-radius: 20px;
+        transition: all ease-in 400ms;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: var(--purple-dark);
+
+        &::before {
+          display: block;
+        }
+      }
   }
 
   &__text {
@@ -58,6 +98,7 @@
     @media (min-width: 768px) {
       padding: 3rem 0;
     }
+
     & h2 {
       line-height: 1.1;
       font-weight: 300;
@@ -65,6 +106,7 @@
       font-size: 1.35rem;
       letter-spacing: 1px;
       color: var(--grey-dark);
+
       & > strong {
         font-size: 1.65rem;
         line-height: 1.1;
@@ -94,6 +136,7 @@
           font-size: 3.15rem;
         }
       }
+
       @media (min-width: 375px) {
         font-size: 1.4rem;
       }
@@ -109,5 +152,30 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+
+
+      &::before {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(at 0% 15%, var(--blue), #42A5F065, #1077c625, #1077c600);
+        z-index: 1;
+        border-radius: 20px;
+        transition: all ease-in 400ms;
+        cursor: pointer;
+      }
+
+      &:hover {
+        background-color: var(--blue-darkest);
+
+        &::before {
+          display: block;
+        }
+      }
+
   }
 }

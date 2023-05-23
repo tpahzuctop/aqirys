@@ -1778,6 +1778,49 @@ body {
   fill: var(--grey-dark);
 }
 
+.topbar.auth {
+  padding: 0;
+  justify-content: center;
+}
+
+.topbar .link-back {
+  width: 50%;
+  max-width: 300px;
+  background: var(--blue);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: all ease-in 300ms;
+}
+
+.topbar .link-back:hover {
+  background: var(--blue-darkest);
+  color: var(--white);
+}
+
+.topbar .link-main-page {
+  width: 50%;
+  max-width: 300px;
+  background: var(--blue-secondary);
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  transition: all ease-in 300ms;
+}
+
+.topbar .link-main-page:hover {
+  background: var(--blue-darkest);
+  color: var(--white);
+}
+
 header.header {
   width: 90vw;
   height: 3rem;
@@ -2240,10 +2283,30 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 .headset__text,
 .headset__side-banner {
   border-radius: 20px;
-  padding: 1rem;
   min-width: 100px;
   overflow: hidden;
   box-sizing: border-box;
+}
+
+.headset__top-banner,
+.headset__side-banner {
+  position: relative;
+}
+
+.headset__top-banner a,
+.headset__side-banner a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 3;
+  position: relative;
+}
+
+.headset__top-banner a:hover,
+.headset__side-banner a:hover {
+  cursor: pointer;
 }
 
 .headset__top-banner {
@@ -2256,6 +2319,29 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.headset__top-banner::before {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 0% 15%, var(--purple), rgba(178, 134, 254, 0.3960784314), rgba(147, 92, 246, 0.1450980392), rgba(147, 92, 246, 0));
+  z-index: 1;
+  border-radius: 20px;
+  transition: all ease-in 400ms;
+  cursor: pointer;
+}
+
+.headset__top-banner:hover {
+  background-color: var(--purple-dark);
+}
+
+.headset__top-banner:hover::before {
+  display: block;
 }
 
 .headset__text {
@@ -2295,6 +2381,29 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.headset__side-banner::before {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(at 0% 15%, var(--blue), rgba(66, 165, 240, 0.3960784314), rgba(16, 119, 198, 0.1450980392), rgba(16, 119, 198, 0));
+  z-index: 1;
+  border-radius: 20px;
+  transition: all ease-in 400ms;
+  cursor: pointer;
+}
+
+.headset__side-banner:hover {
+  background-color: var(--blue-darkest);
+}
+
+.headset__side-banner:hover::before {
+  display: block;
 }
 
 .pc-components {
@@ -4179,6 +4288,50 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="var(--base-color)", endColorstr=" var(--base-color-purple) ", GradientType=1);
 }
 
+/* pages */
+
+.page-contacts {
+  padding: 0 1rem;
+}
+
+.page-contacts-item__pic {
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+.page-contacts-item__title {
+  text-align: center;
+}
+
+.page-contacts-item__description-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-contacts-item__phone-wrapper {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-contacts-item__description {
+  font-size: 0.9rem;
+  color: var(--grey-dark);
+}
+
+.page-contacts-item__description--bold {
+  font-weight: 400;
+}
+
+.page-contacts-item__description--adress {
+  color: var(--blue);
+}
+
+.page-contacts-item__phone--right {
+  text-align: right;
+}
+
 @media (min-width: 360px) {
   .cart-form .purchase .add2cart__submit .qty {
     width: 100%;
@@ -4605,9 +4758,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     grid-template-rows: 300px auto 400px;
   }
 
-  .headset__top-banner,
-  .headset__text,
-  .headset__side-banner {
+  .headset__top-banner a,
+  .headset__side-banner a {
     padding: 2rem;
   }
 
@@ -4793,6 +4945,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .pickup-advantages__descr {
     font-size: 0.8rem;
+  }
+
+  .page-contacts-item__pic {
+    width: 400px;
   }
 }
 
@@ -5068,6 +5224,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .plugin_arrived-body {
     height: auto;
+  }
+
+  .page-contacts {
+    display: flex;
+    justify-content: space-between;
   }
 
   .mice {
