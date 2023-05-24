@@ -4291,7 +4291,18 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 /* pages */
 
 .page-contacts {
-  padding: 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.page-contacts li ul {
+  padding: 0;
+  list-style: none;
+}
+
+.page-contacts-item {
+  margin: 50px auto 0;
+  max-width: 500px;
 }
 
 .page-contacts-item__pic {
@@ -4301,35 +4312,64 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .page-contacts-item__title {
+  margin: 40px auto 15px;
   text-align: center;
 }
 
 .page-contacts-item__description-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .page-contacts-item__phone-wrapper {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.page-contacts-item__phone {
+  font-size: 0.9rem;
+}
+
+.page-contacts-item__phone a {
+  color: var(--blue) !important;
+}
+
+.page-contacts-item__phone a:hover {
+  color: var(--white) !important;
+}
+
+.page-contacts-item__phone--right {
+  text-align: right;
+}
+
+.page-contacts-item__mail a {
+  color: var(--blue) !important;
+}
+
+.page-contacts-item__mail a:hover {
+  color: var(--white) !important;
 }
 
 .page-contacts-item__description {
+  margin-bottom: 5px;
   font-size: 0.9rem;
   color: var(--grey-dark);
 }
 
 .page-contacts-item__description--bold {
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .page-contacts-item__description--adress {
+  text-align: center;
   color: var(--blue);
 }
 
-.page-contacts-item__phone--right {
-  text-align: right;
+.page-contacts-item__description--center {
+  text-align: center;
 }
 
 @media (min-width: 360px) {
@@ -4563,6 +4603,12 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .power-supplies {
     background-position-x: 12vw;
+  }
+}
+
+@media (min-width: 425px) {
+  .page-contacts-item__phone {
+    font-size: 1rem;
   }
 }
 
@@ -4947,8 +4993,21 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     font-size: 0.8rem;
   }
 
+  .page-contacts-item__title {
+    margin: 50px auto 25px;
+    font-size: 1.4rem;
+  }
+
   .page-contacts-item__pic {
     width: 400px;
+  }
+
+  .page-contacts-item__description {
+    font-size: 1rem;
+  }
+
+  .page-contacts-item__phone {
+    font-size: 1.2rem;
   }
 }
 
@@ -5231,6 +5290,36 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     justify-content: space-between;
   }
 
+  .page-contacts-item {
+    margin: 0;
+    max-width: initial;
+    width: 300px;
+  }
+
+  .page-contacts-item__pic {
+    width: 300px;
+  }
+
+  .page-contacts-item__title {
+    font-size: 1.3rem;
+  }
+
+  .page-contacts-item__description {
+    font-size: 0.8rem;
+  }
+
+  .page-contacts-item__phone-wrapper {
+    margin: 15px 0;
+  }
+
+  .page-contacts-item__phone {
+    font-size: 0.8rem;
+  }
+
+  .page-contacts-item__mail {
+    font-size: 0.9rem;
+  }
+
   .mice {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
@@ -5445,6 +5534,18 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     width: 2rem;
     height: 2rem;
   }
+
+  .page-contacts-item {
+    width: 350px;
+  }
+
+  .page-contacts-item__description {
+    font-size: 0.9rem;
+  }
+
+  .page-contacts-item__phone {
+    font-size: 0.9rem;
+  }
 }
 
 @media (min-width: 1350px) {
@@ -5540,6 +5641,14 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .product__images--title h2 {
     font-size: 3.25rem;
+  }
+
+  .page-contacts-item {
+    width: 400px;
+  }
+
+  .page-contacts-item__phone {
+    font-size: 1rem;
   }
 }
 
@@ -5729,6 +5838,26 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     width: 80%;
     height: 80%;
   }
+
+  .page-contacts-item {
+    width: 470px;
+  }
+
+  .page-contacts-item__description {
+    font-size: 1rem;
+  }
+
+  .page-contacts-item__description--adress {
+    margin-bottom: 10px;
+  }
+
+  .page-contacts-item__phone {
+    font-size: 1.1rem;
+  }
+
+  .page-contacts-item__mail {
+    font-size: 1rem;
+  }
 }
 
 @media (min-width: 1850px) {
@@ -5831,6 +5960,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .pickup-contacts__descr {
     margin-top: 30px;
+  }
+
+  .page-contacts-item {
+    width: 520px;
   }
 }
 
