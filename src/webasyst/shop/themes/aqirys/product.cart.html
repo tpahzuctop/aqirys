@@ -129,7 +129,7 @@
     {/if}
 
     <div class="purchase">
-        {if $product_available || count($product.skus) > 1}
+        {if ($product_available || count($product.skus) > 1) && $p.price  != 0}
         <!-- price -->
         <div class="add2cart">
             {if $product.compare_price > 0}<span class="compare-at-price nowrap"> {shop_currency_html($product.compare_price)} </span>{/if}
@@ -146,7 +146,11 @@
             {*<span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $product.name|escape, $_cart_url)}</span>*}
         </div>
         {else}
-            {shopArrivedPlugin::getFormHtml($product)}
+            {if shopArrivedPlugin::getListFormHtml($p)}
+                {shopArrivedPlugin::getListFormHtml($p)}
+            {else}
+                <span class="plugin_arrived-button custom disabled"><a href="https://aqirys.ru/nashi-kontakty/">Доступно в шоу-руме</a></span>
+            {/if}
         {/if}
     </div>
 

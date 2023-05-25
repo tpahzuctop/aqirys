@@ -36,7 +36,7 @@
 
 <section class="cards">
     {foreach $products as $p}
-    {$available = $wa->shop->settings('ignore_stock_count') || $p.count === null || $p.count > 0}
+    {$available = ($wa->shop->settings('ignore_stock_count') || $p.count === null || $p.count > 0) && $p.price  != 0}
 
 
     <article itemscope itemtype="http://schema.org/Product" class="card">
@@ -79,7 +79,11 @@
                                 <span class="out-of-stock"><strong>{if $wa->shop->settings('ignore_stock_count')}{_wd('shop', 'Pre-order only')}{else}{_wd('shop', 'Out of stock')}{/if}</strong></span>
                                 <link itemprop="availability" href="http://schema.org/OutOfStock"/>
                             </div>
-                            {shopArrivedPlugin::getListFormHtml($p)}
+                                {if shopArrivedPlugin::getListFormHtml($p)}
+                                {shopArrivedPlugin::getListFormHtml($p)}
+                                {else}
+                                    <span class="plugin_arrived-button custom disabled"><a href="https://aqirys.ru/nashi-kontakty/">Доступно в шоу-руме</a></span>
+                                {/if}
                             {/if}
                         </div>
                     </div>
