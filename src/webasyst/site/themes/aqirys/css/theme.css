@@ -3469,32 +3469,102 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   padding: 20vh 0;
 }
 
-.about {
-  margin: 50px auto;
-}
-
-.about__descr {
-  font-size: 0.85rem;
-  font-weight: 300;
-  color: var(--white);
-}
-
-.about-fact {
-  margin: 40px auto 0;
-  max-width: 1100px;
-}
-
-.about-fact__title {
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-transform: uppercase;
+.about__title {
+  text-align: center;
   color: var(--blue);
 }
 
-.about-fact__descr {
-  font-size: 0.85rem;
-  font-weight: 300;
-  color: var(--white);
+.about-motto {
+  margin: 20px auto 60px;
+}
+
+.about-motto__descr {
+  font-size: 0.9rem;
+}
+
+.about-motto__pic {
+  display: block;
+  margin: 30px auto;
+  width: 80%;
+}
+
+.about-why {
+  margin: 30px auto 40px;
+  padding: 0 15px;
+  list-style: none;
+}
+
+.about-why__item {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-why__circle {
+  margin: 15px 0;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  font-size: 1.1rem;
+  border-radius: 100%;
+  background: var(--blue-dark);
+  background: linear-gradient(180deg, #009cd6 0%, #7a33ff 100%);
+}
+
+.about-why__descr {
+  max-width: 320px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.about-target {
+  margin: 20px auto 40px;
+  padding: 0 15px;
+  list-style: none;
+}
+
+.about-target__item {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-target__title {
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.about-target__descr {
+  max-width: 320px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.about-offer {
+  margin: 20px auto 60px;
+  list-style: none;
+}
+
+.about-offer__item {
+  position: relative;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.about-offer__item::before {
+  position: absolute;
+  left: -25px;
+  top: 3px;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--blue);
+  border-radius: 100%;
 }
 
 .pickup {
@@ -4607,6 +4677,26 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 @media (min-width: 425px) {
+  .about-motto__descr {
+    font-size: 1rem;
+  }
+
+  .about-why__descr {
+    font-size: 0.9rem;
+  }
+
+  .about-target__title {
+    font-size: 1rem;
+  }
+
+  .about-target__descr {
+    font-size: 0.9rem;
+  }
+
+  .about-offer__item {
+    font-size: 1rem;
+  }
+
   .page-contacts-item__phone {
     font-size: 1rem;
   }
@@ -4916,16 +5006,37 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     line-height: 0.8rem;
   }
 
-  .about__descr {
-    margin-bottom: 30px;
-    font-size: 0.8rem;
-    line-height: 1rem;
+  .about-motto {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
   }
 
-  .about-fact__descr {
-    margin-bottom: 30px;
+  .about-motto__wrapper {
+    margin-left: 45px;
+  }
+
+  .about-motto__pic {
+    margin: 0;
+    width: 30%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+
+  .about-why {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-why__item {
+    margin-top: 15px;
+    padding: 0 10px;
+  }
+
+  .about-why__descr {
     font-size: 0.8rem;
-    line-height: 1rem;
   }
 
   .pickup__title {
@@ -5046,31 +5157,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     text-align: center;
     font-size: 0.8rem;
     line-height: 1.1rem;
-  }
-
-  .about {
-    margin: 70px auto;
-  }
-
-  .about__descr {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-  }
-
-  .about-fact {
-    margin: 70px auto;
-    max-width: 700px;
-  }
-
-  .about-fact__title {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .about-fact__descr {
-    text-align: center;
-    font-size: 0.9rem;
-    line-height: 1.2rem;
   }
 
   .pickup__title {
@@ -5260,6 +5346,37 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   .product__images--title .product__images--subtitle {
     width: 45%;
     margin-left: auto;
+  }
+
+  .about-motto__wrapper {
+    max-width: 680px;
+  }
+
+  .about-motto__pic {
+    width: 25%;
+  }
+
+  .about-motto__descr {
+    line-height: 1.2rem;
+  }
+
+  .about-why {
+    margin: 40px auto 80px;
+  }
+
+  .about-why__descr {
+    font-size: 0.9rem;
+  }
+
+  .about-target {
+    margin: 40px auto 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-offer {
+    margin: 30px auto 80px;
+    line-height: 1.2rem;
   }
 
   .swiper-button-prev,
@@ -5492,6 +5609,42 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     gap: 2rem;
   }
 
+  .about__title {
+    font-size: 1.4rem;
+  }
+
+  .about-motto {
+    margin: 50px auto 100px;
+  }
+
+  .about-motto__wrapper {
+    margin-left: 90px;
+  }
+
+  .about-why {
+    margin: 50px auto 90px;
+  }
+
+  .about-why__descr {
+    font-size: 1rem;
+  }
+
+  .about-target {
+    margin: 40px auto 100px;
+  }
+
+  .about-target__descr {
+    font-size: 1rem;
+  }
+
+  .about-offer {
+    margin: 50px auto 100px;
+  }
+
+  .about-offer__item {
+    margin-top: 20px;
+  }
+
   .pickup__text {
     width: 70%;
   }
@@ -5593,25 +5746,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
-
-  .about__descr {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-  }
-
-  .about-fact {
-    max-width: 1000px;
-    margin: 90px auto;
-  }
-
-  .about-fact__title {
-    font-size: 1.8rem;
-  }
-
-  .about-fact__descr {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
-  }
 }
 
 @media (min-width: 1450px) {
@@ -5641,6 +5775,46 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .product__images--title h2 {
     font-size: 3.25rem;
+  }
+
+  .about__title {
+    font-size: 1.5rem;
+  }
+
+  .about-motto {
+    margin: 50px auto 120px;
+  }
+
+  .about-motto__wrapper {
+    margin-left: 115px;
+  }
+
+  .about-motto__descr {
+    line-height: 1.4rem;
+  }
+
+  .about-why__circle {
+    margin: 25px 0;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+  }
+
+  .about-why__descr {
+    max-width: 390px;
+    font-size: 1rem;
+  }
+
+  .about-target {
+    margin: 50px auto 120px;
+  }
+
+  .about-target__descr {
+    max-width: 415px;
+  }
+
+  .about-offer {
+    margin: 50px auto 120px;
   }
 
   .page-contacts-item {
@@ -5839,6 +6013,22 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     height: 80%;
   }
 
+  .about-motto {
+    max-width: 1600px;
+  }
+
+  .about-motto__wrapper {
+    max-width: 800px;
+  }
+
+  .about-why {
+    max-width: 1400px;
+  }
+
+  .about-target {
+    max-width: 1400px;
+  }
+
   .page-contacts-item {
     width: 470px;
   }
@@ -5849,6 +6039,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .page-contacts-item__description--adress {
     margin-bottom: 10px;
+  }
+
+  .page-contacts-item__pic {
+    width: 350px;
   }
 
   .page-contacts-item__phone {
@@ -5984,22 +6178,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .product-description-fact {
     margin: 100px auto 0;
-  }
-
-  .about__descr {
-    font-size: 1.2rem;
-  }
-
-  .about-fact {
-    max-width: 1240px;
-  }
-
-  .about-fact__title {
-    font-size: 2rem;
-  }
-
-  .about-fact__descr {
-    font-size: 1.2rem;
   }
 }
 
