@@ -3520,7 +3520,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .about-target {
-  margin: 20px auto 40px;
+  margin: 40px auto 40px;
   padding: 0 15px;
   list-style: none;
 }
@@ -3532,20 +3532,29 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   align-items: center;
 }
 
+.about-target__icon {
+  height: 70px;
+}
+
 .about-target__title {
-  margin: 0;
+  margin: 25px 0 0;
   text-align: center;
   font-size: 0.9rem;
 }
 
 .about-target__descr {
-  max-width: 320px;
+  max-width: 340px;
   text-align: center;
   font-size: 0.8rem;
 }
 
 .about-offer {
   margin: 20px auto 60px;
+  max-width: 1600px;
+}
+
+.about-offer__list {
+  margin-bottom: 30px;
   list-style: none;
 }
 
@@ -3565,6 +3574,32 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   height: 8px;
   background-color: var(--blue);
   border-radius: 100%;
+}
+
+.about-offer__pic {
+  width: 100%;
+}
+
+.about-awards {
+  padding: 0;
+  margin: 40px auto 60px;
+  max-width: 1600px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.about-awards__item {
+  margin-bottom: 25px;
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-awards__item img {
+  width: 100%;
 }
 
 .pickup {
@@ -5039,6 +5074,37 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     font-size: 0.8rem;
   }
 
+  .about-target {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .about-target__item {
+    padding: 0 10px;
+  }
+
+  .about-target__title {
+    font-size: 0.9rem;
+  }
+
+  .about-target__descr {
+    font-size: 0.8rem;
+  }
+
+  .about-offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about-offer__pic {
+    min-width: 300px;
+  }
+
+  .about-awards__item {
+    width: 30%;
+  }
+
   .pickup__title {
     margin: 3rem 0 1rem 0;
   }
@@ -5374,9 +5440,22 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     justify-content: space-between;
   }
 
+  .about-target__title {
+    font-size: 1rem;
+  }
+
+  .about-target__descr {
+    font-size: 0.9rem;
+  }
+
   .about-offer {
     margin: 30px auto 80px;
     line-height: 1.2rem;
+  }
+
+  .about-awards__item {
+    width: 17%;
+    margin-bottom: 50px;
   }
 
   .swiper-button-prev,
@@ -5633,6 +5712,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     margin: 40px auto 100px;
   }
 
+  .about-target__title {
+    font-size: 1.1rem;
+  }
+
   .about-target__descr {
     font-size: 1rem;
   }
@@ -5643,6 +5726,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .about-offer__item {
     margin-top: 20px;
+  }
+
+  .about-offer__pic {
+    min-width: 400px;
+    max-width: 400px;
   }
 
   .pickup__text {
@@ -5815,6 +5903,19 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .about-offer {
     margin: 50px auto 120px;
+  }
+
+  .about-offer__list {
+    margin-right: 40px;
+  }
+
+  .about-offer__pic {
+    min-width: 500px;
+    max-width: 500px;
+  }
+
+  .about-awards__item {
+    width: 8%;
   }
 
   .page-contacts-item {
@@ -6027,6 +6128,14 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .about-target {
     max-width: 1400px;
+  }
+
+  .about-target__title {
+    margin: 35px 0 0;
+  }
+
+  .about-target__icon {
+    height: 90px;
   }
 
   .page-contacts-item {

@@ -52,7 +52,7 @@
 }
 
 .about-target {
-  margin: 20px auto 40px;
+  margin: 40px auto 40px;
   padding: 0 15px;
   list-style: none;
 
@@ -63,14 +63,18 @@
     align-items: center;
   }
 
+  &__icon {
+    height: 70px;
+  }
+
   &__title {
-    margin: 0;
+    margin: 25px 0 0;
     text-align: center;
     font-size: 0.9rem;
   }
 
   &__descr {
-    max-width: 320px;
+    max-width: 340px;
     text-align: center;
     font-size: 0.8rem;
   }
@@ -78,7 +82,12 @@
 
 .about-offer {
   margin: 20px auto 60px;
-  list-style: none;
+  max-width: 1600px;
+
+  &__list {
+    margin-bottom: 30px;
+    list-style: none;
+  }
 
   &__item {
     position: relative;
@@ -95,6 +104,32 @@
       height: 8px;
       background-color: var(--blue);
       border-radius: 100%;
+    }
+  }
+
+  &__pic {
+    width: 100%;
+  }
+}
+
+.about-awards {
+  padding: 0;
+  margin: 40px auto 60px;
+  max-width: 1600px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__item {
+    margin-bottom: 25px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & img {
+      width: 100%;
     }
   }
 }
@@ -164,6 +199,40 @@
       font-size: 0.8rem;
     }
   }
+
+  .about-target {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      padding: 0 10px;
+    }
+
+    &__title {
+      font-size: 0.9rem;
+    }
+
+    &__descr {
+      font-size: 0.8rem;
+    }
+  }
+
+  .about-offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__pic {
+      min-width: 300px;
+    }
+  }
+
+  .about-awards {
+
+    &__item {
+      width: 30%;
+    }
+  }
 }
 
 @media (min-width: 1050px) {
@@ -193,11 +262,27 @@
     margin: 40px auto 80px;
     display: flex;
     justify-content: space-between;
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__descr {
+      font-size: 0.9rem;
+    }
   }
 
   .about-offer {
     margin: 30px auto 80px;
     line-height: 1.2rem;
+  }
+
+  .about-awards {
+
+    &__item {
+      width: 17%;
+      margin-bottom: 50px;
+    }
   }
 }
 
@@ -228,6 +313,10 @@
   .about-target {
     margin: 40px auto 100px;
 
+    &__title {
+      font-size: 1.1rem;
+    }
+
     &__descr {
       font-size: 1rem;
     }
@@ -238,6 +327,11 @@
 
     &__item {
       margin-top: 20px;
+    }
+
+    &__pic {
+      min-width: 400px;
+      max-width: 400px;
     }
   }
 }
@@ -286,6 +380,22 @@
 
   .about-offer {
     margin: 50px auto 120px;
+
+    &__list {
+      margin-right: 40px;
+    }
+
+    &__pic {
+      min-width: 500px;
+      max-width: 500px;
+    }
+  }
+
+  .about-awards {
+
+    &__item {
+      width: 8%;
+    }
   }
 }
 
@@ -304,5 +414,13 @@
 
   .about-target {
     max-width: 1400px;
+
+    &__title {
+      margin: 35px 0 0;
+    }
+
+    &__icon {
+      height: 90px;
+    }
   }
 }
