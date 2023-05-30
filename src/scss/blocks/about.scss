@@ -1,0 +1,419 @@
+.about {
+
+  &__title {
+    text-align: center;
+    color: var(--blue);
+  }
+}
+
+.about-motto {
+  margin: 20px auto 60px;
+
+  &__descr {
+    font-size: 0.9rem;
+  }
+
+  &__pic {
+    display: block;
+    margin: 30px auto;
+    width: 80%;
+  }
+}
+
+.about-why {
+  margin: 30px auto 40px;
+  padding: 0 15px;
+  list-style: none;
+
+  &__item {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__circle {
+    margin: 15px 0;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.1rem;
+    border-radius: 100%;
+    background: var(--blue-dark);
+    background: linear-gradient(180deg, #009cd6 0%, #7a33ff 100%);
+  }
+
+  &__descr {
+    max-width: 320px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+.about-target {
+  margin: 40px auto 40px;
+  padding: 0 15px;
+  list-style: none;
+
+  &__item {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    height: 70px;
+  }
+
+  &__title {
+    margin: 25px 0 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  &__descr {
+    max-width: 340px;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+.about-offer {
+  margin: 20px auto 60px;
+  max-width: 1600px;
+
+  &__list {
+    margin-bottom: 30px;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 15px;
+    font-size: 0.9rem;
+
+    &::before {
+      position: absolute;
+      left: -25px;
+      top: 3px;
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      background-color: var(--blue);
+      border-radius: 100%;
+    }
+  }
+
+  &__pic {
+    width: 100%;
+  }
+}
+
+.about-awards {
+  padding: 0;
+  margin: 40px auto 60px;
+  max-width: 1600px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  &__item {
+    margin-bottom: 25px;
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .about-motto {
+
+    &__descr {
+      font-size: 1rem;
+    }
+  }
+
+  .about-why {
+
+    &__descr {
+      font-size: 0.9rem;
+    }
+  }
+
+  .about-target {
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__descr {
+      font-size: 0.9rem;
+    }
+  }
+
+  .about-offer {
+
+    &__item {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .about-motto {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__wrapper {
+      margin-left: 45px;
+    }
+
+    &__pic {
+      margin: 0;
+      width: 30%;
+      height: fit-content;
+    }
+  }
+
+  .about-why {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      margin-top: 15px;
+      padding: 0 10px;
+    }
+
+    &__descr {
+      font-size: 0.8rem;
+    }
+  }
+
+  .about-target {
+    display: flex;
+    justify-content: space-between;
+
+    &__item {
+      padding: 0 10px;
+    }
+
+    &__title {
+      font-size: 0.9rem;
+    }
+
+    &__descr {
+      font-size: 0.8rem;
+    }
+  }
+
+  .about-offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__pic {
+      min-width: 300px;
+    }
+  }
+
+  .about-awards {
+
+    &__item {
+      width: 17%;
+    }
+  }
+}
+
+@media (min-width: 1050px) {
+  .about-motto {
+
+    &__wrapper {
+      max-width: 680px;
+    }
+
+    &__pic {
+      width: 25%;
+    }
+
+    &__descr {
+      line-height: 1.2rem;
+    }
+  }
+  .about-why {
+    margin: 40px auto 80px;
+
+    &__descr {
+      font-size: 0.9rem;
+    }
+  }
+
+  .about-target {
+    margin: 40px auto 80px;
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 1rem;
+    }
+
+    &__descr {
+      font-size: 0.9rem;
+    }
+  }
+
+  .about-offer {
+    margin: 30px auto 80px;
+    line-height: 1.2rem;
+  }
+
+  .about-awards {
+
+    &__item {
+      width: 8%;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  .about {
+
+    &__title {
+      font-size: 1.4rem;
+    }
+  }
+
+  .about-motto {
+    margin: 50px auto 100px;
+
+    &__wrapper {
+      margin-left: 90px;
+    }
+  }
+
+  .about-why {
+    margin: 50px auto 90px;
+
+    &__descr {
+      font-size: 1rem;
+    }
+  }
+
+  .about-target {
+    margin: 40px auto 100px;
+
+    &__title {
+      font-size: 1.1rem;
+    }
+
+    &__descr {
+      font-size: 1rem;
+    }
+  }
+
+  .about-offer {
+    margin: 50px auto 100px;
+
+    &__item {
+      margin-top: 20px;
+    }
+
+    &__pic {
+      min-width: 400px;
+      max-width: 400px;
+    }
+  }
+}
+
+@media (min-width: 1450px) {
+  .about {
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+  .about-motto {
+    margin: 50px auto 120px;
+
+    &__wrapper {
+      margin-left: 115px;
+    }
+
+    &__descr {
+      line-height: 1.4rem;
+    }
+  }
+
+  .about-why {
+
+    &__circle {
+      margin: 25px 0;
+      width: 120px;
+      height: 120px;
+      line-height: 120px;
+    }
+
+    &__descr {
+      max-width: 390px;
+      font-size: 1rem;
+    }
+  }
+
+  .about-target {
+    margin: 50px auto 120px;
+
+    &__descr {
+      max-width: 415px;
+    }
+  }
+
+  .about-offer {
+    margin: 50px auto 120px;
+
+    &__list {
+      margin-right: 40px;
+    }
+
+    &__pic {
+      min-width: 500px;
+      max-width: 500px;
+    }
+  }
+}
+
+@media (min-width: 1650px) {
+  .about-motto {
+    max-width: 1600px;
+
+    &__wrapper {
+      max-width: 800px;
+    }
+  }
+
+  .about-why {
+    max-width: 1400px;
+  }
+
+  .about-target {
+    max-width: 1400px;
+
+    &__title {
+      margin: 35px 0 0;
+    }
+
+    &__icon {
+      height: 90px;
+    }
+  }
+}
