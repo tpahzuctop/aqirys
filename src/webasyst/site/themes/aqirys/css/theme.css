@@ -15,7 +15,6 @@
   --purple-darkest: #7a33ff;
   --pink: #892D89;
   --pink-dark: #5B1E5B;
-  --pink-light: #C38A9F;
   --green: #B1EF42;
   --red: #f04242;
   --surface-color: #ffffff;
@@ -2315,7 +2314,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-area: top-banner;
-  background-color: var(--white);
+  background: var(--blue-secondary);
   min-height: 200px;
   background-size: 90%;
   background-position: center;
@@ -2378,7 +2377,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-area: side-banner;
-  background-color: var(--blue-secondary);
+  background: var(--white);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -2405,30 +2404,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 .headset__side-banner:hover::before {
   display: block;
-}
-
-.headset__side-banner a {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
-  font-size: 1.35rem;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: var(--white);
-  font-weight: bolder;
-  padding: 1.5rem;
-}
-
-.headset__side-banner a span {
-  align-self: flex-start;
-  color: var(--black-dark);
 }
 
 .pc-components {
@@ -4734,11 +4709,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     font-size: 1.7rem;
   }
 
-  .headset__side-banner a {
-    font-size: 1.35rem;
-    padding: 1.5rem 4rem;
-  }
-
   .pc-cases h2,
   .cpu-coolers h2,
   .power-supplies h2,
@@ -4834,14 +4804,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 @media (min-width: 480px) {
   footer.footer .logo a img {
     height: 3.5rem;
-  }
-}
-
-@media (min-width: 600px) {
-  .headset__side-banner a {
-    justify-content: center;
-    gap: 12vw;
-    font-size: 1.45rem;
   }
 }
 
@@ -5422,17 +5384,12 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .headset {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 250px 100px;
+    grid-template-rows: 300px 350px;
     grid-template-areas: "top-banner side-banner" "text side-banner" "text side-banner";
   }
 
   .headset__text h2 > strong {
     font-size: 2.15rem;
-  }
-
-  .headset__side-banner a {
-    padding: 7rem 3rem;
-    gap: 6vw;
   }
 
   .pc-components {
@@ -5745,11 +5702,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     font-size: 2.35rem;
   }
 
-  .headset__side-banner a {
-    padding: 6rem 3rem;
-    gap: 10vw;
-  }
-
   .pc-cases h2 strong {
     font-size: 2.35rem;
   }
@@ -5896,14 +5848,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     max-width: 300px;
     width: auto;
     margin: 2rem auto 0 auto;
-  }
-
-  .headset__side-banner a {
-    padding: 5rem 3rem;
-  }
-
-  .headset__side-banner a {
-    gap: 8vw;
   }
 
   .cpu-coolers {
@@ -6202,10 +6146,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     margin-left: 4rem;
   }
 
-  .headset__top-banner {
-    background-size: 60%;
-  }
-
   .power-supplies {
     background-size: 85%;
     background-position-x: 10vw;
@@ -6296,12 +6236,6 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .headset__text h2 > strong {
     font-size: 3.15rem;
-  }
-
-  .headset__side-banner a {
-    gap: 6vw;
-    padding: 4rem 3rem;
-    font-size: 2rem;
   }
 
   .pc-cases h2 strong {
@@ -6442,11 +6376,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset__top-banner {
-    background-size: contain;
-  }
-
-  .headset__side-banner a {
-    gap: 4.5vw;
+    background-size: 65%;
   }
 
   .pc-cases {
