@@ -15,6 +15,7 @@
   --purple-darkest: #7a33ff;
   --pink: #892D89;
   --pink-dark: #5B1E5B;
+  --pink-light: #C38A9F;
   --green: #B1EF42;
   --red: #f04242;
   --surface-color: #ffffff;
@@ -2272,56 +2273,80 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 .headset {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px auto 300px;
-  grid-template-areas: "top-banner top-banner top-banner" "text text text" "side-banner side-banner side-banner";
   gap: 1rem;
+  flex-direction: column;
+  justify-items: stretch;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 250px;
+  grid-template-areas: "headsets all-gaming-gears";
   margin: 2rem 0;
 }
 
-.headset__top-banner,
-.headset__text,
-.headset__side-banner {
+.headset .headsets,
+.headset .all-gaming-gears {
+  position: relative;
   border-radius: 20px;
   min-width: 100px;
-  overflow: hidden;
   box-sizing: border-box;
 }
 
-.headset__top-banner,
-.headset__side-banner {
-  position: relative;
-}
-
-.headset__top-banner a,
-.headset__side-banner a {
+.headset .headsets a,
+.headset .all-gaming-gears a {
   display: block;
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-  box-sizing: border-box;
-  z-index: 3;
   position: relative;
+  padding: 1rem;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 3;
 }
 
-.headset__top-banner a:hover,
-.headset__side-banner a:hover {
-  cursor: pointer;
+.headset .headsets a:hover,
+.headset .all-gaming-gears a:hover {
+  box-shadow: rgba(1, 2, 16, 0.5215686275) 0 8px 24px;
 }
 
-.headset__top-banner {
+.headset .headsets h2,
+.headset .all-gaming-gears h2 {
+  font-size: 0.75rem;
+  line-height: 1.15;
+  font-weight: 300;
+  margin: 0;
+  text-transform: uppercase;
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  color: var(--grey);
+}
+
+.headset .headsets h2 strong,
+.headset .all-gaming-gears h2 strong {
+  display: block;
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  line-height: 1.05;
+  text-transform: none;
+  color: var(--white);
+}
+
+.headset .headsets {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-area: top-banner;
-  background: var(--blue-secondary);
-  min-height: 200px;
-  background-size: 90%;
-  background-position: center;
+  grid-area: headsets;
+  background: var(--white);
+  background-size: 200px;
+  background-position-x: 32vw;
   background-repeat: no-repeat;
+  background-position-y: bottom;
+  transition: background-color ease-in 100ms;
 }
 
-.headset__top-banner::before {
+.headset .headsets::before {
   display: none;
   position: absolute;
   left: 0;
@@ -2333,57 +2358,38 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   z-index: 1;
   border-radius: 20px;
   transition: all ease-in 400ms;
-  cursor: pointer;
 }
 
-.headset__top-banner:hover {
+.headset .headsets:hover {
   background-color: var(--purple-dark);
 }
 
-.headset__top-banner:hover::before {
+.headset .headsets:hover::before {
   display: block;
 }
 
-.headset__text {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-area: text;
-  border-radius: 0;
-  padding: 2rem 0;
-  align-self: center;
+.headset .headsets h2 {
+  justify-content: flex-start;
 }
 
-.headset__text h2 {
-  line-height: 1.1;
-  font-weight: 300;
-  margin: 0;
-  font-size: 1.35rem;
-  letter-spacing: 1px;
-  color: var(--grey-dark);
+.headset .headsets h2 strong {
+  color: var(--black-dark);
+  font-size: 1.45rem;
 }
 
-.headset__text h2 > strong {
-  font-size: 1.65rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  display: block;
-  color: var(--white);
-  width: 80%;
-}
-
-.headset__side-banner {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
-  grid-area: side-banner;
-  background: var(--white);
-  background-size: contain;
-  background-position: center;
+.headset .all-gaming-gears {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: all-gaming-gears;
+  background-color: var(--blue-secondary);
+  background-size: 200px;
+  background-position-x: 32vw;
   background-repeat: no-repeat;
+  background-position-y: bottom;
+  transition: background-color ease-in 100ms;
 }
 
-.headset__side-banner::before {
+.headset .all-gaming-gears::before {
   display: none;
   position: absolute;
   left: 0;
@@ -2395,15 +2401,22 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   z-index: 1;
   border-radius: 20px;
   transition: all ease-in 400ms;
-  cursor: pointer;
 }
 
-.headset__side-banner:hover {
+.headset .all-gaming-gears:hover {
   background-color: var(--blue-darkest);
 }
 
-.headset__side-banner:hover::before {
+.headset .all-gaming-gears:hover::before {
   display: block;
+}
+
+.headset .all-gaming-gears h2 {
+  justify-content: flex-start;
+}
+
+.headset .all-gaming-gears h2 strong {
+  font-size: 1.45rem;
 }
 
 .pc-components {
@@ -4574,12 +4587,36 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-position-x: 50vw;
   }
 
-  .headset__text h2 > strong {
+  .headset .headsets h2,
+  .headset .all-gaming-gears h2 {
+    font-size: 0.875rem;
+    line-height: 1.35;
+    letter-spacing: 1px;
+  }
+
+  .headset .headsets h2 strong,
+  .headset .all-gaming-gears h2 strong {
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    font-size: 1.45rem;
+  }
+
+  .headset .headsets h2 strong {
     font-size: 1.65rem;
   }
 
-  .headset__text h2 {
-    font-size: 1.4rem;
+  .headset .headsets {
+    background-position-x: 35vw;
+    background-position-y: 15vh;
+  }
+
+  .headset .all-gaming-gears h2 strong {
+    font-size: 1.65rem;
+  }
+
+  .headset .all-gaming-gears {
+    background-position-x: 35vw;
+    background-position-y: 15vh;
   }
 
   .pc-cases h2,
@@ -4652,11 +4689,16 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     font-size: 1.85rem;
   }
 
-  .headset {
-    grid-template-rows: 200px auto 300px;
+  .headset .headsets h2 strong,
+  .headset .all-gaming-gears h2 strong {
+    font-size: 1.55rem;
   }
 
-  .headset__text h2 > strong {
+  .headset .headsets h2 strong {
+    font-size: 1.85rem;
+  }
+
+  .headset .all-gaming-gears h2 strong {
     font-size: 1.85rem;
   }
 
@@ -4705,8 +4747,35 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-position-x: 50vw;
   }
 
-  .headset__text h2 > strong {
+  .headset .headsets h2,
+  .headset .all-gaming-gears h2 {
+    width: 60%;
+  }
+
+  .headset .headsets h2 strong {
     font-size: 1.7rem;
+  }
+
+  .headset .headsets {
+    background-position-x: 55vw;
+    background-position-y: center;
+  }
+
+  .headset .headsets h2 {
+    justify-content: space-between;
+  }
+
+  .headset .all-gaming-gears h2 strong {
+    font-size: 1.7rem;
+  }
+
+  .headset .all-gaming-gears {
+    background-position-x: 55vw;
+    background-position-y: center;
+  }
+
+  .headset .all-gaming-gears h2 {
+    justify-content: space-between;
   }
 
   .pc-cases h2,
@@ -4826,8 +4895,22 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     width: 50%;
   }
 
-  .headset__top-banner {
-    background-size: 80%;
+  .headset .headsets {
+    background-position-x: 50vw;
+    background-size: 250px;
+  }
+
+  .headset .headsets h2 {
+    width: 50%;
+  }
+
+  .headset .all-gaming-gears {
+    background-position-x: 50vw;
+    background-size: 250px;
+  }
+
+  .headset .all-gaming-gears h2 {
+    width: 50%;
   }
 
   .pc-cases {
@@ -4888,6 +4971,24 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .keyboards h2 {
+    width: 40%;
+  }
+
+  .headset .headsets {
+    background-position-x: 48vw;
+    background-size: 280px;
+  }
+
+  .headset .headsets h2 {
+    width: 40%;
+  }
+
+  .headset .all-gaming-gears {
+    background-position-x: 48vw;
+    background-size: 280px;
+  }
+
+  .headset .all-gaming-gears h2 {
     width: 40%;
   }
 
@@ -4964,20 +5065,19 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .headset {
     gap: 2rem;
-    grid-template-rows: 300px auto 400px;
   }
 
-  .headset__top-banner a,
-  .headset__side-banner a {
+  .headset .headsets a,
+  .headset .all-gaming-gears a {
     padding: 2rem;
   }
 
-  .headset__text {
-    padding: 3rem 0;
+  .headset .headsets {
+    background-size: 350px;
   }
 
-  .headset__text h2 {
-    width: 80%;
+  .headset .all-gaming-gears {
+    background-size: 350px;
   }
 
   .pc-components {
@@ -5384,12 +5484,38 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .headset {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 300px 350px;
-    grid-template-areas: "top-banner side-banner" "text side-banner" "text side-banner";
+    grid-template-rows: 650px;
+    grid-template-areas: "headsets all-gaming-gears";
   }
 
-  .headset__text h2 > strong {
+  .headset .headsets h2 strong {
     font-size: 2.15rem;
+  }
+
+  .headset .headsets {
+    background-position-x: center;
+    background-size: 70%;
+    background-position-y: 260px;
+  }
+
+  .headset .headsets h2 {
+    justify-content: start;
+    width: 90%;
+  }
+
+  .headset .all-gaming-gears h2 strong {
+    font-size: 2.15rem;
+  }
+
+  .headset .all-gaming-gears {
+    background-position-x: center;
+    background-size: 70%;
+    background-position-y: 260px;
+  }
+
+  .headset .all-gaming-gears h2 {
+    justify-content: start;
+    width: 90%;
   }
 
   .pc-components {
@@ -5593,24 +5719,14 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     -ms-grid-column: 4;
   }
 
-  .headset__top-banner {
+  .headset .headsets {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
   }
 
-  .headset__text {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-  }
-
-  .headset__side-banner {
+  .headset .all-gaming-gears {
     -ms-grid-row: 1;
-    -ms-grid-row-span: 3;
     -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
   }
 
   .pc-cases {
@@ -5639,6 +5755,14 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 @media (min-width: 1150px) {
   .mice {
+    background-size: 65%;
+  }
+
+  .headset .headsets {
+    background-size: 65%;
+  }
+
+  .headset .all-gaming-gears {
     background-size: 65%;
   }
 
@@ -5698,8 +5822,20 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-size: 60%;
   }
 
-  .headset__text h2 > strong {
+  .headset .headsets h2 strong {
     font-size: 2.35rem;
+  }
+
+  .headset .headsets {
+    background-size: 60%;
+  }
+
+  .headset .all-gaming-gears h2 strong {
+    font-size: 2.35rem;
+  }
+
+  .headset .all-gaming-gears {
+    background-size: 60%;
   }
 
   .pc-cases h2 strong {
@@ -6000,8 +6136,24 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-size: 80%;
   }
 
-  .headset__text h2 > strong {
+  .headset .headsets h2 strong {
     font-size: 2.95rem;
+  }
+
+  .headset .headsets {
+    background-position-y: 85%;
+    background-size: 50%;
+    background-position-x: 90%;
+  }
+
+  .headset .all-gaming-gears h2 strong {
+    font-size: 2.95rem;
+  }
+
+  .headset .all-gaming-gears {
+    background-position-y: 85%;
+    background-size: 50%;
+    background-position-x: 90%;
   }
 
   .pc-cases h2 strong {
@@ -6234,8 +6386,20 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-size: 70%;
   }
 
-  .headset__text h2 > strong {
+  .headset .headsets h2 strong {
     font-size: 3.15rem;
+  }
+
+  .headset .headsets {
+    background-size: 40%;
+  }
+
+  .headset .all-gaming-gears h2 strong {
+    font-size: 3.15rem;
+  }
+
+  .headset .all-gaming-gears {
+    background-size: 40%;
   }
 
   .pc-cases h2 strong {
@@ -6361,6 +6525,14 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     width: 60%;
   }
 
+  .headset .headsets h2 {
+    width: 60%;
+  }
+
+  .headset .all-gaming-gears h2 {
+    width: 60%;
+  }
+
   .pc-cases h2 {
     width: 60%;
   }
@@ -6375,8 +6547,12 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-size: 60%;
   }
 
-  .headset__top-banner {
-    background-size: 65%;
+  .headset .headsets {
+    background-size: 35%;
+  }
+
+  .headset .all-gaming-gears {
+    background-size: 35%;
   }
 
   .pc-cases {

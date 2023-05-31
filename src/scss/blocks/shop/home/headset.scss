@@ -1,121 +1,115 @@
 .headset {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 200px auto 300px;
-  grid-template-areas:
-        "top-banner top-banner top-banner"
-        "text text text"
-        "side-banner side-banner side-banner";
-  gap: 1rem;
-  margin: 2rem 0;
-  @media (min-width: 393px) {
-    grid-template-rows: 200px auto 300px;
-  }
-  @media (min-width: 768px) {
-    gap: 2rem;
-    grid-template-rows: 300px auto 400px;
-  }
-  @media (min-width: 1050px) {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 200px 250px 100px;
+    display: grid;
+    gap: 1rem;
+    flex-direction: column;
+    justify-items: stretch;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 250px;
     grid-template-areas:
-    "top-banner side-banner"
-    "text side-banner"
-    "text side-banner";
-  }
-
-  &__top-banner, &__text, &__side-banner {
+        "headsets all-gaming-gears";
+    margin: 2rem 0;
+    @media (min-width: 768px) {
+      gap: 2rem;
+    }
+    @media (min-width: 1050px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 650px;
+      grid-template-areas:
+        "headsets all-gaming-gears";
+    }
+  .headsets, .all-gaming-gears {
+    position: relative;
     border-radius: 20px;
     min-width: 100px;
-    overflow: hidden;
     box-sizing: border-box;
-  }
-
-  &__top-banner, &__side-banner {
-    position: relative;
     & a {
       display: block;
-      height: 100%;
-      width: 100%;
-      padding: 1rem;
-      box-sizing: border-box;
-      z-index: 3;
       position: relative;
-      &:hover {
-        cursor: pointer;
-      }
-
+      padding: 1rem;
+      height: 100%;
+      box-sizing: border-box;
+      border-radius: 20px;
+      overflow: hidden;
+      z-index: 3;
       @media (min-width: 768px) {
         padding: 2rem;
       }
-    }
-  }
-
-  &__top-banner {
-    grid-area: top-banner;
-    background-color: var(--white);
-    min-height: 200px;
-    background-size: 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-    @media (min-width: 620px) {
-      background-size: 80%;
-    }
-    @media (min-width: 1650px) {
-      background-size: 60%;
-    }
-    @media (min-width: 2150px) {
-      background-size: contain;
-    }
-
-      &::before {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(at 0% 15%, var(--purple), #B286FE65, #935CF625, #935CF600);
-        z-index: 1;
-        border-radius: 20px;
-        transition: all ease-in 400ms;
-        cursor: pointer;
-      }
-
       &:hover {
-        background-color: var(--purple-dark);
-
-        &::before {
-          display: block;
-        }
+        box-shadow: rgba(1, 2, 16, 0.5215686275) 0 8px 24px;
       }
-  }
-
-  &__text {
-    grid-area: text;
-    border-radius: 0;
-    padding: 2rem 0;
-    align-self: center;
-    @media (min-width: 768px) {
-      padding: 3rem 0;
     }
-
     & h2 {
-      line-height: 1.1;
+      font-size: 0.75rem;
+      line-height: 1.15;
       font-weight: 300;
       margin: 0;
-      font-size: 1.35rem;
-      letter-spacing: 1px;
-      color: var(--grey-dark);
-
-      & > strong {
-        font-size: 1.65rem;
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      width: 90%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-content: flex-start;
+      justify-content: space-between;
+      color: var(--grey);
+      @media (min-width: 375px) {
+        font-size: 0.875rem;
+        line-height: 1.35;
+        letter-spacing: 1px;
+      }
+      @media (min-width: 420px) {
+        width: 60%;
+      }
+      & strong {
         display: block;
+        margin: 0.5rem 0;
+        font-size: 1.25rem;
+        line-height: 1.05;
+        text-transform: none;
         color: var(--white);
-        width: 80%;
+        @media (min-width: 375px) {
+          letter-spacing: 1.5px;
+          line-height: 1.2;
+          font-size: 1.45rem;
+        }
+        @media (min-width: 393px) {
+          font-size: 1.55rem;
+        }
+      }
+    }
+  }
+  .headsets {
+    grid-area: headsets;
+    background: var(--white);
+    background-size: 200px;
+    background-position-x: 32vw;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    transition: background-color ease-in 100ms;
+    &::before {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(at 0% 15%, var(--purple), #B286FE65, #935CF625, #935CF600);
+      z-index: 1;
+      border-radius: 20px;
+      transition: all ease-in 400ms;
+    }
+    &:hover {
+      background-color: var(--purple-dark);
+      &::before {
+        display: block;
+      }
+    }
+    & h2 {
+      justify-content: flex-start;
+      & strong {
+        color: var(--black-dark);
+        font-size: 1.45rem;
         @media (min-width: 375px) {
           font-size: 1.65rem;
         }
@@ -138,97 +132,179 @@
           font-size: 3.15rem;
         }
       }
-
-      @media (min-width: 375px) {
-        font-size: 1.4rem;
-      }
-      @media (min-width: 768px) {
-        width: 80%;
+    }
+    @media (min-width: 375px) {
+      background-position-x: 35vw;
+      background-position-y: 15vh;
+    }
+    @media (min-width: 420px) {
+      background-position-x: 55vw;
+      background-position-y: center;
+      & h2 {
+        justify-content: space-between;
       }
     }
-  }
-
-  &__side-banner {
-    grid-area: side-banner;
-    background-color: var(--blue-secondary);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-      &::before {
-        display: none;
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: "";
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(at 0% 15%, var(--blue), #42A5F065, #1077c625, #1077c600);
-        z-index: 1;
-        border-radius: 20px;
-        transition: all ease-in 400ms;
-        cursor: pointer;
+    @media (min-width: 620px) {
+      background-position-x: 50vw;
+      background-size: 250px;
+      & h2 {
+        width: 50%;
       }
-
-      &:hover {
-        background-color: var(--blue-darkest);
-
-        &::before {
-          display: block;
+    }
+    @media (min-width: 720px) {
+      background-position-x: 48vw;
+      background-size: 280px;
+      & h2 {
+        width: 40%;
+      }
+    }
+    @media (min-width: 768px) {
+      background-size: 350px;
+    }
+    @media (min-width: 1050px) {
+      background-position-x: center;
+      background-size: 70%;
+      background-position-y: 260px;
+      & h2 {
+        justify-content: start;
+        width: 90%;
+      }
+    }
+    @media (min-width: 1150px) {
+      background-size: 65%;
+    }
+    @media (min-width: 1250px) {
+      background-size: 60%;
+    }
+    @media (min-width: 1550px) {
+      background-position-y: 85%;
+      background-size: 50%;
+      background-position-x: 90%;
+    }
+    @media (min-width: 1850px) {
+      background-size: 40%;
+    }
+    @media (min-width: 2000px) {
+      & h2 {
+        width: 60%;
+      }
+    }
+    @media (min-width: 2150px) {
+      background-size: 35%;
+    }
+  }
+  .all-gaming-gears {
+    grid-area: all-gaming-gears;
+    background-color: var(--blue-secondary);
+    background-size: 200px;
+    background-position-x: 32vw;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    transition: background-color ease-in 100ms;
+    &::before {
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(at 0% 15%, var(--blue), #42A5F065, #1077c625, #1077c600);
+      z-index: 1;
+      border-radius: 20px;
+      transition: all ease-in 400ms;
+    }
+    &:hover {
+      background-color: var(--blue-darkest);
+      &::before {
+        display: block;
+      }
+    }
+    & h2 {
+      justify-content: flex-start;
+      & strong {
+        font-size: 1.45rem;
+        @media (min-width: 375px) {
+          font-size: 1.65rem;
+        }
+        @media (min-width: 393px) {
+          font-size: 1.85rem;
+        }
+        @media (min-width: 420px) {
+          font-size: 1.7rem;
+        }
+        @media (min-width: 1050px) {
+          font-size: 2.15rem;
+        }
+        @media (min-width: 1250px) {
+          font-size: 2.35rem;
+        }
+        @media (min-width: 1550px) {
+          font-size: 2.95rem;
+        }
+        @media (min-width: 1850px) {
+          font-size: 3.15rem;
         }
       }
-    & a {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      position: relative;
-      height: 100%;
-      width: 100%;
-      z-index: 3;
-      font-size: 1.35rem;
-      flex-wrap: nowrap;
-      flex-direction: row;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: var(--white);
-      font-weight: bolder;
-      padding: 1.5rem;
-      @media (min-width: 420px) {
-        font-size: 1.35rem;
-        padding: 1.5rem 4rem;
+    }
+    @media (min-width: 375px) {
+      background-position-x: 35vw;
+      background-position-y: 15vh;
+    }
+    @media (min-width: 420px) {
+      background-position-x: 55vw;
+      background-position-y: center;
+      & h2 {
+        justify-content: space-between;
       }
-      @media (min-width: 600px) {
-        justify-content: center;
-        gap: 12vw;
-        font-size: 1.45rem;
+    }
+    @media (min-width: 620px) {
+      background-position-x: 50vw;
+      background-size: 250px;
+      & h2 {
+        width: 50%;
       }
-      @media (min-width: 1050px) {
-        padding: 7rem 3rem;
-        gap: 6vw;
+    }
+    @media (min-width: 720px) {
+      background-position-x: 48vw;
+      background-size: 280px;
+      & h2 {
+        width: 40%;
       }
-      @media (min-width: 1250px) {
-        padding: 6rem 3rem;
-        gap: 10vw;
+    }
+    @media (min-width: 768px) {
+      background-size: 350px;
+    }
+    @media (min-width: 1050px) {
+      background-position-x: center;
+      background-size: 70%;
+      background-position-y: 260px;
+      & h2 {
+        justify-content: start;
+        width: 90%;
       }
-      @media (min-width: 1350px) {
-        padding: 5rem 3rem;
+    }
+    @media (min-width: 1150px) {
+      background-size: 65%;
+    }
+    @media (min-width: 1250px) {
+      background-size: 60%;
+    }
+    @media (min-width: 1550px) {
+      background-position-y: 85%;
+      background-size: 50%;
+      background-position-x: 90%;
+    }
+    @media (min-width: 1850px) {
+      background-size: 40%;
+    }
+    @media (min-width: 2000px) {
+      & h2 {
+        width: 60%;
       }
-      @media (min-width: 1350px) {
-        gap: 8vw;
-      }
-      @media (min-width: 1850px) {
-        gap: 6vw;
-        padding: 4rem 3rem;
-        font-size: 2rem;
-      }
-      @media (min-width: 2150px) {
-        gap: 4.5vw;
-      }
-      & span {
-        align-self: flex-start;
-        color: var(--black-dark);
-      }
+    }
+    @media (min-width: 2150px) {
+      background-size: 35%;
     }
   }
 }
