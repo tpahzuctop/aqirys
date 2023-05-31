@@ -3342,14 +3342,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   height: 45px;
 }
 
-.product-description-block__award a {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-.product-description-block__award a img {
+.product-description-block__award img {
   height: 100%;
 }
 

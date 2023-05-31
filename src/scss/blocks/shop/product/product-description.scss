@@ -43,15 +43,8 @@
   &__award {
     height: 45px;
 
-    & a {
-      position: relative;
-      display: block;
-      width: 100%;
+    & img {
       height: 100%;
-
-      & img {
-        height: 100%;
-      }
     }
   }
 }
