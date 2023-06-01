@@ -6,7 +6,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 250px 250px;
     grid-template-areas:
-        "headsets all-gaming-gears";
+        "headsets" "all-gaming-gears";
     margin: 2rem 0;
     @media (min-width: 768px) {
       gap: 2rem;
@@ -105,11 +105,13 @@
         display: block;
       }
     }
+
     & h2 {
       justify-content: flex-start;
       & strong {
         color: var(--black-dark);
         font-size: 1.45rem;
+
         @media (min-width: 375px) {
           font-size: 1.65rem;
         }
@@ -134,69 +136,73 @@
       }
     }
     @media (min-width: 375px) {
-      background-position-x: 35vw;
-      background-position-y: 15vh;
+      background-position-x: 50vw;
+      background-position-y: 12vh;
     }
     @media (min-width: 420px) {
-      background-position-x: 55vw;
+      background-position-x: 50vw;
       background-position-y: center;
       & h2 {
         justify-content: space-between;
       }
     }
     @media (min-width: 620px) {
-      background-position-x: 50vw;
-      background-size: 250px;
+      background-position-x: 52vw;
+      background-size: 260px;
       & h2 {
         width: 50%;
       }
     }
     @media (min-width: 720px) {
-      background-position-x: 48vw;
+      background-position-x: 55vw;
       background-size: 280px;
       & h2 {
         width: 40%;
       }
     }
     @media (min-width: 768px) {
-      background-size: 350px;
+      background-size: 285px;
+      background-position-y: -22px;
+      background-position-x: 55vw;
     }
     @media (min-width: 1050px) {
       background-position-x: center;
-      background-size: 70%;
-      background-position-y: 260px;
+      background-size: 90%;
+      background-position-y: 230px;
       & h2 {
         justify-content: start;
         width: 90%;
       }
     }
     @media (min-width: 1150px) {
-      background-size: 65%;
+      background-size: 85%;
+      background-position-y: 210px;
     }
     @media (min-width: 1250px) {
-      background-size: 60%;
+      background-size: 70%;
+      background-position-y: 230px;
+    }
+    @media (min-width: 1450px) {
+      background-position-y: 180px;
     }
     @media (min-width: 1550px) {
-      background-position-y: 85%;
-      background-size: 50%;
-      background-position-x: 90%;
+      background-position-y: 90%;
+      background-size: 70%;
+      background-position-x: 110%;
     }
     @media (min-width: 1850px) {
-      background-size: 40%;
+      background-size: 60%;
     }
     @media (min-width: 2000px) {
       & h2 {
         width: 60%;
       }
     }
-    @media (min-width: 2150px) {
-      background-size: 35%;
-    }
   }
   .all-gaming-gears {
     grid-area: all-gaming-gears;
     background-color: var(--blue-secondary);
-    background-size: 200px;
+    background-size: 220px;
     background-position-x: 32vw;
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -249,10 +255,10 @@
     }
     @media (min-width: 375px) {
       background-position-x: 35vw;
-      background-position-y: 15vh;
+      background-position-y: 6vh;
     }
     @media (min-width: 420px) {
-      background-position-x: 55vw;
+      background-position-x: 45vw;
       background-position-y: center;
       & h2 {
         justify-content: space-between;
@@ -266,37 +272,35 @@
       }
     }
     @media (min-width: 720px) {
-      background-position-x: 48vw;
-      background-size: 280px;
+      background-position-x: 53vw;
+      background-size: 260px;
       & h2 {
         width: 40%;
       }
     }
-    @media (min-width: 768px) {
-      background-size: 350px;
-    }
     @media (min-width: 1050px) {
       background-position-x: center;
-      background-size: 70%;
-      background-position-y: 260px;
+      background-size: 90%;
+      background-position-y: 200px;
       & h2 {
         justify-content: start;
         width: 90%;
       }
     }
-    @media (min-width: 1150px) {
-      background-size: 65%;
-    }
     @media (min-width: 1250px) {
-      background-size: 60%;
+      background-size: 70%;
+      background-position-y: 225px;
+    }
+    @media (min-width: 1450px) {
+      background-position-y: 185px;
     }
     @media (min-width: 1550px) {
-      background-position-y: 85%;
-      background-size: 50%;
-      background-position-x: 90%;
+      background-position-y: 80%;
+      background-size: 65%;
+      background-position-x: 85%;
     }
     @media (min-width: 1850px) {
-      background-size: 40%;
+      background-size: 55%;
     }
     @media (min-width: 2000px) {
       & h2 {
@@ -304,7 +308,11 @@
       }
     }
     @media (min-width: 2150px) {
-      background-size: 35%;
+      background-size: 55%;
     }
   }
+}
+
+.headsets:hover strong {
+  color: var(--white)!important;
 }

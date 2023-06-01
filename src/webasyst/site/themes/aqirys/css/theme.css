@@ -2278,7 +2278,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   justify-items: stretch;
   grid-template-columns: 1fr;
   grid-template-rows: 250px 250px;
-  grid-template-areas: "headsets all-gaming-gears";
+  grid-template-areas: "headsets" "all-gaming-gears";
   margin: 2rem 0;
 }
 
@@ -2378,11 +2378,11 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 }
 
 .headset .all-gaming-gears {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: all-gaming-gears;
   background-color: var(--blue-secondary);
-  background-size: 200px;
+  background-size: 220px;
   background-position-x: 32vw;
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -2417,6 +2417,10 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 .headset .all-gaming-gears h2 strong {
   font-size: 1.45rem;
+}
+
+.headsets:hover strong {
+  color: var(--white) !important;
 }
 
 .pc-components {
@@ -4599,8 +4603,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-position-x: 35vw;
-    background-position-y: 15vh;
+    background-position-x: 50vw;
+    background-position-y: 12vh;
   }
 
   .headset .all-gaming-gears h2 strong {
@@ -4609,7 +4613,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .headset .all-gaming-gears {
     background-position-x: 35vw;
-    background-position-y: 15vh;
+    background-position-y: 6vh;
   }
 
   .pc-cases h2,
@@ -4750,7 +4754,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-position-x: 55vw;
+    background-position-x: 50vw;
     background-position-y: center;
   }
 
@@ -4763,7 +4767,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .all-gaming-gears {
-    background-position-x: 55vw;
+    background-position-x: 45vw;
     background-position-y: center;
   }
 
@@ -4889,8 +4893,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-position-x: 50vw;
-    background-size: 250px;
+    background-position-x: 52vw;
+    background-size: 260px;
   }
 
   .headset .headsets h2 {
@@ -4968,7 +4972,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-position-x: 48vw;
+    background-position-x: 55vw;
     background-size: 280px;
   }
 
@@ -4977,8 +4981,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .all-gaming-gears {
-    background-position-x: 48vw;
-    background-size: 280px;
+    background-position-x: 53vw;
+    background-size: 260px;
   }
 
   .headset .all-gaming-gears h2 {
@@ -5066,11 +5070,9 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-size: 350px;
-  }
-
-  .headset .all-gaming-gears {
-    background-size: 350px;
+    background-size: 285px;
+    background-position-y: -22px;
+    background-position-x: 55vw;
   }
 
   .pc-components {
@@ -5487,8 +5489,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .headset .headsets {
     background-position-x: center;
-    background-size: 70%;
-    background-position-y: 260px;
+    background-size: 90%;
+    background-position-y: 230px;
   }
 
   .headset .headsets h2 {
@@ -5502,8 +5504,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
   .headset .all-gaming-gears {
     background-position-x: center;
-    background-size: 70%;
-    background-position-y: 260px;
+    background-size: 90%;
+    background-position-y: 200px;
   }
 
   .headset .all-gaming-gears h2 {
@@ -5752,11 +5754,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-size: 65%;
-  }
-
-  .headset .all-gaming-gears {
-    background-size: 65%;
+    background-size: 85%;
+    background-position-y: 210px;
   }
 
   .pc-cases {
@@ -5820,7 +5819,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-size: 60%;
+    background-size: 70%;
+    background-position-y: 230px;
   }
 
   .headset .all-gaming-gears h2 strong {
@@ -5828,7 +5828,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .all-gaming-gears {
-    background-size: 60%;
+    background-size: 70%;
+    background-position-y: 225px;
   }
 
   .pc-cases h2 strong {
@@ -6036,6 +6037,14 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-position: calc(100% + 40px) 0;
   }
 
+  .headset .headsets {
+    background-position-y: 180px;
+  }
+
+  .headset .all-gaming-gears {
+    background-position-y: 185px;
+  }
+
   .fans {
     background-position: calc(100% + 40px) 0;
   }
@@ -6134,9 +6143,9 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-position-y: 85%;
-    background-size: 50%;
-    background-position-x: 90%;
+    background-position-y: 90%;
+    background-size: 70%;
+    background-position-x: 110%;
   }
 
   .headset .all-gaming-gears h2 strong {
@@ -6144,9 +6153,9 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .all-gaming-gears {
-    background-position-y: 85%;
-    background-size: 50%;
-    background-position-x: 90%;
+    background-position-y: 80%;
+    background-size: 65%;
+    background-position-x: 85%;
   }
 
   .pc-cases h2 strong {
@@ -6384,7 +6393,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .headsets {
-    background-size: 40%;
+    background-size: 60%;
   }
 
   .headset .all-gaming-gears h2 strong {
@@ -6392,7 +6401,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   }
 
   .headset .all-gaming-gears {
-    background-size: 40%;
+    background-size: 55%;
   }
 
   .pc-cases h2 strong {
@@ -6540,12 +6549,8 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
     background-size: 60%;
   }
 
-  .headset .headsets {
-    background-size: 35%;
-  }
-
   .headset .all-gaming-gears {
-    background-size: 35%;
+    background-size: 55%;
   }
 
   .pc-cases {
