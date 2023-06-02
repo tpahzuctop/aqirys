@@ -129,7 +129,7 @@
     {/if}
 
     <div class="purchase">
-        {if ($product_available || count($product.skus) > 1) && $p.price  != 0}
+        {if $product_available || count($product.skus) > 1 && $p.price > 0 }
         <!-- price -->
         <div class="add2cart">
             {if $product.compare_price > 0}<span class="compare-at-price nowrap"> {shop_currency_html($product.compare_price)} </span>{/if}
@@ -137,7 +137,7 @@
             <input type="hidden" name="product_id" value="{$product.id}">
             <div class="add2cart__submit">
                 <span class="qty">
-                    Колличество товара
+                    Количество товара
                             <input type="text" name="quantity" value="1">
                 </span>
                 <input type="submit" {if !$product_available}disabled="disabled"{/if} value="[`Add to cart`]">
