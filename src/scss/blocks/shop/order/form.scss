@@ -15,7 +15,7 @@
 }
 
 .wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper {
-  border: 1px solid var(--purple) !important;
+  border: none !important;
   background: var(--purple-dark) !important;
 }
 
@@ -28,8 +28,17 @@
   color: var(--white) !important;
 }
 
-.wa-order-cart-wrapper .wa-products .wa-product .wa-actions .wa-action:hover .wa-icon, .wa-tooltip:not(.custom):after, .wa-tooltip.bottom:not(.custom):before {
+.wa-order-cart-wrapper .wa-products .wa-product .wa-actions .wa-action:hover .wa-icon, .wa-tooltip:not(.custom):after {
   background: var(--red) !important;
+}
+
+.wa-tooltip.bottom:not(.custom):before {
+  border-bottom-color: var(--red) !important;
+}
+
+.wa-tooltip:not(.custom):after {
+  border-radius: 1rem;
+  padding: 0.65rem 1rem !important;
 }
 
 .wa-order-cart-wrapper .wa-cart-details .wa-coupon-section .wa-input {
@@ -52,5 +61,152 @@
     color: var(--black-dark);
     background: var(--white);
     cursor: pointer;
+  }
+}
+
+.wa-select {
+  height: auto !important;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  padding: 0.75rem 1rem !important;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: calc(var(--curve) * 0.5px);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'), linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .65em auto, 100%;
+  outline: none;
+}
+.wa-select::-ms-expand { display: none; }
+.wa-select:hover { border: none; }
+.wa-select:focus { border: none;
+  box-shadow: 0 0 1px 3px var(--blue);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: var(--black-dark);
+  background-color: var(--white) !important;
+  outline: none;
+}
+.wa-select option { font-weight:normal; }
+*[dir="rtl"] .wa-select, :root:lang(ar) .wa-select, :root:lang(iw) .wa-select {
+  background-position: left .7em top 50%, 0 0;
+  padding: .6em .8em .5em 1.4em;
+}
+
+.wa-order-form-wrapper .wa-step-region-section .wa-required-text, .wa-field-wrapper .wa-label, .wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section > .wa-header, .wa-order-form-wrapper .wa-step-details-section .wa-details-description, .wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-variants-section > .wa-header {
+  color: var(--grey-dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper:hover, .wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper.is-active {
+  background: var(--purple-darkest) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.wa-order-form-wrapper .wa-step-details-section .wa-details-rates-section .wa-table > .wa-row > .wa-cell.wa-cell-name .wa-name {
+  color: var(--blue) !important;
+}
+
+.wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .wa-total-section .wa-item .wa-name, .wa-order-form-wrapper .wa-step-details-section .wa-details-rates-section .wa-table > .wa-row .wa-delivery-price
+, .wa-order-form-wrapper .wa-step-details-section .wa-details-rates-section .wa-table > .wa-row > .wa-cell.wa-cell-value {
+  color: var(--green) !important;
+}
+
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper .wa-price, .wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper .wa-date {
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
+  font-weight: 700 !important;
+}
+
+.wa-order-form-wrapper .wa-step-shipping-section .wa-delivery-types-section .wa-types-list .wa-type-wrapper .wa-date {
+  color: var(--black) !important;
+  font-weight: 300 !important;
+}
+
+.wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .wa-total-section .wa-item.wa-item-total .wa-name {
+  color: var(--white) !important;
+  font-weight: 700 !important;
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper {
+  padding: 1.5rem !important;
+  background: var(--purple-darkest) !important;
+  border: none !important;
+  margin-top: 0.5rem;
+  border-radius: calc(var(--curve) * 0.5px) !important;
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper.is-active, .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper.is-active:hover {
+  box-shadow: none !important;
+  background: var(--white) !important;
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list .wa-method-wrapper .wa-method .wa-image-wrapper {
+  display: none !important;
+}
+
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper:hover .wa-method-body .wa-payment-name a, .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper .wa-method-body .wa-payment-name a {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--white) !important;
+}
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list .wa-method-wrapper .wa-method .wa-method-body .wa-description {
+  font-size: .85rem !important;
+  color: var(--black-dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper.is-active {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--purple-darkest) !important;
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper:hover {
+  background: var(--blue) !important;
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list .wa-method-wrapper .wa-method .wa-method-body .wa-description {
+  font-size: .85rem !important;
+  color: var(--black-dark) !important;
+}
+
+.wa-order-form-wrapper .wa-step-confirm-section .wa-section-body .wa-submit-button {
+  color: var(--white);
+  text-decoration: none;
+  outline: none;
+  background: var(--blue);
+  border-radius: calc(var(--curve) * 1px);
+  padding: 1rem !important;
+  display: block;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  border: none !important;
+  cursor: pointer;
+  &:hover {
+    color: var(--black-dark);
+    background: var(--white);
+  }
+}
+
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: 1rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 }
