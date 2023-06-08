@@ -1,3 +1,60 @@
 .wa-quantity-cart-section .wa-field-wrapper {
   background: none !important;
 }
+
+.wa-field-wrapper .wa-input {
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: calc(var(--curve) * 0.5px);
+  border: none;
+  outline: none;
+  color: var(--white) !important;
+  &:focus, &:active {
+    background: var(--white);
+    color: var(--black-dark) !important;
+  }
+}
+
+.wa-quantity-cart-section .wa-field-wrapper .wa-field {
+  color: var(--black-dark) !important;
+  border: none !important;
+  text-align: center !important;
+}
+
+.wa-dropdown.is-locked > .wa-dropdown-toggle:after {
+  border-color: var(--white) !important;
+}
+
+.wa-dropdown.is-locked > .wa-dropdown-toggle {
+  color: var(--grey-dark) !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  cursor: no-drop !important;
+  padding: 0.75rem 1rem !important;
+  border-radius: calc(var(--curve) * 0.5px);
+  border-color: var(--grey-dark) !important;
+}
+
+.wa-dropdown.is-locked > .wa-dropdown-toggle:after {
+  border-color: var(--grey-dark) !important;
+}
+
+select.wa-select.wa-error, input.wa-input.wa-error {
+  color: var(--red) !important;
+  background: rgba(255, 0, 0, 0.1) !important;
+  &:focus, &:active {
+    color: var(--black-dark) !important;
+    background: var(--white) !important;
+  }
+}
+
+.wa-dropdown > .wa-dropdown-toggle {
+  padding: 0.75rem 1rem !important;
+  border: none !important;
+  box-shadow: none;
+  border-radius: calc(var(--curve) * 0.5px);
+  outline: none;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: var(--white) !important;
+}
