@@ -2,8 +2,6 @@
 /dist/
 /src/evnia-site-css.css
 /gulp/version.json
-/src/webasyst/site/themes/agonbyaoc/css/
-/src/webasyst/site/themes/agonbyaoc/js/
-/src/webasyst/site/themes/evnia/css/
-/src/webasyst/site/themes/evnia/js/
+/src/webasyst/site/themes/aqirys/css/
+/src/webasyst/site/themes/aqirys/js/
 /.idea
