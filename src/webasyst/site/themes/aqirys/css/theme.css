@@ -4931,10 +4931,6 @@ input.wa-input.wa-error:active {
     background-position-x: 50vw;
   }
 
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
   .pickup-contacts {
     grid-template-rows: repeat(2, 190px);
   }
@@ -5125,10 +5121,6 @@ input.wa-input.wa-error:active {
 }
 
 @media (min-width: 450px) {
-  .cards {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  }
-
   .sub-categories {
     padding: 1rem;
   }
@@ -5153,6 +5145,12 @@ input.wa-input.wa-error:active {
 @media (min-width: 480px) {
   footer.footer .logo a img {
     height: 3.5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .cards {
+    grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
   }
 }
 
@@ -5385,7 +5383,7 @@ input.wa-input.wa-error:active {
   }
 
   .cards {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: minmax(300px, 1fr) minmax(300px, 1fr);
   }
 
   .sub-categories {
@@ -5850,6 +5848,7 @@ input.wa-input.wa-error:active {
   }
 
   .cards {
+    grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr) minmax(280px, 1fr);
     margin: 0 0 3rem 0;
   }
 
@@ -6291,6 +6290,10 @@ input.wa-input.wa-error:active {
     background-size: 70%;
     background-position-x: 10vw;
   }
+
+  .cards {
+    grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr) minmax(280px, 1fr) minmax(280px, 1fr);
+  }
 }
 
 @media (min-width: 1440px) {
@@ -6724,6 +6727,10 @@ input.wa-input.wa-error:active {
   .power-supplies {
     background-size: 75%;
     background-position-x: 9vw;
+  }
+
+  .cards {
+    grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr) minmax(280px, 1fr) minmax(280px, 1fr) minmax(280px, 1fr);
   }
 
   .product__name .product__name--h1 {
