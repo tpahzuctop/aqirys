@@ -192,6 +192,21 @@
             </table>
             </div>
         {/if}
+
+        {if $product.params}
+            {foreach from=$product.params key=key item=param}
+                {if $key == 'aqirys-manual'}
+                    <a href="{$param}" title="текст">ТЕКСТ</a>
+                {/if}
+                {if $key == 'aqirys-soft'}
+                        {$key} = {$param} <br>
+                {/if}
+                {if $key == 'aqirys-case'}
+                        {$key} = {$param} <br>
+                {/if}
+            {/foreach}
+        {/if}
+
         {*
         <!-- categories -->
         {if $product.categories}
