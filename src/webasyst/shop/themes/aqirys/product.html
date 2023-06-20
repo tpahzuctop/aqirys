@@ -1,3 +1,4 @@
+
 {$_video = false}
 {$_video_url = false}
 {if $product->video}
@@ -192,6 +193,32 @@
             </table>
             </div>
         {/if}
+
+        {if $product.params}
+        <div class="product-docs">
+            {foreach from=$product.params key=key item=param}
+                {if $key == 'aqirys-manual'}
+                    <div class="product-docs__item">
+                        <a class="product-docs__link" href="{$param}" title="User's manual" target="_blank">User's manual</a>
+                        <img class="product-docs__icon" src="{$wa_theme_url}img/download.png" alt="">
+                    </div>
+                {/if}
+                {if $key == 'aqirys-soft'}
+                    <div class="product-docs__item">
+                        <a class="product-docs__link" href="{$param}" title="Software" target="_blank">Software</a>
+                        <img class="product-docs__icon" src="{$wa_theme_url}img/download.png" alt="">
+                    </div>
+                {/if}
+                {if $key == 'aqirys-case'}
+                    <div class="product-docs__item">
+                        <a class="product-docs__link" href="{$param}" title="Product case" target="_blank">Product case</a>
+                        <img class="product-docs__icon" src="{$wa_theme_url}img/download.png" alt="">
+                    </div>
+                {/if}
+            {/foreach}
+        </div>
+        {/if}
+
         {*
         <!-- categories -->
         {if $product.categories}
