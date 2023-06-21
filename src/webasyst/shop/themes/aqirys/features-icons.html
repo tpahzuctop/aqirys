@@ -1,3 +1,12 @@
 {foreach $product.features as $f_code => $f_value}
-    {$f_code} ==== {$f_value}<br>
+    {$f_code}(id={$features[$f_code].id}) ==== {$f_value}<br>
+
+
+    {if is_array($f_value)}
+        {*implode(', ', $f_value)*}
+    {else}
+        {if $f_value == '2.1 м' && $features[$f_code].id =='73'}
+            <p>Картинка 2.1 м</p>
+        {/if}
+    {/if}
 {/foreach}
