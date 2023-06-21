@@ -20,7 +20,11 @@
             {include file="product.cart.html" inline}
         </div>
     </div>
-
+    {if $product.features}
+        <div class="product__features-icons-wrap">
+            {include file="product.cart.html" inline}
+        </div>
+    {/if}
     <!-- GALLERY -->
     {if $product.images}
         <div class="product__images">
