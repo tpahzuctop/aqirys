@@ -1,3 +1,4 @@
+<div style="visibility: hidden;">
 {foreach $product.features as $f_code => $f_value}
     {$f_code}(id={$features[$f_code].id}) ==== {$f_value}<br>
 
@@ -8,5 +9,35 @@
         {if $f_value == '2.1 м' && $features[$f_code].id =='73'}
             <p>Картинка 2.1 м</p>
         {/if}
+
+        {if $f_value == '1.8 м' && $features[$f_code].id =='73'}
+            <p>Картинка 1.8 м</p>
+        {/if}
+
+        {if $f_value == '50 мм' && $features[$f_code].id =='230'}
+            <p>Картинка 50 мм динамики</p>
+        {/if}
+
+        {if $f_value == '40 мм' && $features[$f_code].id =='230'}
+            <p>Картинка 40 мм динамики</p>
+        {/if}
+
+        {if $f_value == 'RGB' && $features[$f_code].id =='65'}
+            <p>Картинка rgb</p>
+        {/if}
+
+        {if $f_value == 'ARGB' && $features[$f_code].id =='65'}
+            <p>Картинка argb</p>
+        {/if}
+
+        {if $f_value == 'USB 2.0' && $features[$f_code].id =='64'}
+            <p>Картинка usb 2.0</p>
+        {/if}
+
+        {if $f_value == '450 × 400 × 4 мм' && $features[$f_code].id =='220'}
+            <p>коврик md</p>
+        {/if}
+
     {/if}
 {/foreach}
+</div>
