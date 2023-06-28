@@ -1,13 +1,55 @@
-<div style="visibility: hidden;">
+<div class="product__features-icons-wrap" style="display: none">
 {foreach $product.features as $f_code => $f_value}
+
     {$f_code}(id={$features[$f_code].id}) ==== {$f_value}<br>
 
 
     {if is_array($f_value)}
-        {*implode(', ', $f_value)*}
+        {foreach $f_value as $key => $value}
+            {$value}<br>
+            {if $value == 'ПК'}
+            <p>LOL</p>
+            {/if}
+        {/foreach}
     {else}
-        {if $f_value == '2.1 м' && $features[$f_code].id =='73'}
-            <p>Картинка 2.1 м</p>
+        {if $f_value == '7.1 Virtual Surround' && $features[$f_code].id =='465'}
+            <p>7.1 Virtual Surround</p>
+        {/if}
+
+        {if $f_value == '3D Stereo' && $features[$f_code].id =='465'}
+            <p>3D Stereo</p>
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='300'}
+            <p>BT 5.0</p>
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='474'}
+            <p>бассссс</p>
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='475'}
+            <p>дышащие что?</p>
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='476'}
+            <p>беспроводное подключение</p>
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='477'}
+            <p>Вибрация</p>
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='478'}
+            <p>Кроссплатформенность</p>
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='473'}
+            <p>Software</p>
+        {/if}
+
+        {if $f_value == '2.2 м' && $features[$f_code].id =='73'}
+            <p>Картинка 2.2 м</p>
         {/if}
 
         {if $f_value == '1.8 м' && $features[$f_code].id =='73'}
@@ -15,23 +57,51 @@
         {/if}
 
         {if $f_value == '50 мм' && $features[$f_code].id =='230'}
-            <p>Картинка 50 мм динамики</p>
+            <p>50 мм динамики</p>
         {/if}
 
         {if $f_value == '40 мм' && $features[$f_code].id =='230'}
-            <p>Картинка 40 мм динамики</p>
+            <p>40 мм динамики</p>
         {/if}
 
         {if $f_value == 'RGB' && $features[$f_code].id =='65'}
-            <p>Картинка rgb</p>
+            <p>rgb</p>
         {/if}
 
         {if $f_value == 'ARGB' && $features[$f_code].id =='65'}
-            <p>Картинка argb</p>
+            <p>argb</p>
         {/if}
 
         {if $f_value == 'USB 2.0' && $features[$f_code].id =='64'}
             <p>Картинка usb 2.0</p>
+        {/if}
+
+        {if $f_value == 'Гибкий' && $features[$f_code].id =='212'}
+            <p>Гибкий</p>
+        {/if}
+
+        {if $f_value == 'Съемный + Встроенный' && $features[$f_code].id =='212'}
+            <p>Двойной</p>
+        {/if}
+
+        {if $f_value == 'Съемный' && $features[$f_code].id =='212'}
+            <p>Съемный</p>
+        {/if}
+
+        {if $f_value == 'Выдвижной' && $features[$f_code].id =='212'}
+            <p>Выдвижной</p>
+        {/if}
+
+        {if $f_value == 'До 40 часов' && $features[$f_code].id =='292'}
+            <p>40 часов батарея</p>
+        {/if}
+
+        {if $f_value == 'До 17 часов' && $features[$f_code].id =='292'}
+            <p>17 часов батарея</p>
+        {/if}
+
+        {if $f_value == 'До 27 часов' && $features[$f_code].id =='292'}
+            <p>27 часов батарея</p>
         {/if}
 
         {if $f_value == '450 × 400 × 4 мм' && $features[$f_code].id =='220'}
