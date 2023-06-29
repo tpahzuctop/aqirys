@@ -147,11 +147,7 @@
             {*<span class="added2cart" style="display: none;">{sprintf('[`%s is now <a href="%s"><strong>in your shopping cart</strong></a>`]', $product.name|escape, $_cart_url)}</span>*}
         </div>
         {else}
-            {if shopArrivedPlugin::getListFormHtml($p)}
-                {shopArrivedPlugin::getListFormHtml($p)}
-            {else}
-                <span class="plugin_arrived-button custom disabled"><a href="https://aqirys.ru/nashi-kontakty/">Доступно в шоу-руме</a></span>
-            {/if}
+            {shopArrivedPlugin::getFormHtml($product)}
         {/if}
     </div>
 
@@ -181,7 +177,7 @@
 
 <div class="product__name">
     <h1 itemprop="name" style=" position: relative;" class="product__name--h1">
-        {$product.name|replace:$big_sku:''|escape}
-        <strong>{$big_sku|escape}</strong>
+        {$product.name|replace:($big_sku|replace:'_':' '):''|escape}
+        <strong>{$big_sku|replace:'_':' '|escape}</strong>
     </h1>
 </div>
