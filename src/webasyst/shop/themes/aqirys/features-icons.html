@@ -7,13 +7,45 @@
     {if is_array($f_value)}
         {foreach $f_value as $key => $value}
             {$value}<br>
-            {if $value == 'ПК'}
-            <p>LOL</p>
+            {if $value == 'Спиральный кабель в стиле "авиатор"'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/cable2maviator.jpg" alt="aviator cable">
+            {/if}
+
+            {if $value == 'Смазанные на заводе переключатели'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/lubed-switches.jpg" alt="lubed-switches">
+            {/if}
+
+            {if $value == 'Смазанные на заводе стабилизаторы'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/lubed-stabilizers.jpg" alt="lubed-stabilizers">
+            {/if}
+
+            {if $value == 'Защита от фантомных нажатий'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/anti-ghost.jpg" alt="anti-ghosting">
+            {/if}
+
+            {if $value == 'Клавиша с двойным литьем'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/double-shot.jpg" alt="double-shot">
+            {/if}
+
+            {if $value == 'Конструкция с уплотнителем'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/gasket-mounted.jpg" alt="gasket-mounted">
+            {/if}
+
+            {if $value == 'Клавиши с возможностью горячей замены'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/hot-swap.jpg" alt="hot-swap">
+            {/if}
+
+            {if $value == 'Подставка для телефона'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/phone-holder.jpg" alt="phone-holder">
+            {/if}
+
+            {if $value == 'Управление мультимедиа'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/multimedia.jpg" alt="multimedia">
             {/if}
         {/foreach}
     {else}
         {if $f_value == '7.1 Virtual Surround' && $features[$f_code].id =='465'}
-            <p>7.1 Virtual Surround</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/virtual-surround.jpg" alt="virtual-surround">
         {/if}
 
         {if $f_value == '3D Stereo' && $features[$f_code].id =='465'}
@@ -41,39 +73,103 @@
         {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='478'}
-            <p>Кроссплатформенность</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/multiplatform.jpg" alt="multiplatform">
         {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='473'}
-            <p>Software</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/software.jpg" alt="software">
+        {/if}
+
+        {if $f_value == 'Gateron G Pro 2.0 Red' && $features[$f_code].id =='301'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/gateron-red.jpg" alt="gateron-red">
+        {/if}
+
+        {if $f_value == 'Мембранная' && $features[$f_code].id =='312'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/membrane.jpg" alt="membrane">
         {/if}
 
         {if $f_value == '2.2 м' && $features[$f_code].id =='73'}
-            <p>Картинка 2.2 м</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/cable2-20m.jpg" alt="cable 2.20m">
         {/if}
 
         {if $f_value == '1.8 м' && $features[$f_code].id =='73'}
-            <p>Картинка 1.8 м</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/cable-1-8m.jpg" alt="cable 1.8m">
         {/if}
 
         {if $f_value == '50 мм' && $features[$f_code].id =='230'}
-            <p>50 мм динамики</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/driver-50mm.jpg" alt="driver 50mm">
         {/if}
 
         {if $f_value == '40 мм' && $features[$f_code].id =='230'}
-            <p>40 мм динамики</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/driver-40mm.jpg" alt="driver 40mm">
         {/if}
 
         {if $f_value == 'RGB' && $features[$f_code].id =='65'}
-            <p>rgb</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/rgb.jpg" alt="rgb">
         {/if}
 
         {if $f_value == 'ARGB' && $features[$f_code].id =='65'}
-            <p>argb</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/argb.jpg" alt="argb">
         {/if}
 
         {if $f_value == 'USB 2.0' && $features[$f_code].id =='64'}
-            <p>Картинка usb 2.0</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/usb.jpg" alt="usb 2.0">
+        {/if}
+
+        {if $f_value == '20 миллионов нажатий' && $features[$f_code].id =='63'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/20clicks.jpg" alt="20m clicks">
+        {/if}
+
+        {if $f_value == '50 миллионов нажатий' && $features[$f_code].id =='63'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/50clicks.jpg" alt="50m clicks">
+        {/if}
+
+        {if $f_value == '80 миллионов нажатий' && $features[$f_code].id =='63'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/80clicks.jpg" alt="80m clicks">
+        {/if}
+
+        {if $f_value == '10000 DPI' && $features[$f_code].id =='289'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/10k.jpg" alt="10k dpi">
+        {/if}
+
+        {if $f_value == '19000 DPI' && $features[$f_code].id =='289'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/19k.jpg" alt="19k dpi">
+        {/if}
+
+        {if $f_value == '16000 DPI' && $features[$f_code].id =='289'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/16k.jpg" alt="16k dpi">
+        {/if}
+
+        {if $f_value == '12000 DPI' && $features[$f_code].id =='289'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/12k.jpg" alt="12k dpi">
+        {/if}
+
+        {if $f_value == '0.063 кг' && $features[$f_code].id =='31'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/63g.jpg" alt="63 g">
+        {/if}
+
+        {if $f_value == '0.065 кг' && $features[$f_code].id =='31'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/65g.jpg" alt="65 g">
+        {/if}
+
+        {if $f_value == '0.061 кг' && $features[$f_code].id =='31'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/61g.jpg" alt="61 g">
+        {/if}
+
+        {if $f_value == '0.073 кг' && $features[$f_code].id =='31'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/73g.jpg" alt="73 g">
+        {/if}
+
+        {if $f_value == '0.076 кг' && $features[$f_code].id =='31'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/76g.jpg" alt="76 g">
+        {/if}
+
+        {if $f_value == 'Эргономичный, для обеих рук' && $features[$f_code].id =='293'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/ambidextrous.jpg" alt="ambidextrous">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='479'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/covers.jpg" alt="covers">
         {/if}
 
         {if $f_value == 'Гибкий' && $features[$f_code].id =='212'}
