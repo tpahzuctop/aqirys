@@ -42,6 +42,22 @@
             {if $value == 'Управление мультимедиа'}
                 <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/multimedia.jpg" alt="multimedia">
             {/if}
+
+            {if $value == '4-й класс'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/gaslift.jpg" alt="gaslift">
+            {/if}
+
+            {if $value == 'Углеродистая сталь с порошковым покрытием'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/frame-steel.jpg" alt="frame-steel">
+            {/if}
+
+            {if $value == '160 кг'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/160kg-maxweight.jpg" alt="160kg-maxweight">
+            {/if}
+
+            {if $value == '140 кг'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/160kg-maxweight.jpg" alt="140kg-maxweight">
+            {/if}
         {/foreach}
     {else}
         {if $f_value == '7.1 Virtual Surround' && $features[$f_code].id =='465'}
@@ -49,7 +65,7 @@
         {/if}
 
         {if $f_value == '3D Stereo' && $features[$f_code].id =='465'}
-            <p>3D Stereo</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/3d-stereo.jpg" alt="3d-stereo">
         {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='300'}
@@ -57,19 +73,16 @@
         {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='474'}
-            <p>бассссс</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/bass.jpg" alt="deep bass">
         {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='475'}
-            <p>дышащие что?</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/ear-pads.jpg" alt="ear-pads">
         {/if}
 
-        {if $f_value == 'Да' && $features[$f_code].id =='476'}
-            <p>беспроводное подключение</p>
-        {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='477'}
-            <p>Вибрация</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/vibro.jpg" alt="vibro">
         {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='478'}
@@ -173,35 +186,100 @@
         {/if}
 
         {if $f_value == 'Гибкий' && $features[$f_code].id =='212'}
-            <p>Гибкий</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/flexible-mic.jpg" alt="flexible-mic">
         {/if}
 
         {if $f_value == 'Съемный + Встроенный' && $features[$f_code].id =='212'}
-            <p>Двойной</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/dual-mic.jpg" alt="dual-mic">
         {/if}
 
         {if $f_value == 'Съемный' && $features[$f_code].id =='212'}
-            <p>Съемный</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/removable-mic.jpg" alt="removable-mic">
         {/if}
 
         {if $f_value == 'Выдвижной' && $features[$f_code].id =='212'}
-            <p>Выдвижной</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/retractable-mic.jpg" alt="retractable-mic">
         {/if}
 
         {if $f_value == 'До 40 часов' && $features[$f_code].id =='292'}
-            <p>40 часов батарея</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/battery40h.jpg" alt="battery40h">
         {/if}
 
         {if $f_value == 'До 17 часов' && $features[$f_code].id =='292'}
-            <p>17 часов батарея</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/battery17h" alt="battery17h">
         {/if}
 
         {if $f_value == 'До 27 часов' && $features[$f_code].id =='292'}
-            <p>27 часов батарея</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/battery27h.jpg" alt="battery27h">
+        {/if}
+
+        {if $f_value == '320 × 270 × 3 мм' && $features[$f_code].id =='220'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/mousepad-m-3.jpg" alt="mousepad-m">
+        {/if}
+
+        {if $f_value == '320 × 270 × 4 мм' && $features[$f_code].id =='220'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/mousepad-m.jpg" alt="mousepad-m">
         {/if}
 
         {if $f_value == '450 × 400 × 4 мм' && $features[$f_code].id =='220'}
-            <p>коврик md</p>
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/mousepad-md.jpg" alt="mousepad-md">
+        {/if}
+
+        {if $f_value == '900 × 400 × 4 мм' && $features[$f_code].id =='220'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/mousepad-xl.jpg" alt="mousepad-xl">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='408'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/waterproof.jpg" alt="waterproof">
+        {/if}
+
+        {if $f_value == 'Искусственная кожа премиум-класса X Алькантара' && $features[$f_code].id =='426'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/faux-leather-suede.jpg" alt="faux-leather-suede">
+        {/if}
+
+        {if $f_value == 'Высококачественная ткань' && $features[$f_code].id =='426'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/upholstery-textile.jpg" alt="upholstery-textile">
+        {/if}
+
+        {if $f_value == 'Искусственная кожа премиум-класса' && $features[$f_code].id =='426'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/faux-leather.jpg" alt="faux-leather">
+        {/if}
+
+        {if $f_value == '4-направленный регулируемый' && $features[$f_code].id =='430'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/4d-armrests.jpg" alt="4d-armrests">
+        {/if}
+
+        {if $f_value == '3-направленный регулируемый' && $features[$f_code].id =='430'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/3d-armrests.jpg" alt="3d-armrests">
+        {/if}
+
+        {if $f_value == 'Полиуретан высокой плотности' && $features[$f_code].id =='425'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/pillow.jpg" alt="pillow">
+        {/if}
+
+        {if $f_value == '3-дюймовый нейлон (5 шт.), 3-дюймовый полиуретан (5 шт.)' && $features[$f_code].id =='427'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/wheel8cm.jpg" alt="wheel8cm">
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/silent-wheels.jpg" alt="silent-wheels">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='481'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/controller.jpg" alt="controller">
+        {/if}
+
+        {if $f_value == '4 шт.' && $features[$f_code].id =='480'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/4fans-set.jpg" alt="fans-set">
+        {/if}
+
+        {if $f_value == 'Mini-ITX, Micro-ATX, ATX' && $features[$f_code].id =='378'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/atx.jpg" alt="atx">
+        {/if}
+
+        {if $f_value == 'Mini-ITX, Micro-ATX, ATX, E-ATX' && $features[$f_code].id =='378'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/eatx.jpg" alt="eatx">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='482'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/usb-3.jpg" alt="usb-3">
         {/if}
 
     {/if}
