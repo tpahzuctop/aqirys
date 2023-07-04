@@ -58,6 +58,14 @@
             {if $value == '140 кг'}
                 <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/160kg-maxweight.jpg" alt="140kg-maxweight">
             {/if}
+
+            {if $value == 'Плоский, черный'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/flat-cable.jpg" alt="flat-cable">
+            {/if}
+
+            {if $value == 'Плоский, белый'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/flat-cable.jpg" alt="flat-cable">
+            {/if}
         {/foreach}
     {else}
         {if $f_value == '7.1 Virtual Surround' && $features[$f_code].id =='465'}
@@ -123,6 +131,10 @@
 
         {if $f_value == 'ARGB' && $features[$f_code].id =='65'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/argb.jpg" alt="argb">
+        {/if}
+
+        {if $f_value == 'Rainbow' && $features[$f_code].id =='65'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/rainbow.jpg" alt="rainbow">
         {/if}
 
         {if $f_value == 'USB 2.0' && $features[$f_code].id =='64'}
@@ -266,8 +278,24 @@
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/controller.jpg" alt="controller">
         {/if}
 
+        {if $f_value == '5 шт.' && $features[$f_code].id =='480'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/5fans-set.jpg" alt="fans-set">
+        {/if}
+
         {if $f_value == '4 шт.' && $features[$f_code].id =='480'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/4fans-set.jpg" alt="fans-set">
+        {/if}
+
+        {if $f_value == '3 шт.' && $features[$f_code].id =='480'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/3fans-set.jpg" alt="fans-set">
+        {/if}
+
+        {if $f_value == '2 шт.' && $features[$f_code].id =='480'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2fans-set.jpg" alt="fans-set">
+        {/if}
+
+        {if $f_value == '1 шт.' && $features[$f_code].id =='480'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1fan-set.jpg" alt="fans-set">
         {/if}
 
         {if $f_value == 'Mini-ITX, Micro-ATX, ATX' && $features[$f_code].id =='378'}
@@ -278,8 +306,136 @@
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/eatx.jpg" alt="eatx">
         {/if}
 
+        {if $f_value == 'Mini-ITX, Micro-ATX' && $features[$f_code].id =='378'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/matx.jpg" alt="matx">
+        {/if}
+
         {if $f_value == 'Да' && $features[$f_code].id =='482'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/usb-3.jpg" alt="usb-3">
+        {/if}
+
+        {if $f_value == 'Панель на петлях' && $features[$f_code].id =='483'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/loops.jpg" alt="loops">
+        {/if}
+
+        {if $f_value == 'Акриловая панель' && $features[$f_code].id =='483'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/acrylic.jpg" alt="acrylic">
+        {/if}
+
+        {if $f_value == 'Панель из закаленного стекла' && $features[$f_code].id =='483'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/glass.jpg" alt="glass">
+        {/if}
+
+        {if $f_value == 'Панель из звукопоглощающего материала' && $features[$f_code].id =='483'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/silent.jpg" alt="silent">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='484'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/card-reader.jpg" alt="card-reader">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='485'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/type-c.jpg" alt="type-c">
+        {/if}
+
+        {if $f_value == '12 шт.' && $features[$f_code].id =='413'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/12-led.jpg" alt="led">
+        {/if}
+
+        {if $f_value == '21 шт.' && $features[$f_code].id =='413'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/21-led.jpg" alt="led">
+        {/if}
+
+        {if $f_value == '16 шт.' && $features[$f_code].id =='413'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/16-led.jpg" alt="led">
+        {/if}
+
+        {if $f_value == '15 шт.' && $features[$f_code].id =='413'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/15-led.jpg" alt="led">
+        {/if}
+
+        {if $f_value == '24 шт.' && $features[$f_code].id =='413'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/24-led.jpg" alt="led">
+        {/if}
+
+        {if $f_value == '22 шт.' && $features[$f_code].id =='413'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/22-led.jpg" alt="led">
+        {/if}
+
+        {if $f_value == '1200±15% об/мин' && $features[$f_code].id =='409'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1200rpm.jpg" alt="rpm">
+        {/if}
+
+        {if $f_value == '1500±15% об/мин' && $features[$f_code].id =='409'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1500rpm.jpg" alt="rpm">
+        {/if}
+
+        {if $f_value == '1800±15% об/мин' && $features[$f_code].id =='409'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1800rpm.jpg" alt="rpm">
+        {/if}
+
+        {if $f_value == '120 × 120 × 25 мм' && $features[$f_code].id =='220'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/120mm-fan.jpg" alt="fan size">
+        {/if}
+
+        {if $f_value == '140 × 140 × 25 мм' && $features[$f_code].id =='220'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/140mm-fan.jpg" alt="fan size">
+        {/if}
+
+        {if $f_value == 'Гидроподшипник' && $features[$f_code].id =='350'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/silent.jpg" alt="silent">
+        {/if}
+
+        {if $f_value == '3 шт.' && $features[$f_code].id =='486'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/3fan.jpg" alt="fan set">
+        {/if}
+
+        {if $f_value == '80PLUS® Platinum' && $features[$f_code].id =='315'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/80-platinum.jpg" alt="80-platinum">
+        {/if}
+
+        {if $f_value == '80PLUS® Gold' && $features[$f_code].id =='315'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/80-gold.jpg" alt="80-gold">
+        {/if}
+
+        {if $f_value == '80PLUS® White' && $features[$f_code].id =='315'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/80-white.jpg" alt="80-white">
+        {/if}
+
+        {if $f_value == '80PLUS® Bronze' && $features[$f_code].id =='315'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/80-bronze.jpg" alt="80-bronze">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='318'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/module.jpg" alt="module">
+        {/if}
+
+        {if $f_value == '120 мм' && $features[$f_code].id =='319'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/120mm-fan.jpg" alt="fan size">
+        {/if}
+
+        {if $f_value == 'Intel® ATX V2.52 (готовность к версии 3.0)' && $features[$f_code].id =='314'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/atx-3.jpg" alt="atx-3">
+        {/if}
+
+        {if $f_value == 'Intel® ATX V2.52' && $features[$f_code].id =='314'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/atx-2-52.jpg" alt="atx-2-52">
+        {/if}
+
+        {if $f_value == 'Intel® ATX12V 2.31' && $features[$f_code].id =='314'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/atx-2-31.jpg" alt="atx-2-31">
+        {/if}
+
+        {if $f_value == 'Японские А-класса' && $features[$f_code].id =='487'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/japanA.jpg" alt="capasitors">
+        {/if}
+
+        {if $f_value == 'Японские' && $features[$f_code].id =='487'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/japan.jpg" alt="capasitors">
+        {/if}
+
+        {if $f_value == 'Тайваньские' && $features[$f_code].id =='487'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/taiwan.jpg" alt="capasitors">
         {/if}
 
     {/if}
