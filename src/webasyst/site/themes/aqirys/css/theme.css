@@ -5758,7 +5758,7 @@ input.wa-input.wa-error:active {
   }
 
   .features-icons__pic {
-    margin: 0 7px;
+    margin: 5px 7px;
     width: 95px;
     height: 95px;
   }
@@ -6269,7 +6269,7 @@ input.wa-input.wa-error:active {
   }
 
   .features-icons__pic {
-    margin: 0 10px;
+    margin: 5px 10px;
     width: 100px;
     height: 100px;
   }
@@ -6494,13 +6494,11 @@ input.wa-input.wa-error:active {
   }
 
   .features-icons {
-    padding: 20px 50px;
+    padding: 20px 30px;
   }
 
   .features-icons__pic {
-    margin: 0 15px;
-    width: 120px;
-    height: 120px;
+    margin: 5px 10px;
   }
 
   .about__title {
@@ -6667,8 +6665,8 @@ input.wa-input.wa-error:active {
   }
 
   .features-icons__pic {
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
   }
 
   .pickup__text {
@@ -6824,15 +6822,14 @@ input.wa-input.wa-error:active {
 
 @media (min-width: 1680px) {
   .features-icons {
-    max-width: 1680px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 20px 75px;
   }
 
   .features-icons__pic {
-    margin: 0 20px;
-    width: 130px;
-    height: 130px;
+    margin: 5px 15px;
+    width: 120px;
+    height: 120px;
   }
 }
 

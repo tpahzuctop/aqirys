@@ -80,16 +80,20 @@
             {/if}
         {/foreach}
     {else}
+        {if $f_value == 'Беспроводной' && $features[$f_code].id =='228'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/wireless.jpg" alt="wireless">
+        {/if}
+
+        {if $f_value == 'Проводной и беспроводной' && $features[$f_code].id =='228'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/wireless.jpg" alt="wireless">
+        {/if}
+
         {if $f_value == '7.1 Virtual Surround' && $features[$f_code].id =='465'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/virtual-surround.jpg" alt="virtual-surround">
         {/if}
 
         {if $f_value == '3D Stereo' && $features[$f_code].id =='465'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/3d-stereo.jpg" alt="3d-stereo">
-        {/if}
-
-        {if $f_value == 'Да' && $features[$f_code].id =='300'}
-            <p>BT 5.0</p>
         {/if}
 
         {if $f_value == 'Да' && $features[$f_code].id =='474'}
