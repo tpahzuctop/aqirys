@@ -3368,6 +3368,30 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   color: var(--white);
 }
 
+.product__features-icons-wrap {
+  margin-top: 40px;
+  background-color: var(--blue-dark);
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+}
+
+.features-icons {
+  padding: 15px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.features-icons__pic {
+  margin: 5px;
+  width: 80px;
+  height: 80px;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .product-docs {
   margin-bottom: 100px;
 }
@@ -5506,6 +5530,11 @@ input.wa-input.wa-error:active {
     line-height: 0.8rem;
   }
 
+  .features-icons__pic {
+    width: 90px;
+    height: 90px;
+  }
+
   .product-docs__item {
     margin-top: 15px;
     height: 60px;
@@ -5722,6 +5751,16 @@ input.wa-input.wa-error:active {
     text-align: center;
     font-size: 0.8rem;
     line-height: 1.1rem;
+  }
+
+  .product__features-icons-wrap {
+    margin-top: 50px;
+  }
+
+  .features-icons__pic {
+    margin: 0 7px;
+    width: 95px;
+    height: 95px;
   }
 
   .pickup__title {
@@ -6225,6 +6264,16 @@ input.wa-input.wa-error:active {
     font-size: 2.5rem;
   }
 
+  .product__features-icons-wrap {
+    margin-top: 60px;
+  }
+
+  .features-icons__pic {
+    margin: 0 10px;
+    width: 100px;
+    height: 100px;
+  }
+
   .product-docs__link {
     left: 50px;
   }
@@ -6440,6 +6489,20 @@ input.wa-input.wa-error:active {
     font-size: 3.25rem;
   }
 
+  .product__features-icons-wrap {
+    margin-top: 80px;
+  }
+
+  .features-icons {
+    padding: 20px 50px;
+  }
+
+  .features-icons__pic {
+    margin: 0 15px;
+    width: 120px;
+    height: 120px;
+  }
+
   .about__title {
     font-size: 1.5rem;
   }
@@ -6599,6 +6662,15 @@ input.wa-input.wa-error:active {
     padding: 10vw 8vw;
   }
 
+  .product__features-icons-wrap {
+    margin-top: 0;
+  }
+
+  .features-icons__pic {
+    width: 120px;
+    height: 120px;
+  }
+
   .pickup__text {
     width: 60%;
     font-size: 1.1rem;
@@ -6747,6 +6819,20 @@ input.wa-input.wa-error:active {
 
   .page-contacts-item__mail {
     font-size: 1rem;
+  }
+}
+
+@media (min-width: 1680px) {
+  .features-icons {
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 20px 75px;
+  }
+
+  .features-icons__pic {
+    margin: 0 20px;
+    width: 130px;
+    height: 130px;
   }
 }
 
@@ -6913,6 +6999,11 @@ input.wa-input.wa-error:active {
 
   .product-description-fact {
     margin: 100px auto 0;
+  }
+
+  .features-icons__pic {
+    width: 140px;
+    height: 140px;
   }
 }
 

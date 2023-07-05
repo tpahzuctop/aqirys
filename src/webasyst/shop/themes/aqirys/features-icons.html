@@ -1,12 +1,12 @@
-<div class="product__features-icons-wrap" style="display: none">
+<div class="features-icons">
 {foreach $product.features as $f_code => $f_value}
 
-    {$f_code}(id={$features[$f_code].id}) ==== {$f_value}<br>
+  {*  {$f_code}(id={$features[$f_code].id}) ==== {$f_value}<br> *}
 
 
     {if is_array($f_value)}
         {foreach $f_value as $key => $value}
-            {$value}<br>
+          {*  {$value}<br> *}
             {if $value == 'Спиральный кабель в стиле "авиатор"'}
                 <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/cable2maviator.jpg" alt="aviator cable">
             {/if}
@@ -65,6 +65,18 @@
 
             {if $value == 'Плоский, белый'}
                 <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/flat-cable.jpg" alt="flat-cable">
+            {/if}
+
+            {if $value == '410 х 105 х 7 мм (боковая панель)'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/plate410.jpg" alt="plate410">
+            {/if}
+
+            {if $value == '304 х 115 х 7 мм (передняя панель)'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/plate304.jpg" alt="plate304">
+            {/if}
+
+            {if $value == '343 x 86 x 7 мм'}
+                <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/plate343.jpg" alt="plate343">
             {/if}
         {/foreach}
     {else}
@@ -211,6 +223,10 @@
 
         {if $f_value == 'Выдвижной' && $features[$f_code].id =='212'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/retractable-mic.jpg" alt="retractable-mic">
+        {/if}
+
+        {if $f_value == 'Встроенный' && $features[$f_code].id =='212'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/buld-mic.jpg" alt="buld-mic">
         {/if}
 
         {if $f_value == 'До 40 часов' && $features[$f_code].id =='292'}
@@ -374,6 +390,14 @@
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1800rpm.jpg" alt="rpm">
         {/if}
 
+        {if $f_value == '120 × 120 × 25 мм' && $features[$f_code].id =='346'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/120mm-fan.jpg" alt="fan size">
+        {/if}
+
+        {if $f_value == '90 × 90 × 25 мм' && $features[$f_code].id =='346'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/90mm-fan.jpg" alt="fan size">
+        {/if}
+
         {if $f_value == '120 × 120 × 25 мм' && $features[$f_code].id =='220'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/120mm-fan.jpg" alt="fan size">
         {/if}
@@ -436,6 +460,158 @@
 
         {if $f_value == 'Тайваньские' && $features[$f_code].id =='487'}
             <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/taiwan.jpg" alt="capasitors">
+        {/if}
+
+        {if $f_value == 'Intel: LGA 115x/ 1200/ 1700; AMD: AM4' && $features[$f_code].id =='337'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/intel-amd.jpg" alt="intel-amd">
+        {/if}
+
+        {if $f_value == 'Intel: LGA 115x/ 1200; AMD: AM4' && $features[$f_code].id =='337'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/intel-amd.jpg" alt="intel-amd">
+        {/if}
+
+        {if $f_value == '800 - 2400 ± 10% об/мин' && $features[$f_code].id =='351'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2400rpm.jpg" alt="2400rpm">
+        {/if}
+
+        {if $f_value == '900 - 2400 ± 10% об/мин' && $features[$f_code].id =='351'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2000rpm.jpg" alt="2000rpm">
+        {/if}
+
+        {if $f_value == '1000 - 2000 ± 10% об/мин' && $features[$f_code].id =='351'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2000rpm.jpg" alt="2000rpm">
+        {/if}
+
+        {if $f_value == '1800 об/мин' && $features[$f_code].id =='351'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1800rpm.jpg" alt="1800rpm">
+        {/if}
+
+        {if $f_value == 'до 200 Вт' && $features[$f_code].id =='338'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/tdp-200.jpg" alt="tdp-200">
+        {/if}
+
+        {if $f_value == 'до 250 Вт' && $features[$f_code].id =='338'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/tdp-250.jpg" alt="tdp-250">
+        {/if}
+
+        {if $f_value == 'до 300 Вт' && $features[$f_code].id =='338'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/tdp-300.jpg" alt="tdp-300">
+        {/if}
+
+        {if $f_value == 'до 125 Вт' && $features[$f_code].id =='338'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/tdp-125.jpg" alt="tdp-125">
+        {/if}
+
+        {if $f_value == '1 шт.' && $features[$f_code].id =='486'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1fan.jpg" alt="1fan">
+        {/if}
+
+        {if $f_value == '2 шт.' && $features[$f_code].id =='486'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2fans.jpg" alt="2fans">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='488'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/paste.jpg" alt="paste">
+        {/if}
+
+        {if $f_value == '450 мм' && $features[$f_code].id =='360'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/450pipe.jpg" alt="pipe">
+        {/if}
+
+        {if $f_value == '2 шт, медь' && $features[$f_code].id =='345'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2pipes.jpg" alt="2pipes">
+        {/if}
+
+        {if $f_value == '4 шт, медь' && $features[$f_code].id =='345'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/4pipes.jpg" alt="4pipes">
+        {/if}
+
+        {if $f_value == '2.1MP' && $features[$f_code].id =='441'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2-1mpx.jpg" alt="2-1mpx">
+        {/if}
+
+        {if $f_value == '1080 — 1920' && $features[$f_code].id =='442'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/1080.jpg" alt="1080">
+        {/if}
+
+        {if $f_value == 'Плата с 5-контактными переключателями' && $features[$f_code].id =='454'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/switch-5pin.jpg" alt="switch-5pin">
+        {/if}
+
+        {if $f_value == 'Слегка смазанный на заводе' && $features[$f_code].id =='453'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/oiled.jpg" alt="oiled">
+        {/if}
+
+        {if $f_value == 'Тактильный, бесшумный' && $features[$f_code].id =='302'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/tactickle.jpg" alt="tactickle">
+        {/if}
+
+        {if $f_value == '47 gF' && $features[$f_code].id =='304'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/47gf.jpg" alt="47gf">
+        {/if}
+
+        {if $f_value == '2 мм' && $features[$f_code].id =='450'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2mm-key.jpg" alt="2mm-key">
+        {/if}
+
+        {if $f_value == '100 млн нажатий' && $features[$f_code].id =='63'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/100-clicks.jpg" alt="100-clicks">
+        {/if}
+
+        {if $f_value == 'Да, 395 -735 мм' && $features[$f_code].id =='403'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/table-stand.jpg" alt="table-stand">
+        {/if}
+
+        {if $f_value == 'Кардиоидная' && $features[$f_code].id =='394'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/diagram.jpg" alt="diagram">
+        {/if}
+
+        {if $f_value == 'Да' && $features[$f_code].id =='401'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/noise-suppression.jpg" alt="noise-suppression">
+        {/if}
+
+        {if $f_value == '3.5 mm Audio jack' && $features[$f_code].id =='405'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/monitoring-port.jpg" alt="monitoring-port">
+        {/if}
+
+        {if $f_value == '192 кГц/24 бит' && $features[$f_code].id =='397'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/streaming.jpg" alt="streaming">
+        {/if}
+
+        {if $f_value == '2.7 м' && $features[$f_code].id =='73'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/cable2-7m.jpg" alt="cable2-7m">
+        {/if}
+
+        {if $f_value == '350 мм' && $features[$f_code].id =='272'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/350mm-length.jpg" alt="cable">
+        {/if}
+
+        {if $f_value == '0.002 кг' && $features[$f_code].id =='31'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/2g.jpg" alt="2g">
+        {/if}
+
+        {if $f_value == '5,6 Вт/мК' && $features[$f_code].id =='456'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/thermal-5-6.jpg" alt="thermal-5-6">
+        {/if}
+
+        {if $f_value == '8,5 Вт/мК' && $features[$f_code].id =='456'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/thermal-8-5.jpg" alt="thermal-8-5">
+        {/if}
+
+        {if $f_value == '>9 Вт/мК' && $features[$f_code].id =='456'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/thermal-9.jpg" alt="thermal-9">
+        {/if}
+
+        {if $f_value == '850 пуаз' && $features[$f_code].id =='457'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/viscosity-850.jpg" alt="viscosity-850">
+        {/if}
+
+        {if $f_value == '870 пуаз' && $features[$f_code].id =='457'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/viscosity-870.jpg" alt="viscosity-870">
+        {/if}
+
+        {if $f_value == '880 пуаз' && $features[$f_code].id =='457'}
+            <img class="features-icons__pic" src="{$wa_theme_url}img/features-icons/viscosity-880.jpg" alt="viscosity-880">
         {/if}
 
     {/if}
