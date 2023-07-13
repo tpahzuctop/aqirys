@@ -1,7 +1,7 @@
 .menu-h {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-evenly;
   align-items: center;
@@ -11,6 +11,7 @@
   border-radius: calc(var(--curve) * 0.5px);
   @media (min-width: 450px) {
     padding: 1rem;
+    flex-wrap: nowrap;
   }
   @media (min-width: 768px) {
     padding: 2rem;
@@ -20,6 +21,7 @@
   }
   & li {
     display: block;
+    margin: 3px;
     & a {
       display: block;
       min-width: 10px;
@@ -53,6 +55,9 @@
           background: var(--blue) !important;
           color: var(--white) !important;
         }
+    }
+    @media (min-width: 450px) {
+      margin: 0;
     }
   }
   &-left {

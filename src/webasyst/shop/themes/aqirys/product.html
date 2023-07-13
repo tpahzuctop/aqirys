@@ -130,6 +130,7 @@
     <ul class="menu-h menu-h-left product-internal top-padded">
         <li class="selected"><a href="{$wa->shop->productUrl($product)}">[`Overview`]</a></li>
         <li><a href="#product-features">Характеристики</a></li>
+        <li><a href="#product-docs">Файлы</a></li>
         {*
         <li>
             <a href="{$wa->shop->productUrl($product, 'reviews')}">[`Reviews`] <span class="hint">({$reviews_total_count})</span></a>
@@ -199,7 +200,7 @@
         {/if}
 
         {if $product.params}
-        <div class="product-docs">
+        <div class="product-docs" id="product-docs">
             {foreach from=$product.params key=key item=param}
                 {if $key == 'aqirys-manual'}
                     <div class="product-docs__item">

@@ -1928,6 +1928,44 @@ header nav {
   display: none;
 }
 
+.auth__title {
+  text-align: center;
+}
+
+.auth .wa-login-form-wrapper input[type=text] {
+  margin: 1rem 0 0 0;
+  padding: 0.5rem 1rem !important;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: calc(var(--curve) * 1px);
+  border: none !important;
+}
+
+.auth .wa-login-form-wrapper input[type=text]:focus {
+  background: var(--white);
+  color: var(--black-dark) !important;
+}
+
+.auth .wa-signup-url {
+  display: none;
+}
+
+.auth .button {
+  width: 100%;
+  margin: 1rem 0 1rem 0;
+  padding: 0.9rem 1rem;
+  justify-content: center !important;
+  color: white;
+  background: var(--blue);
+  border-radius: calc(var(--curve) * 1px);
+  border: none;
+  cursor: pointer;
+}
+
+.auth .button:hover {
+  background: var(--white);
+  color: var(--black-dark);
+}
+
 .right-panel {
   margin-left: auto;
   background: rgba(255, 255, 255, 0.1);
@@ -2869,7 +2907,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 .menu-h {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-evenly;
   align-items: center;
@@ -2881,6 +2919,7 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 .menu-h li {
   display: block;
+  margin: 3px;
 }
 
 .menu-h li a {
@@ -5198,10 +5237,15 @@ input.wa-input.wa-error:active {
 
   .menu-h {
     padding: 1rem;
+    flex-wrap: nowrap;
   }
 
   .menu-h li a {
     padding: 0.5rem 1rem;
+  }
+
+  .menu-h li {
+    margin: 0;
   }
 
   .pickup-advantages__item {
