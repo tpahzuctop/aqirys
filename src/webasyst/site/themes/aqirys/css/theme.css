@@ -4825,6 +4825,7 @@ input.wa-input.wa-error:active {
 /* pages */
 
 .page-contacts {
+  margin-bottom: 60px;
   padding: 0;
   list-style: none;
 }
@@ -6095,14 +6096,17 @@ input.wa-input.wa-error:active {
   }
 
   .page-contacts {
+    margin-bottom: 100px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .page-contacts-item {
     margin: 0;
     max-width: initial;
-    width: 300px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
   }
 
   .page-contacts-item__pic {
@@ -6425,7 +6429,7 @@ input.wa-input.wa-error:active {
   }
 
   .page-contacts-item {
-    width: 350px;
+    width: 400px;
   }
 
   .page-contacts-item__description {
@@ -6595,7 +6599,7 @@ input.wa-input.wa-error:active {
   }
 
   .page-contacts-item {
-    width: 400px;
+    width: 450px;
   }
 
   .page-contacts-item__phone {
@@ -6840,7 +6844,7 @@ input.wa-input.wa-error:active {
   }
 
   .page-contacts-item {
-    width: 470px;
+    width: 500px;
   }
 
   .page-contacts-item__description {
@@ -7011,7 +7015,7 @@ input.wa-input.wa-error:active {
   }
 
   .page-contacts-item {
-    width: 520px;
+    width: 550px;
   }
 }
 
@@ -7045,6 +7049,12 @@ input.wa-input.wa-error:active {
   .features-icons__pic {
     width: 140px;
     height: 140px;
+  }
+}
+
+@media (min-width: 1950px) {
+  .page-contacts {
+    margin: 0 10% 100px;
   }
 }
 
