@@ -177,6 +177,13 @@
 }
 
 @media (min-width: 1250px) {
+  .warranty {
+
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+
   .warranty-service {
 
     &__info-item {
