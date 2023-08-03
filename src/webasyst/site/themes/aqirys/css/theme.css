@@ -4907,6 +4907,131 @@ input.wa-input.wa-error:active {
   text-align: center;
 }
 
+.warranty {
+  max-width: 1800px;
+  margin: auto;
+}
+
+.warranty__title {
+  text-align: center;
+  color: var(--blue);
+}
+
+.warranty__title--margin {
+  margin-top: 70px;
+}
+
+.warranty__descr a {
+  color: var(--blue) !important;
+}
+
+.warranty__descr a:hover {
+  color: var(--white) !important;
+}
+
+.warranty__list-wrapper {
+  margin: 30px 0;
+}
+
+.warranty__list {
+  list-style: none;
+}
+
+.warranty__list-title {
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.warranty__item {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.warranty__item::before {
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--blue);
+  border-radius: 100%;
+}
+
+.warranty-service__info {
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-areas: "adress adress" "schedule phone";
+  grid-template-rows: auto 150px;
+  grid-gap: 15px;
+}
+
+.warranty-service__info img {
+  width: 50px;
+  height: 50px;
+}
+
+.warranty-service__info-item {
+  padding: 10px;
+  background-color: var(--black-dark);
+  border-radius: 15px;
+}
+
+.warranty-service__info-item--adress {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: adress;
+  display: flex;
+  align-items: center;
+}
+
+.warranty-service__info-item--adress p {
+  margin-left: 20px;
+}
+
+.warranty-service__info-item--schedule {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: schedule;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.warranty-service__info-item--schedule p {
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.warranty-service__info-item--phone {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: phone;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.warranty-service__info-item--phone a {
+  font-size: 0.9rem;
+}
+
+.warranty-service__phone-wrapper {
+  height: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.warranty-service__map--desktop {
+  display: none;
+}
+
 @media (min-width: 360px) {
   .cart-form .purchase .add2cart__submit .qty {
     width: 100%;
@@ -5751,6 +5876,48 @@ input.wa-input.wa-error:active {
   .page-contacts-item__phone {
     font-size: 1.2rem;
   }
+
+  .warranty-service {
+    margin: 40px auto;
+  }
+
+  .warranty-service__info {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: unset;
+  }
+
+  .warranty-service__info-item {
+    padding: 20px 15px;
+  }
+
+  .warranty-service__info-item--adress {
+    grid-area: unset;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .warranty-service__info-item--adress p {
+    margin: 25px 0 10px 0;
+    text-align: center;
+  }
+
+  .warranty-service__info-item--schedule {
+    grid-area: unset;
+    justify-content: space-between;
+  }
+
+  .warranty-service__info-item--schedule p {
+    margin: 10px 0 20px 0;
+  }
+
+  .warranty-service__info-item--phone {
+    grid-area: unset;
+    justify-content: space-between;
+  }
+
+  .warranty-service__phone-wrapper {
+    height: 50px;
+  }
 }
 
 @media (min-width: 850px) {
@@ -6133,6 +6300,10 @@ input.wa-input.wa-error:active {
     font-size: 0.9rem;
   }
 
+  .warranty-service__info-item {
+    padding: 30px 50px;
+  }
+
   .mice {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
@@ -6438,6 +6609,27 @@ input.wa-input.wa-error:active {
 
   .page-contacts-item__phone {
     font-size: 0.9rem;
+  }
+
+  .warranty-service__info-item {
+    padding: 30px 45px;
+  }
+
+  .warranty-service__info-item--schedule p {
+    margin: 25px 0 10px 0;
+  }
+
+  .warranty-service__phone-wrapper {
+    height: 50px;
+    margin: 30px 0 0 0;
+  }
+
+  .warranty-service__map--mobile {
+    display: none;
+  }
+
+  .warranty-service__map--desktop {
+    display: block;
   }
 }
 
@@ -6773,6 +6965,11 @@ input.wa-input.wa-error:active {
 
   .pickup-advantages__descr {
     font-size: 1.1rem;
+  }
+
+  .warranty-service__info img {
+    width: 65px;
+    height: 65px;
   }
 
   .product__promo .product__image {
