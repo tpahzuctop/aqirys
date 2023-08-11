@@ -1831,6 +1831,22 @@ header.header {
   align-items: center;
 }
 
+.topbar {
+  justify-content: space-between;
+}
+
+.city-wrapper {
+  margin-top: 7px;
+}
+
+.first-phone {
+  display: none;
+}
+
+.phone-separator {
+  display: none;
+}
+
 .search {
   background: rgba(255, 255, 255, 0.1);
   padding: 0.25rem;
@@ -5542,6 +5558,18 @@ input.wa-input.wa-error:active {
     display: flex;
   }
 
+  .first-phone {
+    display: flex;
+  }
+
+  .phone-separator {
+    display: flex;
+  }
+
+  .time-work {
+    display: none !important;
+  }
+
   .search {
     margin-top: 1.5rem;
   }
@@ -6008,6 +6036,18 @@ input.wa-input.wa-error:active {
 @media (min-width: 1050px) {
   .topbar .phones .email {
     display: flex;
+  }
+
+  .topbar {
+    justify-content: flex-end;
+  }
+
+  .time-work {
+    display: flex !important;
+  }
+
+  .city-wrapper {
+    flex-grow: 1;
   }
 
   header nav {

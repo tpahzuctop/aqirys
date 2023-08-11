@@ -92,15 +92,19 @@
     {else}
         <div class="topbar">
             <!-- plugin hook: 'frontend_header' -->
-            {* @event frontend_header.%plugin_id% *}
-            {foreach $frontend_header as $_}{$_}{/foreach}
+            <div class="city-wrapper">
+
+                {* @event frontend_header.%plugin_id% *}
+                {foreach $frontend_header as $_}{$_}{/foreach}
+
+            </div>
 
             <div class="phones">
                 <svg class="small-icon">
                     <use xlink:href="{$wa_theme_url}svg/symbols-sprite.svg#aqyris-icon_phone"></use>
                 </svg>
-                <a href="tel:+74951158451" class="phone"><span class="grey">+7 (495)</span> 115-84-51</a>
-                &nbsp; | &nbsp;
+                <a href="tel:+74951158451" class="phone first-phone"><span class="grey">+7 (495)</span> 115-84-51</a>
+                   <p class="phone-separator">&nbsp; | &nbsp;</p>
                 <a href="tel:88003508845" class="phone"><span class="grey">8 (800)</span> 350-88-45</a>
                 <span class="email">
                     <svg class="small-icon">

@@ -9,3 +9,46 @@ header.header {
     height: 4rem;
   }
 }
+
+.topbar {
+  justify-content: space-between;
+}
+
+.city-wrapper {
+  margin-top: 7px;
+}
+
+.first-phone {
+  display: none;
+}
+
+.phone-separator {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .first-phone {
+    display: flex;
+  }
+
+  .phone-separator {
+    display: flex;
+  }
+
+  .time-work {
+    display: none!important;
+  }
+}
+
+@media (min-width: 1050px) {
+  .topbar {
+    justify-content: flex-end;
+  }
+  .time-work {
+    display: flex!important;
+  }
+
+  .city-wrapper {
+    flex-grow: 1;
+  }
+}

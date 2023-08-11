@@ -14,6 +14,7 @@
             // DYNAMIC VARS
 
             // INIT
+
             that.initClass();
         };
 
