@@ -112,7 +112,7 @@
                 function load() {
                     var deferred = $.Deferred();
 
-                    $.getScript("{$wa_theme_url}js/order.js?v={$wa->version()}", function() {
+                    $.getScript(\"{$wa_theme_url}js/order.js?v={$wa->version()}", function() {
                         deferred.resolve();
                     });
 
