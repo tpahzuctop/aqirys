@@ -410,9 +410,9 @@
   width: 100%;
   font-size: 1rem !important;
   line-height: 1rem !important;
-  background: #EDEDEDFF;
+  background: var(--white);
   border-radius: calc(var(--curve) * 0.5px);
-  border: none;
+  border: 2px solid var(--grey);
   outline: none;
 
   &::placeholder {
@@ -420,7 +420,7 @@
   }
 
   &:focus {
-    background: #F7F7F7FF;
+    border-color: var(--blue-dark);
     color: var(--black);
   }
 }
@@ -473,9 +473,9 @@
   width: 100%;
   font-size: 1rem !important;
   line-height: 1rem !important;
-  background: #EDEDEDFF;
+  background: var(--white);
   border-radius: calc(var(--curve) * 0.5px);
-  border: none;
+  border: 2px solid var(--grey);
   outline: none;
 
   &::placeholder {
@@ -483,7 +483,7 @@
   }
 
   &:focus {
-    background: #F7F7F7FF;
+    border-color: var(--blue-dark);
     color: var(--black);
   }
 }

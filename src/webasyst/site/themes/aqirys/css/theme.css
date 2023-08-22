@@ -4060,9 +4060,9 @@ input.wa-input.wa-error:active {
   width: 100%;
   font-size: 1rem !important;
   line-height: 1rem !important;
-  background: #ededed;
+  background: var(--white);
   border-radius: calc(var(--curve) * 0.5px);
-  border: none;
+  border: 2px solid var(--grey);
   outline: none;
 }
 
@@ -4079,7 +4079,7 @@ input.wa-input.wa-error:active {
 }
 
 #shop .wa-login-form-wrapper input:focus {
-  background: #f7f7f7;
+  border-color: var(--blue-dark);
   color: var(--black);
 }
 
@@ -4115,9 +4115,9 @@ input.wa-input.wa-error:active {
   width: 100%;
   font-size: 1rem !important;
   line-height: 1rem !important;
-  background: #ededed;
+  background: var(--white);
   border-radius: calc(var(--curve) * 0.5px);
-  border: none;
+  border: 2px solid var(--grey);
   outline: none;
 }
 
@@ -4134,7 +4134,7 @@ input.wa-input.wa-error:active {
 }
 
 #shop .wa-signup-form-wrapper .wa-value input:focus {
-  background: #f7f7f7;
+  border-color: var(--blue-dark);
   color: var(--black);
 }
 
