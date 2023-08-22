@@ -4009,6 +4009,163 @@ input.wa-input.wa-error:active {
   border: 2px solid var(--black-dark);
 }
 
+#shop .wa-login-form-wrapper .wa-signup-url {
+  display: flex;
+  flex-direction: column;
+}
+
+#shop .wa-login-form-wrapper .wa-signup-url:not(a) {
+  color: transparent;
+  cursor: default;
+}
+
+#shop .wa-login-form-wrapper .wa-signup-url a {
+  color: var(--blue);
+  transition: 0.1s;
+}
+
+#shop .wa-login-form-wrapper .wa-signup-url a:hover {
+  transition: 0.1s;
+  color: var(--black);
+}
+
+#shop .wa-login-form-wrapper .wa-request-onetime-password-button {
+  display: block;
+  margin: 0 0 10px 0;
+  height: 3rem;
+  width: 100%;
+  border-radius: calc(var(--curve) * 0.25px);
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#shop .wa-login-form-wrapper .wa-request-onetime-password-button:hover {
+  transition: 0.1s;
+  color: var(--white);
+  background-color: var(--black-dark);
+  border: 2px solid var(--black-dark);
+}
+
+#shop .wa-login-form-wrapper .wa-login-form-fields .wa-name {
+  color: var(--grey-dark) !important;
+}
+
+#shop .wa-login-form-wrapper input {
+  display: block;
+  padding: 0.85rem 1.2rem !important;
+  width: 100%;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
+  background: #ededed;
+  border-radius: calc(var(--curve) * 0.5px);
+  border: none;
+  outline: none;
+}
+
+#shop .wa-login-form-wrapper input::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+#shop .wa-login-form-wrapper input::-moz-placeholder {
+  color: transparent !important;
+}
+
+#shop .wa-login-form-wrapper input::placeholder {
+  color: transparent !important;
+}
+
+#shop .wa-login-form-wrapper input:focus {
+  background: #f7f7f7;
+  color: var(--black);
+}
+
+#shop .wa-auth-dialog-wrapper .wa-dialog-content {
+  margin-top: 40px;
+}
+
+#shop .wa-signup-form-wrapper .wa-buttons-wrapper input {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 0 !important;
+  height: 3rem;
+  width: 100%;
+  border-radius: calc(var(--curve) * 0.25px);
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+#shop .wa-signup-form-wrapper .wa-buttons-wrapper input:hover {
+  transition: 0.1s;
+  color: var(--white);
+  background-color: var(--black-dark);
+  border: 2px solid var(--black-dark);
+}
+
+#shop .wa-signup-form-wrapper .wa-value input {
+  display: block;
+  padding: 0.85rem 1.2rem !important;
+  width: 100%;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
+  background: #ededed;
+  border-radius: calc(var(--curve) * 0.5px);
+  border: none;
+  outline: none;
+}
+
+#shop .wa-signup-form-wrapper .wa-value input::-webkit-input-placeholder {
+  color: transparent !important;
+}
+
+#shop .wa-signup-form-wrapper .wa-value input::-moz-placeholder {
+  color: transparent !important;
+}
+
+#shop .wa-signup-form-wrapper .wa-value input::placeholder {
+  color: transparent !important;
+}
+
+#shop .wa-signup-form-wrapper .wa-value input:focus {
+  background: #f7f7f7;
+  color: var(--black);
+}
+
+#shop .wa-signup-form-wrapper .wa-login-url {
+  display: flex;
+  flex-direction: column;
+}
+
+#shop .wa-signup-form-wrapper .wa-login-url:not(a) {
+  color: transparent;
+  cursor: default;
+}
+
+#shop .wa-signup-form-wrapper .wa-login-url a {
+  color: var(--blue);
+  transition: 0.1s;
+}
+
+#shop .wa-signup-form-wrapper .wa-login-url a:hover {
+  transition: 0.1s;
+  color: var(--black);
+}
+
+#shop .wa-signup-form-wrapper .wa-signup-form-actions {
+  margin-top: -30px !important;
+}
+
+#shop .wa-signup-form-wrapper .wa-name {
+  color: var(--grey-dark) !important;
+}
+
 .wa-cart-loader,
 .wa-form-loader {
   text-align: center;
@@ -6375,6 +6532,22 @@ input.wa-input.wa-error:active {
 
   #shop .wa-dialog-body .wa-dialog-footer button:first-child {
     margin: 0 20px 0 0;
+  }
+
+  #shop .wa-auth-dialog-wrapper .wa-dialog-content {
+    margin-top: 30px;
+  }
+
+  #shop .wa-login-form-wrapper .wa-signup-url {
+    margin-top: 10px !important;
+  }
+
+  #shop .wa-auth-dialog-wrapper .wa-dialog-content {
+    padding: 20px 40px 40px;
+  }
+
+  #shop .wa-signup-form-wrapper .wa-login-url {
+    margin-top: 10px !important;
   }
 
   .about-motto__wrapper {

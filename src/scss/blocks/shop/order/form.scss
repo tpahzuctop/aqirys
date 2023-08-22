@@ -356,3 +356,168 @@
 
   }
 }
+
+//форма входа в order
+
+#shop .wa-login-form-wrapper .wa-signup-url {
+  display: flex;
+  flex-direction: column;
+
+  &:not(a) {
+    color: transparent;
+    cursor: default;
+  }
+
+  & a {
+    color: var(--blue);
+    transition: .1s;
+
+    &:hover {
+      transition: .1s;
+      color: var(--black);
+    }
+  }
+}
+
+#shop .wa-login-form-wrapper .wa-request-onetime-password-button {
+  display: block;
+  margin: 0 0 10px 0;
+  height: 3rem;
+  width: 100%;
+  border-radius: calc(var(--curve) * 0.25px);
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &:hover {
+    transition: 0.1s;
+    color: var(--white);
+    background-color: var(--black-dark);
+    border: 2px solid var(--black-dark);
+  }
+}
+
+#shop .wa-login-form-wrapper .wa-login-form-fields .wa-name {
+  color: var(--grey-dark)!important;
+}
+
+#shop .wa-login-form-wrapper input {
+  display: block;
+  padding: 0.85rem 1.2rem !important;
+  width: 100%;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
+  background: #EDEDEDFF;
+  border-radius: calc(var(--curve) * 0.5px);
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: transparent!important;
+  }
+
+  &:focus {
+    background: #F7F7F7FF;
+    color: var(--black);
+  }
+}
+
+#shop .wa-auth-dialog-wrapper .wa-dialog-content {
+  margin-top: 40px;
+}
+
+@media (min-width: 1050px) {
+  #shop .wa-auth-dialog-wrapper .wa-dialog-content {
+    margin-top: 30px;
+  }
+
+  #shop .wa-login-form-wrapper .wa-signup-url {
+    margin-top: 10px!important;
+  }
+
+  #shop .wa-auth-dialog-wrapper .wa-dialog-content {
+    padding: 20px 40px 40px;
+  }
+}
+
+//форма регистрации в order
+
+#shop .wa-signup-form-wrapper .wa-buttons-wrapper input {
+  display: block;
+  margin: 0 0 10px 0;
+  padding: 0!important;
+  height: 3rem;
+  width: 100%;
+  border-radius: calc(var(--curve) * 0.25px);
+  color: var(--white);
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+  outline: none;
+  cursor: pointer;
+  transition: 0.1s;
+
+  &:hover {
+    transition: 0.1s;
+    color: var(--white);
+    background-color: var(--black-dark);
+    border: 2px solid var(--black-dark);
+  }
+}
+
+#shop .wa-signup-form-wrapper .wa-value input {
+  display: block;
+  padding: 0.85rem 1.2rem !important;
+  width: 100%;
+  font-size: 1rem !important;
+  line-height: 1rem !important;
+  background: #EDEDEDFF;
+  border-radius: calc(var(--curve) * 0.5px);
+  border: none;
+  outline: none;
+
+  &::placeholder {
+    color: transparent!important;
+  }
+
+  &:focus {
+    background: #F7F7F7FF;
+    color: var(--black);
+  }
+}
+
+#shop .wa-signup-form-wrapper .wa-login-url {
+  display: flex;
+  flex-direction: column;
+
+  &:not(a) {
+    color: transparent;
+    cursor: default;
+  }
+
+  & a {
+    color: var(--blue);
+    transition: .1s;
+
+    &:hover {
+      transition: .1s;
+      color: var(--black);
+    }
+  }
+}
+
+#shop .wa-signup-form-wrapper .wa-signup-form-actions {
+  margin-top: -30px!important;
+}
+
+#shop .wa-signup-form-wrapper .wa-name {
+  color: var(--grey-dark)!important;
+}
+
+@media (min-width: 1050px) {
+  #shop .wa-signup-form-wrapper .wa-login-url {
+    margin-top: 10px!important;
+  }
+}
