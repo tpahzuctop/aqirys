@@ -8,6 +8,8 @@
 <meta name="robots" content="noindex,nofollow" >
 {/if}
 
+{if $wa->shop}{shopYossPlugin::display()}{/if}
+
 <!-- plugin hook: 'frontend_head' -->
 {* @event frontend_head.%plugin_id% *}
 {foreach $frontend_head as $_}{$_}{/foreach}
