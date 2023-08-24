@@ -4,4 +4,13 @@
 /gulp/version.json
 /src/webasyst/site/themes/aqirys/css/
 /src/webasyst/site/themes/aqirys/js/
+/src/webasyst/site/themes/clear/
+/src/webasyst/site/themes/default/
+/src/webasyst/site/themes/hypermarket
+/src/webasyst/shop/themes/clear/
+/src/webasyst/shop/themes/default/
+/src/webasyst/shop/themes/hypermarket
+/src/webasyst/blog/themes/clear/
+/src/webasyst/blog/themes/default/
+/src/webasyst/blog/themes/hypermarket
 /.idea
