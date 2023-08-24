@@ -1,8 +1,10 @@
 {$_cart_count = $wa->shop->cart->count()}
 
+{$wa->globals("isOrderPage", true)}
+{$wa->globals("hideCart", true)}
+
 <style>
-    #cart { display: none; }
-    .s-cart-empty-wrapper { padding: 100px 0; text-align: center; }
+    .s-cart-empty-wrapper { margin: 100px 0; text-align: center; }
     .s-cart-empty-wrapper .s-image-wrapper { margin: 0 0 20px; }
     .s-cart-empty-wrapper .s-image-wrapper img { vertical-align: top; max-width: 100%; max-height: 160px; }
     .s-cart-empty-wrapper .s-description { margin: 20px 0 0; }
@@ -21,10 +23,10 @@
         </p>
     </div>
 
-{*ORDER*}
+    {*ORDER*}
 {else}
 
-    <div class="s-checkout-order-page" id="js-checkout-order-page">
+    <div class="s-order-page" id="js-order-page">
         <div class="s-order-column">
 
             <section class="s-order-section" id="js-order-cart">
@@ -37,8 +39,8 @@
                 </div>
                 <div class="s-section-body">
                     {$wa->shop->checkout()->cart([
-                        "DEBUG" => true,
-                        "wrapper" => "#js-order-cart"
+                    "DEBUG" => true,
+                    "wrapper" => "#js-order-cart"
                     ])}
                 </div>
                 <div class="s-section-footer">
@@ -60,12 +62,12 @@
             </section>
 
             {strip}
-            {capture assign="_cross_selling_html"}
-                {$wa->shop->checkout()->crossSelling([
+                {capture assign="_cross_selling_html"}
+                    {$wa->shop->checkout()->crossSelling([
                     "DEBUG" => true,
                     "wrapper" => "#js-cross-selling-section"
-                ])}
-            {/capture}
+                    ])}
+                {/capture}
             {/strip}
 
             {if !empty($_cross_selling_html)}
@@ -88,8 +90,8 @@
                 </div>
                 <div class="s-section-body">
                     {$wa->shop->checkout()->form([
-                        "DEBUG" => true,
-                        "wrapper" => "#js-order-form"
+                    "DEBUG" => true,
+                    "wrapper" => "#js-order-form"
                     ])}
                 </div>
             </section>
@@ -113,55 +115,12 @@
 
                 function init() {
                     new window.ShopOrderPage({
-                        $wrapper: $("#js-checkout-order-page")
+                        $wrapper: $("#js-order-page"),
+                        urls: {
+                            "checkbox-icon": "{$wa_url}wa-apps/shop/img/frontend/order/svg/sprite.svg#checkbox-yes"
+                        }
                     });
                 }
-
-            })(jQuery);
-        </script>
-
-        <script>
-            ( function($) { "use strict";
-
-                var ShopOrderPage = ( function($) {
-
-                    ShopOrderPage = function(options) {
-                        var that = this;
-
-                        // DOM
-                        that.$wrapper = options["$wrapper"];
-                        that.$wa_order_cart = that.$wrapper.find("#js-order-cart");
-
-                        // VARS
-
-                        // DYNAMIC VARS
-
-                        // INIT
-                        that.initClass();
-                    };
-
-                    ShopOrderPage.prototype.initClass = function() {
-                        var that = this;
-
-                        that.$wrapper.on("click", ".js-clear-cart", function() {
-                            var wa_order_cart = that.$wa_order_cart.data("controller");
-                            if (wa_order_cart) {
-                                wa_order_cart.clear({
-                                    confirm: true
-                                }).then( function() {
-                                    location.reload();
-                                });
-                            } else {
-                                alert("Error");
-                            }
-                        });
-                    };
-
-                    return ShopOrderPage;
-
-                })(jQuery);
-
-                window.ShopOrderPage = ShopOrderPage;
 
             })(jQuery);
         </script>
