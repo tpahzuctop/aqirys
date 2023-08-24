@@ -132,7 +132,7 @@
                         </svg>
                     </button>
                     {$_query = $smarty.get.query|default:''|escape}
-                    <input type="text" name="query" autocomplete="off" value="{if !empty($_query)}{$_query}{/if}" placeholder="[`Search`] по названию или SKU" id="aqirys-header-fixed-search-form-input">
+                    <input type="text" name="query" autocomplete="off" value="{if !empty($_query)}{$_query}{/if}" placeholder="[`Search`] по названию или SKU" id="smarty-search-input" minlength="4">
                 </form>
             </div>
             <main class="main">
