@@ -2920,6 +2920,18 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
   border-color: var(--blue);
 }
 
+.sub-categories li a.active {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+
+.sub-categories li a.active:hover {
+  background: var(--blue);
+  color: var(--white);
+  border-color: var(--blue);
+}
+
 .menu-h {
   display: flex;
   flex-direction: row;

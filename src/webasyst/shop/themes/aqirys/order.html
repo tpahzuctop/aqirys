@@ -39,8 +39,8 @@
                 </div>
                 <div class="s-section-body">
                     {$wa->shop->checkout()->cart([
-                    "DEBUG" => true,
-                    "wrapper" => "#js-order-cart"
+                        "DEBUG" => true,
+                        "wrapper" => "#js-order-cart"
                     ])}
                 </div>
                 <div class="s-section-footer">
@@ -62,12 +62,12 @@
             </section>
 
             {strip}
-                {capture assign="_cross_selling_html"}
-                    {$wa->shop->checkout()->crossSelling([
+            {capture assign="_cross_selling_html"}
+                {$wa->shop->checkout()->crossSelling([
                     "DEBUG" => true,
                     "wrapper" => "#js-cross-selling-section"
-                    ])}
-                {/capture}
+                ])}
+            {/capture}
             {/strip}
 
             {if !empty($_cross_selling_html)}
@@ -90,8 +90,8 @@
                 </div>
                 <div class="s-section-body">
                     {$wa->shop->checkout()->form([
-                    "DEBUG" => true,
-                    "wrapper" => "#js-order-form"
+                        "DEBUG" => true,
+                        "wrapper" => "#js-order-form"
                     ])}
                 </div>
             </section>

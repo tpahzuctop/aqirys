@@ -49,6 +49,16 @@
         margin: 0 0.5rem 0 0;
         border-radius: calc(var(--curve) * .5px);
       }
+      &.active {
+        background: var(--blue);
+        color: var(--white);
+        border-color: var(--blue);
+        &:hover {
+          background: var(--blue);
+          color: var(--white);
+          border-color: var(--blue);
+        }
+      }
     }
   }
 }

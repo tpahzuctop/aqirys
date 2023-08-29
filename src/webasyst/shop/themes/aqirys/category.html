@@ -108,6 +108,7 @@
 {/if}
 *}
 <!-- subcategories -->
+
 {if $category.subcategories}
     <ul class="sub-categories">
         {foreach $category.subcategories as $sc}
@@ -116,6 +117,19 @@
             </li>
         {/foreach}
     </ul>
+{else}
+    {$categories = $wa->shop->categories(0, 1, true)}
+        {foreach $categories as $item}
+            {if $category.parent_id == $item.id && !empty($item.childs)}
+                <ul class="sub-categories">
+                    {foreach $item.childs as $sub_item}
+                        <li>
+                            <a href="{$sub_item.url}" title="{$sub_item.name|escape}" {if $wa->currentUrl(false) == $sub_item.url}class="active"{/if}>{$sub_item.name|escape}</a>
+                        </li>
+                    {/foreach}
+                </ul>
+            {/if}
+        {/foreach}
 {/if}
 
 {if !$products}
