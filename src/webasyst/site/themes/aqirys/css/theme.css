@@ -4178,6 +4178,19 @@ input.wa-input.wa-error:active {
   color: var(--grey-dark) !important;
 }
 
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper:hover .wa-method-body .wa-payment-name a,
+.wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide .wa-method-wrapper.is-active .wa-method-body .wa-payment-name a {
+  color: inherit !important;
+}
+
+.wa-order-form-wrapper .wa-step-details-section .wa-details-rates-section .wa-schedule-wrapper .wa-days-wrapper .wa-day-wrapper .wa-value .wa-text {
+  color: #ffffff !important;
+}
+
+.wa-order-form-wrapper .wa-step-details-section .wa-details-rates-section .wa-schedule-wrapper .wa-days-wrapper .wa-day-wrapper .wa-value .wa-time {
+  color: #ffffff !important;
+}
+
 .wa-cart-loader,
 .wa-form-loader {
   text-align: center;
