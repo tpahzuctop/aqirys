@@ -533,3 +533,27 @@
 .wa-order-form-wrapper .wa-step-details-section .wa-details-rates-section .wa-schedule-wrapper .wa-days-wrapper .wa-day-wrapper .wa-value .wa-time {
   color: #ffffff!important;
 }
+
+//сетка под сбер
+@media (min-width: 768px) {
+  .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide {
+    flex-direction: column!important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide {
+    flex-direction: row!important;
+  }
+}
+@media (min-width: 1250px) {
+  .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide {
+    flex-direction: column!important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wa-order-form-wrapper .wa-step-payment-section .wa-methods-list.wide {
+    flex-direction: row!important;
+  }
+}
