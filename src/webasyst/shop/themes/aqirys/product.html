@@ -41,7 +41,7 @@
                         {foreach $product.images as $image}
                             <div class="swiper-slide">
                                 <a href="{$wa->shop->productImgUrl($product, '750x0')}" data-fancybox="gallery" data-caption="{$product.name}">
-                                    {$wa->shop->imgHtml($image, '440', ['alt' => $product.name|cat:' - ':$image.description|escape])}
+                                    {$wa->shop->imgHtml($image, '440', ['alt' => $product.name|cat:' - купить геймерскую периферию AQIRYS'])}
                                 </a>
                             </div>
                         {/foreach}
