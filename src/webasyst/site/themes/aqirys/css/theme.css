@@ -2105,6 +2105,32 @@ footer.footer nav.footer-menu .footer-menu-item a:hover {
 
 /* shop */
 
+.home-header {
+  font-size: 1.25rem;
+  line-height: 1.15;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 1rem;
+  color: var(--white);
+}
+
+.home-header strong {
+  display: block;
+  font-weight: 200;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.05;
+  text-transform: none;
+  color: var(--grey);
+  word-break: break-word;
+}
+
 .gaming-gear {
   display: grid;
   gap: 1rem;
@@ -5369,6 +5395,10 @@ input.wa-input.wa-error:active {
     letter-spacing: 1px;
   }
 
+  .home-header {
+    font-size: 1.45rem;
+  }
+
   .mice h2,
   .keyboards h2,
   .mousepads h2,
@@ -5483,6 +5513,10 @@ input.wa-input.wa-error:active {
 }
 
 @media (min-width: 393px) {
+  .home-header {
+    font-size: 2rem;
+  }
+
   .gaming-gear {
     grid-template-rows: 150px 150px 200px 300px;
   }
@@ -6396,6 +6430,14 @@ input.wa-input.wa-error:active {
     width: 200px;
   }
 
+  .home-header {
+    font-size: 2.25rem;
+  }
+
+  .home-header strong {
+    font-size: 2.25rem;
+  }
+
   .gaming-gear {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 300px 300px;
@@ -6815,6 +6857,14 @@ input.wa-input.wa-error:active {
     width: 250px;
   }
 
+  .home-header {
+    font-size: 2.5rem;
+  }
+
+  .home-header strong {
+    font-size: 2.5rem;
+  }
+
   .mice h2 strong {
     font-size: 2.35rem;
   }
@@ -7091,6 +7141,15 @@ input.wa-input.wa-error:active {
 @media (min-width: 1450px) {
   .topbar .time-work {
     margin-left: 3rem;
+  }
+
+  .home-header {
+    font-size: 2.95rem;
+    margin: 5vw 0;
+  }
+
+  .home-header strong {
+    font-size: 2.95rem;
   }
 
   .chairs {
@@ -7384,6 +7443,14 @@ input.wa-input.wa-error:active {
 @media (min-width: 1650px) {
   .topbar .time-work {
     margin-left: 4rem;
+  }
+
+  .home-header {
+    font-size: 4rem;
+  }
+
+  .home-header strong {
+    font-size: 4rem;
   }
 
   .power-supplies {
