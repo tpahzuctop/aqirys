@@ -34,18 +34,11 @@ header.header {
   .phone-separator {
     display: flex;
   }
-
-  .time-work {
-    display: none!important;
-  }
 }
 
 @media (min-width: 1050px) {
   .topbar {
     justify-content: flex-end;
-  }
-  .time-work {
-    display: flex!important;
   }
 
   .city-wrapper {

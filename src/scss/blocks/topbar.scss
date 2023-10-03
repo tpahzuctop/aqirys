@@ -12,6 +12,9 @@
   @media (min-width: 375px) {
     font-size: .875rem;
   }
+  & .hidden-icon {
+    display: none;
+  }
   & .phones {
     display: flex;
     flex-wrap: nowrap;
@@ -19,6 +22,7 @@
     justify-content: flex-start;
     align-items: center;
     & .phone {
+      display: none;
       &:hover {
         color: var(--blue);
         & span {
@@ -27,7 +31,7 @@
       }
     }
     & .email {
-      display: none;
+      display: flex;
       flex-wrap: nowrap;
       flex-direction: row;
       justify-content: flex-start;
@@ -44,7 +48,7 @@
     justify-content: flex-start;
     align-items: center;
     @media (min-width: 768px) {
-      display: flex;
+      display: none;
     }
     @media (min-width: 1250px) {
       margin-left: 2rem;
